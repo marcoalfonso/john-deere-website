@@ -1,5 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
@@ -11,13 +9,16 @@ import ArticlePreview from '../components/article-preview'
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
+    const products = get(this, 'props.data.allContentfulProduct.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
 
     return (
       <Layout location={this.props.location} >
         <Helmet title={siteTitle} />
-        <Hero data={author.node} />
+        <Hero data={author.node}>
+          <h1>Nothing's built<br/>like a Deere.</h1>
+          <a href="#" className="btn">Discover more</a>
+        </Hero>
         {/*<div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
           <ul className="article-list">
@@ -44,7 +45,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulProduct(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
           title
@@ -72,16 +73,6 @@ export const pageQuery = graphql`
             shortBio
           }
           title
-          heroImage: image {
-            fluid(
-              maxWidth: 1180
-              maxHeight: 480
-              resizingBehavior: PAD
-              background: "rgb:000000"
-            ) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
         }
       }
     }

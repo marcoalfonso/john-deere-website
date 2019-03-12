@@ -1,0 +1,14 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75.8vh;
+  max-height: 800px;
+  background: #4C5367;
+  font-size: 4.5em;
+  overflow: hidden;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: -2.5px;
+  line-height: 70px;
+}

@@ -2,13 +2,12 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import styles from './hero.module.css'
 
-export default ({ data }) => (
-  <section className={styles.hero}>
+export default ({ data, children }) => {
+  console.log("data", data)
+ return (
+  <section className={styles.hero} style={data.heroImage ? {backgroundImage: "url("+data.heroImage.fluid.src+")"} : null}>
     <Container>
-      <div className="hero-inner">
-        <h1>Nothing's built<br/>like a Deere.</h1>
-        <a href="#" className="btn">Discover more</a>
-      </div>
+      {children}
     </Container>
   </section>
-)
+)}

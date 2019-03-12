@@ -6,14 +6,14 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import Container from 'react-bootstrap/Container'
-import logo from './logo.png'
+import logos from './logos.svg'
 
 export default () => (
   <Navbar collapseOnSelect expand="lg">
     <Container>
       <Navbar.Brand href="/">
         <img
-          src={logo}
+          src={logos}
           width="100"
           className="d-inline-block align-top logo"
           alt="RDO Equipment Logo"

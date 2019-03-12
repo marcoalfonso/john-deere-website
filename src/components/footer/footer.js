@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import './footer.css'
-import logo from './logo.png'
+import logos from './logos.svg'
 
 export default ({ data }) => (
   <section className="footer">
@@ -12,7 +12,7 @@ export default ({ data }) => (
         <Row>
           <Col>
             <img
-              src={logo}
+              src={logos}
               width="100"
               className="d-inline-block align-top logo"
               alt="RDO Equipment Logo"
