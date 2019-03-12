@@ -1,45 +1,82 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+# gatsby-contentful-starter
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+Gatsby [Contentful](https://www.contentful.com) starter for creating a blog
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+![The index page of the starter blog](https://rawgit.com/contentful-userland/gatsby-contentful-starter/master/screenshot.jpg "The index page of the starter blog")
 
----
+Static sites are scalable, secure and have very little required maintenance. They come with a drawback though. Not everybody feels good editing files, building a project and uploading it somewhere. This is where Contentful comes into play.
 
-## Edit a file
+With Contentful and Gatsby you can connect your favorite static site generator with an API that provides an easy to use interface for people writing content and automate the publishing using services like [Travis CI](https://travis-ci.org/) or [Netlify](https://www.netlify.com/).
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+## Features
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+* Simple content model and structure. Easy to adjust to your needs.
+* Contentful integration using our [Sync API](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/synchronization/initial-synchronization-of-entries-of-a-specific-content-type)
+* Using our [Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/).
+* Responsive/adaptive images via [gatsby-image](https://www.gatsbyjs.org/packages/gatsby-image/)
 
----
+## Contribution
 
-## Create a file
+This project is part of [contentful-userland](https://github.com/contentful-userland) which means that we’re always open to contributions **and you can be part of userland and shape the project yourself after your first merged pull request**. You can learn more about how contentful userland is organized by visiting [our about repository](https://github.com/contentful-userland/about).
 
-Next, you’ll add a new file to this repository.
+## Requirements
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
+To use this project you have to have a Contentful account. If you don't have one yet you can register at [www.contentful.com/sign-up](https://www.contentful.com/sign-up/).
 
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+## Getting started
 
----
+Install [Yarn](https://yarnpkg.com/en/docs/install) (if you haven't already).
 
-## Clone a repository
+### Get the source code and install dependencies.
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+```
+$ git clone git@github.com:contentful-userland/gatsby-contentful-starter.git
+$ yarn install
+```
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
+Or use the [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli).
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+```
+$ gatsby new contentful-starter https://github.com/contentful-userland/gatsby-contentful-starter
+```
+
+### Set up of the needed content model and create a configuration file
+
+This project comes with a Contentful setup command `yarn run setup`.
+
+![Command line dialog of the yarn run setup command](https://rawgit.com/contentful-userland/gatsby-contentful-starter/master/setup.jpg "Command line dialog of the yarn run setup command")
+
+This command will ask you for a space ID, and access tokens for the Contentful Management and Delivery API and then import the needed content model into the space you define and write a config file (`./contentful.json`).
+
+`yarn run setup` automates that for you but if you want to do it yourself rename `.contentful.json.sample` to `.contentful.json` and add your configuration in this file.
+
+## Crucial Commands
+
+This project comes with a few handy commands for linting and code fixing. The most important ones are the ones to develop and ship code. You can find the most important commands below.
+
+### `yarn run dev`
+
+Run in the project locally.
+
+### `yarn run build`
+
+Run a production build into `./public`. The result is ready to be put on any static hosting you prefer.
+
+### `yarn run deploy`
+
+Run a production build into `./public` and publish the site to GitHub pages.
+
+### `yarn run cleanup-repository`
+
+Removes all dependencies, scripts and data from the installation script.
+
+## Roadmap
+
+- [x] [make the starter completely responsive](https://github.com/contentful-userland/gatsby-contentful-starter/issues/2)
+- [ ] [include tags](https://github.com/contentful-userland/gatsby-contentful-starter/issues/3)
+- [x] [support traced placeholders](https://github.com/contentful-userland/gatsby-contentful-starter/issues/4)
+- [ ] [add i18n](https://github.com/contentful-userland/gatsby-contentful-starter/issues/6)
+
+## Other resources
+
+- Tutorial video series ["Building a blazing fast website with GatsbyJS and Contentful"](https://www.youtube.com/watch?v=Ek4o40w1tH4&list=PL8KiuH6vpACV-F7jXribe4YveGBhBeG9A) by @Khaledgarbaya
