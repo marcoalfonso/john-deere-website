@@ -7,31 +7,20 @@ import Container from 'react-bootstrap/Container'
 
 import Layout from '../components/layout'
 import Hero from '../components/hero/hero'
+import VideoSection from '../components/video-section/video-section'
 import styles from './product.module.css'
 
 class ProductTemplate extends React.Component {
   render() {
     const product = get(this.props, 'data.contentfulProduct')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-
+    console.log("product", product)
     return (
       <Layout location={this.props.location} >
         <div style={{ background: '#fff' }}>
           <Helmet title={`${product.title} | ${siteTitle}`} />
-          {/*<div className={styles.hero}>
-            <Img className={styles.heroImage} alt={product.title} fluid={product.heroImage.fluid} />
-            <Container>
-              <h1>{product.productModelNumber}</h1>
-              <h2>{product.title}</h2>
-              <a href="#" className={styles.btnYellow}>Download brochure</a>
-            </Container>
-          </div>*/}
-          <Hero data={product}>
-            <h1>{product.productModelNumber}</h1>
-            <h2>{product.title}</h2>
-            <a href="#" className={styles.btnYellow}>Download brochure</a>
-          </Hero>
-          <div className="wrapper">
+          <Hero data={product} title={product.productModelNumber} subtitle={product.title} button="Download brochure" />
+          {/*<div className="wrapper">
             <h1 className="section-headline">{product.title}</h1>
             <p
               style={{
@@ -45,7 +34,12 @@ class ProductTemplate extends React.Component {
                 __html: product.body.childMarkdownRemark.html,
               }}
             />
-          </div>
+          </div>*/}
+          <VideoSection
+            title="JOHN DEERE"
+            headline="Get more bang<br/>from your truck."
+            video={product.youTubeVideoId}
+          />
         </div>
       </Layout>
     )
@@ -64,6 +58,7 @@ export const pageQuery = graphql`
     contentfulProduct(slug: { eq: $slug }) {
       title
       productModelNumber
+      youTubeVideoId
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
         fluid(maxWidth: 1180, background: "rgb:000000") {

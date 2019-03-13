@@ -1,34 +1,31 @@
 import React from 'react'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import './footer.css'
 import logos from './logos.svg'
 
 export default ({ data }) => (
   <section className="footer">
-    <Container>
+    <div className="container">
       <div className="footer-inner">
-        <Row>
-          <Col>
+        <div className="row">
+          <div className="col">
             <img
               src={logos}
               width="100"
               className="d-inline-block align-top logo"
               alt="RDO Equipment Logo"
             />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-xs-12 col-md-4 col-lg-2">
             <ul>
               <li>About us</li>
               <li>The RDO story</li>
               <li>50 year video</li>
               <li>RDO Team</li>
             </ul>
-          </Col>
-          <Col>
+          </div>
+          <div className="col-xs-12 col-md-4 col-lg-2">
             <ul>
               <li>Equipment</li>
               <li>About John Deere</li>
@@ -36,8 +33,8 @@ export default ({ data }) => (
               <li>Forestry</li>
               <li>Parts information</li>
             </ul>
-          </Col>
-          <Col>
+          </div>
+          <div className="col-xs-12 col-md-4 col-lg-2">
             <ul>
               <li>Servicing</li>
               <li>RDO Blurb</li>
@@ -46,23 +43,23 @@ export default ({ data }) => (
               <li>After Hours Servicing</li>
               <li>Warranty</li>
             </ul>
-          </Col>
-          <Col>
+          </div>
+          <div className="col-xs-12 col-md-4 col-lg-2">
             <ul>
               <li>Careers</li>
               <li>Why RDO</li>
               <li>Current Jobs</li>
               <li>Core Values</li>
             </ul>
-          </Col>
-          <Col>
+          </div>
+          <div className="col-xs-12 col-md-4 col-lg-2">
             <ul>
               <li>Other pages</li>
               <li>Privacy & Data</li>
               <li>Terms & Conditions</li>
             </ul>
-          </Col>
-          <Col>
+          </div>
+          <div className="col-xs-12 col-md-4 col-lg-2">
             <ul>
               <li>Contact Us</li>
               <li>News</li>
@@ -70,9 +67,9 @@ export default ({ data }) => (
               <li>Get Social</li>
               <li>Health & Safety</li>
             </ul>
-          </Col>
-        </Row>
+          </div>
+        </div>
       </div>
-    </Container>
+    </div>
   </section>
 )

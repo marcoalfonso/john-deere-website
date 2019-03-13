@@ -7,6 +7,7 @@
     "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
   },
   "dependencies": {
+    "@u-wave/react-youtube": "^0.6.0",
     "bootstrap": "^4.3.1",
     "gatsby-image": "^2.0.13",
     "gatsby-plugin-react-helmet": "^3.0.0",

@@ -15,9 +15,8 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location} >
         <Helmet title={siteTitle} />
-        <Hero data={author.node}>
-          <h1>Nothing's built<br/>like a Deere.</h1>
-          <a href="#" className="btn">Discover more</a>
+        <Hero data={author.node} title="Nothing's built<br/>like a Deere." subtitle="Discover more">
+
         </Hero>
         {/*<div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
@@ -73,6 +72,16 @@ export const pageQuery = graphql`
             shortBio
           }
           title
+          heroImage: image {
+            fluid(
+              maxWidth: 1180
+              # maxHeight: 480
+              # resizingBehavior: PAD
+              background: "rgb:000000"
+            ) {
+              ...GatsbyContentfulFluid_tracedSVG
+            }
+          }
         }
       }
     }
