@@ -1,5 +1,4 @@
 import React from 'react'
-import YouTube from '@u-wave/react-youtube'
 import styles from './text-interlude.module.css'
 
 export default ({ headline, body }) => {
