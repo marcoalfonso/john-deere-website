@@ -6,10 +6,12 @@ import Hero from '../components/hero/hero'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 import TextInterlude from '../components/text-interlude/text-interlude'
-import FeaturedSection from '../components/featured-section/featured-section'
+import Featured from '../components/featured/featured'
+import SecondayHero from '../components/secondary-hero/secondary-hero'
 
 // Static image place holders to be removed
 import FeaturedImage from './homepage_science_img.png'
+import CarouselImage from './homepage_carousel_placeholder.png'
 
 class RootIndex extends React.Component {
   render() {
@@ -24,11 +26,16 @@ class RootIndex extends React.Component {
           title="Nothing's built<br/>like a Deere."
           subtitle="Discover more"
         />
+        <SecondayHero
+          image={CarouselImage}
+          headline="Applied power."
+          callToAction="Discover more"
+        />
         <TextInterlude
           headline="Haul of famer."
           body="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus."
         />
-        <FeaturedSection
+        <Featured
           image={FeaturedImage}
           title="JOHN DEERE"
           headline="Designed by science."
