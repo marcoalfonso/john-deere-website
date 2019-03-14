@@ -1,0 +1,35 @@
+.videoContainer {
+  background-color: #FFFFFF;
+  color: #000000;
+  padding-top: 186px;
+  padding-bottom: 186px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.headline {
+  font-size: 34px;
+  font-weight: 900;
+  padding-bottom: 30px;
+}
+
+.body {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .videoContainer {
+    padding-top: 167px;
+    padding-bottom: 150px;
+  }
+
+  .headline {
+  	font-size: 48px;
+  }
+
+  .body {
+    margin: 0 auto;
+    max-width: 672px;
+    font-size: 16px;
+  }
+}

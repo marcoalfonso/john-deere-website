@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import Hero from '../components/hero/hero'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
+import TextInterlude from '../components/text-interlude/text-interlude'
 
 class RootIndex extends React.Component {
   render() {
@@ -15,9 +16,14 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location} >
         <Helmet title={siteTitle} />
-        <Hero data={author.node} title="Nothing's built<br/>like a Deere." subtitle="Discover more">
-
-        </Hero>
+        <Hero data={author.node}
+          title="Nothing's built<br/>like a Deere."
+          subtitle="Discover more"
+        />
+        <TextInterlude
+          headline="Haul of famer."
+          body="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus."
+        />
         {/*<div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
           <ul className="article-list">
