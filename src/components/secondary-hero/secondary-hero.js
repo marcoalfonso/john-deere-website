@@ -23,15 +23,18 @@ export default ({ image, children, headline, callToAction }) => {
           <Slide index={1}>
             <img className={styles.image} src={image} />
             <div className={styles.overlay}>
-        			<h1>hello</h1>
-        			<p>hello</p>
-        			<button>hello</button>
+              { headline && <div className={styles.headline}>{headline}</div>}
+              { callToAction && <div className={styles.callToAction}>{callToAction}</div>}
         		</div>
           </Slide>
         </Slider>
-        <ButtonBack className={styles.backButton}>Back</ButtonBack>
-        <ButtonNext className={styles.nextButton}>Next</ButtonNext>
-        <DotGroup className={styles.dotGroup}/>
+        <ButtonBack className={styles.backButton}>
+          <div className={styles.chevronArrowLeft}></div>
+        </ButtonBack>
+        <ButtonNext className={styles.nextButton}>
+          <div className={styles.chevronArrowRight}></div>
+        </ButtonNext>
+        <DotGroup className={styles.dots}/>
       </CarouselProvider>
     </section>
 )}
