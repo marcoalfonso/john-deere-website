@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import base from './base.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 import Container from 'react-bootstrap/Container'
 import Header from './header/header'
 import Footer from './footer/footer'

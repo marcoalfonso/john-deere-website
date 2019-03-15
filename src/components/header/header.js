@@ -27,7 +27,7 @@ export default () => (
             <NavDropdown.Item href="/contact-us/">50 year video</NavDropdown.Item>
             <NavDropdown.Item href="/careers/">RDO Team</NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link href="#home">Equipment</Nav.Link>
+          <Nav.Link href="/equipment">Equipment</Nav.Link>
           <NavDropdown title="Careers" id="basic-nav-dropdown">
             <NavDropdown.Item href="/about-us/">Why RDO</NavDropdown.Item>
             <NavDropdown.Item href="/contact-us/">Current Jobs</NavDropdown.Item>

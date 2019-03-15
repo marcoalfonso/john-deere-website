@@ -6,8 +6,8 @@ import Img from 'gatsby-image'
 import Container from 'react-bootstrap/Container'
 
 import Layout from '../components/layout'
-import Hero from '../components/hero/hero'
-import VideoSection from '../components/video-section/video-section'
+import PrimaryHero from '../components/primary-hero/primary-hero'
+import Video from '../components/video/video'
 import styles from './product.module.css'
 
 class ProductTemplate extends React.Component {
@@ -19,7 +19,7 @@ class ProductTemplate extends React.Component {
       <Layout location={this.props.location} >
         <div style={{ background: '#fff' }}>
           <Helmet title={`${product.title} | ${siteTitle}`} />
-          <Hero data={product} title={product.productModelNumber} subtitle={product.title} button="Download brochure" />
+          <PrimaryHero data={product} title={product.productModelNumber} subtitle={product.title} button="Download brochure" />
           {/*<div className="wrapper">
             <h1 className="section-headline">{product.title}</h1>
             <p
@@ -35,10 +35,10 @@ class ProductTemplate extends React.Component {
               }}
             />
           </div>*/}
-          <VideoSection
+          <Video
             title="JOHN DEERE"
             headline="Get more bang<br/>from your truck."
-            video={product.youTubeVideoId}
+            videoId={product.youTubeVideoId}
           />
         </div>
       </Layout>

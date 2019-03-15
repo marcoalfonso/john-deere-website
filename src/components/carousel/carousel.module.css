@@ -1,0 +1,142 @@
+.carouselComponent {
+  background-color: #FFFFFF;
+}
+
+.carouselContainer {
+  color: #000000;
+  padding-top: 35px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+}
+
+.flexRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.71px;
+  line-height: 40px;
+}
+
+.headline {
+  font-size: 34px;
+  font-weight: 900;
+  padding-bottom: 30px;
+  max-width: 285px;
+}
+
+.body {
+  font-size: 14px;
+  padding-bottom: 30px;
+}
+
+.callToAction {
+  border: 2px solid #FFDD00;
+  border-radius: 30px;
+  overflow: hidden;
+  display: inline-block;
+  padding: 14px 53px;
+  color: #000000 !important;
+  background-color: #FFDD00;
+  margin-bottom: 40px
+}
+
+.callToAction:hover {
+  text-decoration: underline;
+}
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dots button {
+  height: 16px;
+  width: 12px;
+  background-color: #D8D8D8;
+  display: inline-block;
+  border-color: #D8D8D8;
+  border-radius: 50%;
+  margin: 0px 9px;
+}
+
+.dots button:disabled {
+  opacity: 0.22;
+}
+
+.nextButton {
+  background: none;
+  border: none;
+  height: 40px;
+  width: 27px;
+  float: right;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  height: 40px;
+  width: 27px;
+}
+
+.chevronArrowRight {
+  display: inline-block;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  width: 15px;
+  height: 15px;
+  transform: rotate(-45deg);
+}
+
+.chevronArrowLeft {
+  display: inline-block;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  width: 15px;
+  height: 15px;
+  transform: rotate(-225deg);
+}
+
+.backButton:disabled > div,
+.nextButton:disabled > div {
+  border-right: 3px solid #C7C7C7 !important;
+  border-bottom: 3px solid #C7C7C7 !important;
+}
+
+@media (min-width: 768px) {
+  .carouselContainer {
+    padding-top: 109px;
+    padding-bottom: 103px;
+  }
+
+  .title {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .headline {
+  	font-size: 48px;
+    max-width: 370px;
+  }
+
+  .body {
+    max-width: 302px;
+    font-size: 16px;
+    padding-bottom: 0px;
+  }
+
+  .callToAction {
+    margin-bottom: 0px;
+  }
+}

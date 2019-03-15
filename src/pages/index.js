@@ -2,16 +2,19 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import Hero from '../components/hero/hero'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
+import PrimaryHero from '../components/primary-hero/primary-hero'
 import TextInterlude from '../components/text-interlude/text-interlude'
 import Featured from '../components/featured/featured'
 import SecondayHero from '../components/secondary-hero/secondary-hero'
+import Video from '../components/video/video'
+import Carousel from '../components/carousel/carousel'
 
 // Static image place holders to be removed
 import FeaturedImage from './homepage_science_img.png'
 import CarouselImage from './homepage_carousel_placeholder.png'
+import SubCarouselImage from './homepage_sub_carousel_placeholder.png'
 
 class RootIndex extends React.Component {
   render() {
@@ -22,7 +25,7 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location} >
         <Helmet title={siteTitle} />
-        <Hero data={author.node}
+        <PrimaryHero data={author.node}
           title="Nothing's built<br/>like a Deere."
           callToAction="Discover more"
         />
@@ -31,15 +34,22 @@ class RootIndex extends React.Component {
           headline="Applied power."
           callToAction="Discover more"
         />
-        <TextInterlude
-          headline="Haul of famer."
-          body="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus."
+        <Carousel
+          image={SubCarouselImage}
+          title="THE RDO STORY"
+          headline="Everything you need to apply."
+          callToAction="Learn more"
+          callToActionLink="/careers"
         />
         <Featured
           image={FeaturedImage}
           title="JOHN DEERE"
           headline="Designed by science."
           body="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit."
+        />
+        <TextInterlude
+          headline="Haul of famer."
+          body="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus."
         />
         {/*<div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
@@ -53,6 +63,11 @@ class RootIndex extends React.Component {
             })}
           </ul>
         </div>*/}
+        <Video
+          title="JOHN DEERE"
+          headline="Get more bang<br/>from your truck."
+          videoId="HQvSrLtVCyw"
+        />
       </Layout>
     )
   }
