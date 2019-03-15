@@ -21,6 +21,7 @@
   top: 50%;
   right: 0px;
   transform: translateY(-50%);
+  display: none;
 }
 
 .backButton {
@@ -28,13 +29,15 @@
   top: 50%;
   left: 0px;
   transform: translateY(-50%);
+  display: none;
 }
 
 .overlay {
   position: absolute;
   bottom: 35%;
   left: 0;
-  padding-left: 135px;
+  padding-right: 15px;
+  padding-left: 15px;
   /* transform: translateY(0%); */
 }
 
@@ -46,10 +49,38 @@
   padding-bottom: 14px;
 }
 
+.callToAction {
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 @media (min-width: 768px) {
   .headline {
     font-size: 82px;
     letter-spacing: -3.42px;
-    padding-bottom: 38px;
+    padding-bottom: 20px;
+  }
+
+  .overlay {
+    padding-left: 100px;
+  }
+
+  .nextButton {
+    display: block;
+  }
+
+  .backButton {
+    display: block;
+  }
+
+  .callToAction {
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+    overflow: hidden;
+    display: inline-block;
+    padding: 14px 53px;
   }
 }

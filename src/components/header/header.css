@@ -1,10 +1,10 @@
 .logo {
-  width: 300px;
+  width: 250px;
 }
 
 .navbar {
   z-index: 1;
-  opacity: 0.85;
+  /* opacity: 0.85; */
   background-color: #000000 !important;
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
@@ -17,4 +17,10 @@
 
 .navbar-dark .navbar-nav .nav-link {
   color: #ffffff !important;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 300px;
+  }
 }

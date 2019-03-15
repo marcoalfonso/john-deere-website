@@ -24,7 +24,7 @@ class RootIndex extends React.Component {
         <Helmet title={siteTitle} />
         <Hero data={author.node}
           title="Nothing's built<br/>like a Deere."
-          subtitle="Discover more"
+          callToAction="Discover more"
         />
         <SecondayHero
           image={CarouselImage}
