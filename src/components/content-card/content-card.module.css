@@ -1,0 +1,26 @@
+.image {
+	max-height: 230px;
+  max-width: 350px;
+  padding-bottom: 30px;
+}
+
+.body {
+  max-width: 280px;
+}
+
+.headline {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 20px;
+  padding-bottom: 20px;
+}
+
+.headlineUnderline {
+  border-bottom: 2px solid #FFDD00;
+}
+
+.callToAction {
+  padding-top: 20px;
+  font-size: 16px;
+  font-weight: 900;
+}

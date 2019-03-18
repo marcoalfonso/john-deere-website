@@ -2,13 +2,13 @@ import React from 'react'
 import Img from 'gatsby-image'
 import styles from './primary-hero.module.css'
 
-export default ({ data, children, title, callToAction }) => {
+export default ({ children, heading, ctaText, ctaLink, image }) => {
   return (
     <section className={styles.hero}>
-      <Img className={styles.heroImage} alt={data.title} fluid={data.heroImage.fluid} />
+      <Img className={styles.heroImage} alt={heading} fluid={image} />
       <div className={`container ` + styles.heroText}>
-        { title && <div className={styles.heroTitle} dangerouslySetInnerHTML={{__html: title}} />}
-        { callToAction && <div className={styles.callToAction} dangerouslySetInnerHTML={{__html: callToAction}} />}
+        { heading && <div className={styles.heading} dangerouslySetInnerHTML={{__html: heading}} /> }
+        { ctaText && <a href={ctaLink}><div className={styles.ctaText} dangerouslySetInnerHTML={{__html: ctaText}} /></a> }
         {children}
       </div>
     </section>

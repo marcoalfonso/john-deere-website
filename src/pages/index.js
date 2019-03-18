@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import styles from './index.module.css'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 import PrimaryHero from '../components/primary-hero/primary-hero'
@@ -10,6 +11,8 @@ import Featured from '../components/featured/featured'
 import SecondayHero from '../components/secondary-hero/secondary-hero'
 import Video from '../components/video/video'
 import Carousel from '../components/carousel/carousel'
+import ContentCard from '../components/content-card/content-card'
+import ProductCarousel from '../components/product-carousel/product-carousel'
 
 // Static image place holders to be removed
 import FeaturedImage from './homepage_science_img.png'
@@ -20,14 +23,21 @@ class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const products = get(this, 'props.data.allContentfulProduct.edges')
-    const [author] = get(this, 'props.data.allContentfulPerson.edges')
+    const [homepage] = get(this, 'props.data.allContentfulPage.edges')
+
+    const homePageCarousel = homepage.node.pageModules[0]
 
     return (
       <Layout location={this.props.location} >
         <Helmet title={siteTitle} />
-        <PrimaryHero data={author.node}
-          title="Nothing's built<br/>like a Deere."
-          callToAction="Discover more"
+        <PrimaryHero
+          heading={homePageCarousel.heading}
+          ctaText={homePageCarousel.ctaText}
+          image={homePageCarousel.backgroundImage.fluid}
+        />
+        <ProductCarousel
+          categories={["Construction & Mining", "Forestry"]}
+          products={products}
         />
         <SecondayHero
           image={CarouselImage}
@@ -51,23 +61,29 @@ class RootIndex extends React.Component {
           headline="Haul of famer."
           body="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus."
         />
-        {/*<div className="wrapper">
-          <h2 className="section-headline">Recent articles</h2>
-          <ul className="article-list">
-            {posts.map(({ node }) => {
-              return (
-                <li key={node.slug}>
-                  <ArticlePreview article={node} />
-                </li>
-              )
-            })}
-          </ul>
-        </div>*/}
         <Video
           title="JOHN DEERE"
           headline="Get more bang<br/>from your truck."
           videoId="HQvSrLtVCyw"
         />
+        <section className={styles.contentCardSection}>
+          <div className="container">
+            <div className="row justify-content-around">
+              <div className="col-xs-12 col-md-4">
+                <ContentCard
+                  headline="Built to last."
+                  body="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit."
+                />
+              </div>
+              <div className="col-xs-12 col-md-4">
+                <ContentCard
+                  headline="Proven design."
+                  body="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit."
+                />
+              </div>
+            </div>
+          </div>
+        </section>
       </Layout>
     )
   }
@@ -97,6 +113,26 @@ export const pageQuery = graphql`
           description {
             childMarkdownRemark {
               html
+            }
+          }
+        }
+      }
+    }
+    allContentfulPage(filter: { contentful_id: { eq: "49UoS1ol9WQMe4aXB5subo" } }) {
+      edges {
+        node {
+          pageModules {
+            heading
+            ctaText
+            ctaLink
+            backgroundImage {
+              fluid {
+                aspectRatio
+                sizes
+                src
+                srcSet
+                tracedSVG
+              }
             }
           }
         }

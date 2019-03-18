@@ -6,7 +6,7 @@
   text-align: left;
   color: white;
   background: #686F86;
-  max-height: 580px;
+  /* max-height: 580px; */
 }
 
 .heroImage {
@@ -17,21 +17,20 @@
 }
 
 .heroText {
-  /* position: absolute; */
   z-index: 2;
 }
 
-.heroTitle {
+.heading {
   font-size: 44px;
   font-weight: 900;
   letter-spacing: -1px;
   margin-top: -150px;
+  line-height: 60px;
 }
 
-.heroSubTitle {
+.subheading {
   font-size: 16px;
   font-weight: 900;
-  /* padding-bottom: 15px; */
 }
 
 .btnYellow {
@@ -52,7 +51,7 @@
   color: #000000;
 }
 
-.callToAction {
+.ctaText {
   overflow: hidden;
   display: inline-block;
   color: white;
@@ -69,7 +68,7 @@
     padding: 15px 32px 13px 32px;
   }
 
-  .heroTitle {
+  .heading {
     font-size: 82px;
     line-height: 1em;
     letter-spacing: -2.42px;
@@ -77,13 +76,13 @@
     margin-top: -50px;
   }
 
-  .heroSubTitle {
+  .subheading {
     font-size: 28px;
     line-height: 2em;
     /* padding-bottom: 35px; */
   }
 
-  .callToAction {
+  .ctaText {
     border: 2px solid #FFFFFF;
     border-radius: 30px;
     overflow: hidden;

@@ -19,7 +19,12 @@ class ProductTemplate extends React.Component {
       <Layout location={this.props.location} >
         <div style={{ background: '#fff' }}>
           <Helmet title={`${product.title} | ${siteTitle}`} />
-          <PrimaryHero data={product} title={product.productModelNumber} subtitle={product.title} button="Download brochure" />
+          {/*<PrimaryHero data={product} title={product.productModelNumber} subtitle={product.title} button="Download brochure" />*/}
+          <PrimaryHero
+            heading={product.productModelNumber + '<br/>' + product.title}
+            ctaText="Download brochure"
+            image={product.heroImage.fluid}
+          />
           {/*<div className="wrapper">
             <h1 className="section-headline">{product.title}</h1>
             <p
