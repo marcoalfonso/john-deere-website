@@ -18,6 +18,8 @@
 .slideContainer {
   /* max-height: 271px;
   max-width: 271px; */
+  min-height: 136px;
+  min-width: 136px;
   height: 100%;
   width: 100%;
   text-align: center;
@@ -25,7 +27,7 @@
 }
 
 .slider {
-  padding-bottom: 45px;
+  padding-bottom: 90px;
 }
 
 .slide {
@@ -36,10 +38,11 @@
 .title {
   padding-top: 20px;
 }
+
 .carousel {
   height: 100%;
   /* max-height: 250px; */
-  padding-left: 80px;
+  /* padding-left: 80px; */
 }
 
 .nextButton {
@@ -47,7 +50,7 @@
   top: 50%;
   right: 0px;
   transform: translateY(-50%);
-  /* display: none; */
+  display: none;
   background: none;
   border: none;
   height: 90px;
@@ -60,7 +63,7 @@
   top: 50%;
   left: 0px;
   transform: translateY(-50%);
-  /* display: none; */
+  display: none;
   background: none;
   border: none;
   height: 90px;
@@ -92,4 +95,15 @@
 
 .nextButton:disabled {
   opacity: 0.20;
+}
+
+@media (min-width: 768px) {
+  .carousel {
+    padding-left: 80px;
+  }
+
+  .backButton,
+  .nextButton {
+    display: block;
+  }
 }
