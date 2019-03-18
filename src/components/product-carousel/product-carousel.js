@@ -8,7 +8,6 @@ import windowSize from 'react-window-size'
 import styles from './product-carousel.module.css'
 
 class ProductCarousel extends Component {
-
   render() {
     console.log("categories", this.props.categories)
     console.log("products", this.props.products)
@@ -17,24 +16,24 @@ class ProductCarousel extends Component {
     return (
       <section className={`product-carousel ` + styles.productCarouselContainer}>
         <Tabs>
-          {this.props.categories.map((category, i) => (
-            <Tab eventKey={category} title={category} key={i}>
+          {this.props.categories.map(({ node }, index) => (
+            <Tab eventKey={node.title} title={node.title} key={index}>
               <CarouselProvider
                 naturalSlideWidth={471}
                 naturalSlideHeight={471}
-                totalSlides={this.props.products.length}
+                totalSlides={node.products.length}
                 visibleSlides={this.props.windowWidth > 991 ? 6 : this.props.windowWidth > 556 ? 3 : 2}
                 className={styles.carousel}
               >
                 <Slider className={styles.slider}>
-                  {this.props.products.map((product, i) => (
+                  {node.products.map((product, i) => (
                     <Slide index={i} key={i} className={styles.slide}>
                       <div className={styles.slideContainer}>
-                        <Link to={`/equipment/${product.node.slug}`}>
-                          <Img className={styles.image} alt={product.node.title} fluid={product.node.heroImage.fluid} />
+                        <Link to={`/equipment/${product.slug}`}>
+                          <Img className={styles.image} alt={product.title} fluid={product.heroImage.fluid} />
                           {/*<img className={styles.image} alt={product.node.title} src={product.node.heroImage.fluid.src} />*/}
                           <div className={styles.title}>
-                            {product.node.title}
+                            {product.title}
                           </div>
                         </Link>
                       </div>

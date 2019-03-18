@@ -1,5 +1,5 @@
 .textInterludeContainer {
-  background-color: #FFFFFF;
+  background-color: transparent;
   color: #000000;
   padding-top: 186px;
   padding-bottom: 186px;
@@ -13,7 +13,8 @@
   padding-bottom: 30px;
 }
 
-.body {
+.body,
+.miniHeadline {
   font-size: 16px;
 }
 
@@ -27,7 +28,8 @@
   	font-size: 48px;
   }
 
-  .body {
+  .body,
+  .miniHeadline {
     margin: 0 auto;
     max-width: 672px;
     font-size: 16px;

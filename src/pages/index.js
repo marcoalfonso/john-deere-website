@@ -13,6 +13,7 @@ import Video from '../components/video/video'
 import Carousel from '../components/carousel/carousel'
 import ContentCard from '../components/content-card/content-card'
 import ProductCarousel from '../components/product-carousel/product-carousel'
+import ContentCardSection from '../components/content-card-section/content-card-section'
 
 // Static image place holders to be removed
 import FeaturedImage from './homepage_science_img.png'
@@ -24,6 +25,7 @@ class RootIndex extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const products = get(this, 'props.data.allContentfulProduct.edges')
     const [homepage] = get(this, 'props.data.allContentfulPage.edges')
+    const categories = get(this, 'props.data.allContentfulCategory.edges')
 
     const homePageCarousel = homepage.node.pageModules[0]
 
@@ -36,8 +38,7 @@ class RootIndex extends React.Component {
           image={homePageCarousel.backgroundImage.fluid}
         />
         <ProductCarousel
-          categories={["Construction & Mining", "Forestry"]}
-          products={products}
+          categories={categories}
         />
         <SecondayHero
           image={CarouselImage}
@@ -61,12 +62,13 @@ class RootIndex extends React.Component {
           headline="Haul of famer."
           body="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus."
         />
+
         <Video
           title="JOHN DEERE"
           headline="Get more bang<br/>from your truck."
           videoId="HQvSrLtVCyw"
         />
-        <section className={styles.contentCardSection}>
+        <ContentCardSection>
           <div className="container">
             <div className="row justify-content-around">
               <div className="col-xs-12 col-md-4">
@@ -83,7 +85,7 @@ class RootIndex extends React.Component {
               </div>
             </div>
           </div>
-        </section>
+        </ContentCardSection>
       </Layout>
     )
   }
@@ -154,6 +156,26 @@ export const pageQuery = graphql`
               background: "rgb:000000"
             ) {
               ...GatsbyContentfulFluid_tracedSVG
+            }
+          }
+        }
+      }
+    }
+    allContentfulCategory {
+      edges {
+        node {
+          title
+          products {
+            title
+            slug
+            heroImage {
+              fluid {
+                aspectRatio
+                sizes
+                src
+                srcSet
+                tracedSVG
+              }
             }
           }
         }

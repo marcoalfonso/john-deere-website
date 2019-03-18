@@ -5,30 +5,49 @@ import Helmet from 'react-helmet'
 import styles from './equipment.module.css'
 import Layout from "../components/layout"
 import ArticlePreview from '../components/article-preview'
-import HeroTitle from '../components/hero-title/hero-title'
+import PrimaryHero from '../components/primary-hero/primary-hero'
+import TextInterlude from '../components/text-interlude/text-interlude'
+import ProductCarousel from '../components/product-carousel/product-carousel'
+import ContentCardSection from '../components/content-card-section/content-card-section'
 
 class EquipmentIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const products = get(this, 'props.data.allContentfulProduct.edges')
+    const categories = get(this, 'props.data.allContentfulCategory.edges')
 
     return (
       <Layout location={this.props.location} >
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
-          <HeroTitle title='There’s a John Deere<br/>for everything.' />
-          <div className="wrapper">
-            <h2 className="section-headline">Recent products</h2>
-            <ul className="article-list">
-              {products.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
+          <PrimaryHero
+            heading="There’s a Deere for everything."
+          />
+          <TextInterlude
+            miniHeadline="ABOUT JOHN DEERE."
+            headline="Our Strategy for Success."
+            ctaText="Read more"
+          />
+          <ContentCardSection>
+            <div className="container">
+              <div className="row justify-content-around">
+                <div className="col-xs-12 col-md-4">
+                  <TextInterlude
+                    headline="Construction & Mining"
+                    ctaText="Read more"
+                  />
+                </div>
+                <div className="col-xs-12 col-md-4">
+                  <TextInterlude
+                    headline="Forestry"
+                    ctaText="Read more"
+                  />
+                </div>
+              </div>
+            </div>
+          </ContentCardSection>
+          <ProductCarousel
+            categories={categories}
+          />
         </div>
       </Layout>
     )
@@ -44,21 +63,21 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulProduct(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulCategory {
       edges {
         node {
           title
-          slug
-          publishDate(formatString: "MMMM Do, YYYY")
-          tags
-          heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-          description {
-            childMarkdownRemark {
-              html
+          products {
+            title
+            slug
+            heroImage {
+              fluid {
+                aspectRatio
+                sizes
+                src
+                srcSet
+                tracedSVG
+              }
             }
           }
         }
