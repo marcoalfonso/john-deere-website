@@ -19,27 +19,11 @@ class ProductTemplate extends React.Component {
       <Layout location={this.props.location} >
         <div style={{ background: '#fff' }}>
           <Helmet title={`${product.title} | ${siteTitle}`} />
-          {/*<PrimaryHero data={product} title={product.productModelNumber} subtitle={product.title} button="Download brochure" />*/}
           <PrimaryHero
             heading={product.productModelNumber + '<br/>' + product.title}
             ctaText="Download brochure"
             image={product.heroImage.fluid}
           />
-          {/*<div className="wrapper">
-            <h1 className="section-headline">{product.title}</h1>
-            <p
-              style={{
-                display: 'block',
-              }}
-            >
-              {product.publishDate}
-            </p>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: product.body.childMarkdownRemark.html,
-              }}
-            />
-          </div>*/}
           <Video
             title="JOHN DEERE"
             headline="Get more bang<br/>from your truck."
@@ -61,18 +45,16 @@ export const pageQuery = graphql`
       }
     }
     contentfulProduct(slug: { eq: $slug }) {
-      title
+      productModelName
       productModelNumber
-      youTubeVideoId
-      publishDate(formatString: "MMMM Do, YYYY")
-      heroImage {
-        fluid(maxWidth: 1180, background: "rgb:000000") {
-          ...GatsbyContentfulFluid_tracedSVG
-        }
-      }
-      body {
-        childMarkdownRemark {
-          html
+      videoYoutubeRef
+      productHeroImage {
+        fluid {
+          aspectRatio
+          sizes
+          src
+          srcSet
+          tracedSVG
         }
       }
     }

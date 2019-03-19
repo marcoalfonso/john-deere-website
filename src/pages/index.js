@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import styles from './index.module.css'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 import PrimaryHero from '../components/primary-hero/primary-hero'
@@ -27,7 +26,7 @@ class RootIndex extends React.Component {
     const categories = get(this, 'props.data.allContentfulCategory.edges')
 
     const homePageCarousel = homepage.node.pageModules[0]
-
+    console.log("categories index", categories)
     return (
       <Layout location={this.props.location} >
         <Helmet title={siteTitle} />
@@ -123,25 +122,27 @@ export const pageQuery = graphql`
       edges {
         node {
           title
-          products {
-            title
-            slug
-            productImage {
-              fluid {
-                aspectRatio
-                sizes
-                src
-                srcSet
-                tracedSVG
+          subcategories {
+            products {
+              productModelName
+              slug
+              productThumbnailImage {
+                fluid {
+                  aspectRatio
+                  sizes
+                  src
+                  srcSet
+                  tracedSVG
+                }
               }
-            }
-            heroImage {
-              fluid {
-                aspectRatio
-                sizes
-                src
-                srcSet
-                tracedSVG
+              productHeroImage {
+                fluid {
+                  aspectRatio
+                  sizes
+                  src
+                  srcSet
+                  tracedSVG
+                }
               }
             }
           }

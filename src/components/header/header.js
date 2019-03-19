@@ -22,18 +22,15 @@ export default () => (
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
-          <NavDropdown title="About Us" id="basic-nav-dropdown">
-            <NavDropdown.Item href="/about-us/">The RDO Story</NavDropdown.Item>
-            <NavDropdown.Item href="/contact-us/">50 year video</NavDropdown.Item>
-            <NavDropdown.Item href="/careers/">RDO Team</NavDropdown.Item>
+          <Nav.Link href="/about-us">About us</Nav.Link>
+          <NavDropdown title="Equipment" id="basic-nav-dropdown">
+            <NavDropdown.Item href="/about-us/">About John Deere</NavDropdown.Item>
+            <NavDropdown.Item href="/contact-us/">Construction & Mining</NavDropdown.Item>
+            <NavDropdown.Item href="/careers/">Forestry</NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link href="/equipment">Equipment</Nav.Link>
-          <NavDropdown title="Careers" id="basic-nav-dropdown">
-            <NavDropdown.Item href="/about-us/">Why RDO</NavDropdown.Item>
-            <NavDropdown.Item href="/contact-us/">Current Jobs</NavDropdown.Item>
-            <NavDropdown.Item href="/careers/">Core Values</NavDropdown.Item>
-          </NavDropdown>
-          <Nav.Link href="#home">Contact us</Nav.Link>
+          <Nav.Link href="/parts-and-service">Parts & Service</Nav.Link>
+          <Nav.Link href="/careers">Careers</Nav.Link>
+          <Nav.Link href="/contact-us">Contact us</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Container>

@@ -14,9 +14,8 @@
   font-size: 44px;
   font-weight: 900;
   letter-spacing: -1px;
-  margin-top: -150px;
-  line-height: 60px;
   padding-bottom: 30px;
+  line-height: 60px;
 }
 
 .subheading {
@@ -65,9 +64,8 @@
 
   .heading {
     font-size: 82px;
-    line-height: 1em;
+    line-height: 90px;
     letter-spacing: -2.42px;
-    margin-top: -50px;
     max-width: 556px;
   }
 

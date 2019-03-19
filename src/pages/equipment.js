@@ -67,16 +67,27 @@ export const pageQuery = graphql`
       edges {
         node {
           title
-          products {
-            title
-            slug
-            heroImage {
-              fluid {
-                aspectRatio
-                sizes
-                src
-                srcSet
-                tracedSVG
+          subcategories {
+            products {
+              productModelName
+              slug
+              productThumbnailImage {
+                fluid {
+                  aspectRatio
+                  sizes
+                  src
+                  srcSet
+                  tracedSVG
+                }
+              }
+              productHeroImage {
+                fluid {
+                  aspectRatio
+                  sizes
+                  src
+                  srcSet
+                  tracedSVG
+                }
               }
             }
           }

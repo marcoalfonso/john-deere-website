@@ -11,8 +11,12 @@
 }
 
 .navbar-dark .nav-item, .navbar-dark .nav-link {
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+}
+
+.nav-link::after {
+  display: none;
 }
 
 .navbar-dark .navbar-nav .nav-link {
