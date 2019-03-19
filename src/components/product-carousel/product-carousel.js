@@ -30,7 +30,7 @@ class ProductCarousel extends Component {
                     <Slide index={i} key={i} className={styles.slide}>
                       <div className={styles.slideContainer}>
                         <Link to={`/equipment/${product.slug}`}>
-                          <Img className={styles.image} alt={product.title} fluid={product.heroImage.fluid} />
+                          <Img className={styles.image} alt={product.title} fluid={product.productImage.fluid} />
                           {/*<img className={styles.image} alt={product.node.title} src={product.node.heroImage.fluid.src} />*/}
                           <div className={styles.title}>
                             {product.title}

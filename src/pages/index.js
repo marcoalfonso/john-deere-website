@@ -23,7 +23,6 @@ import SubCarouselImage from './homepage_sub_carousel_placeholder.png'
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const products = get(this, 'props.data.allContentfulProduct.edges')
     const [homepage] = get(this, 'props.data.allContentfulPage.edges')
     const categories = get(this, 'props.data.allContentfulCategory.edges')
 
@@ -100,26 +99,6 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulProduct(sort: { fields: [publishDate], order: DESC }) {
-      edges {
-        node {
-          title
-          slug
-          publishDate(formatString: "MMMM Do, YYYY")
-          tags
-          heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-             ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
-        }
-      }
-    }
     allContentfulPage(filter: { contentful_id: { eq: "49UoS1ol9WQMe4aXB5subo" } }) {
       edges {
         node {
@@ -140,27 +119,6 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulPerson(filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }) {
-      edges {
-        node {
-          name
-          shortBio {
-            shortBio
-          }
-          title
-          heroImage: image {
-            fluid(
-              maxWidth: 1180
-              # maxHeight: 480
-              # resizingBehavior: PAD
-              background: "rgb:000000"
-            ) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-        }
-      }
-    }
     allContentfulCategory {
       edges {
         node {
@@ -168,6 +126,15 @@ export const pageQuery = graphql`
           products {
             title
             slug
+            productImage {
+              fluid {
+                aspectRatio
+                sizes
+                src
+                srcSet
+                tracedSVG
+              }
+            }
             heroImage {
               fluid {
                 aspectRatio
