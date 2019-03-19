@@ -20,7 +20,7 @@ export default ({ image, title, headline, body, callToAction, callToActionLink }
               naturalSlideHeight={400}
               totalSlides={2}
             >
-              <Slider>
+              <Slider className={styles.slider}>
                 <Slide index={0}>
                   <img className={styles.image} src={image} />
                 </Slide>
