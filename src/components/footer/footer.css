@@ -1,7 +1,7 @@
 .footer {
   height: 100%;
-	/* max-height: 459px; */
-	background-color: #4C5367;
+	color: #FFFFFF;
+	background-color: #000000;
   padding-bottom: 50px;
 }
 
@@ -9,6 +9,17 @@
   width: 300px;
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+.footer .social {
+  width: 22px;
+  height: 26px;
+  margin-left: 20px;
+}
+
+.footer .social-row {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .footer ul {

@@ -1,6 +1,10 @@
 import React from 'react'
 import './footer.css'
 import logos from './logos.svg'
+import linkedin from './linkedin.svg'
+import podcast from './podcast.svg'
+import youtube from './youtube.svg'
+import twitter from './twitter.svg'
 
 export default ({ data }) => (
   <section className="footer">
@@ -67,6 +71,35 @@ export default ({ data }) => (
               <li>Get Social</li>
               <li>Health & Safety</li>
             </ul>
+          </div>
+        </div>
+        <div className="row social-row">
+          <div className="col">
+            <span>More</span>
+            <img
+              src={linkedin}
+              width="100"
+              className="d-inline-block align-top social"
+              alt="RDO Equipment Logo"
+            />
+            <img
+              src={twitter}
+              width="100"
+              className="d-inline-block align-top social"
+              alt="RDO Equipment Logo"
+            />
+            <img
+              src={youtube}
+              width="100"
+              className="d-inline-block align-top social"
+              alt="RDO Equipment Logo"
+            />
+            <img
+              src={podcast}
+              width="100"
+              className="d-inline-block align-top social"
+              alt="RDO Equipment Logo"
+            />
           </div>
         </div>
       </div>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>icons/liknedin</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Footer/black" transform="translate(-197.000000, -390.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Footer">
+                <g id="Group-7" transform="translate(135.000000, 388.000000)">
+                    <g id="Group-8">
+                        <g id="icons/liknedin" transform="translate(62.000000, 2.000000)">
+                            <path d="M16,16 L12.6653533,16 L12.6653533,10.6849937 C12.6653533,9.41778939 12.6434885,7.78734522 10.9318111,7.78734522 C9.19639578,7.78734522 8.93152339,9.16841985 8.93152339,10.594661 L8.93152339,16 L5.6,16 L5.6,5.07099853 L8.79721266,5.07099853 L8.79721266,6.56530728 L8.84281545,6.56530728 C9.28760135,5.705873 10.3764538,4.8 11.9994232,4.8 C15.375925,4.8 16,7.06277406 16,10.0062251 L16,16 Z M1.80058235,3.6 C0.803488235,3.6 0,2.79373485 0,1.79970934 C0,0.806265145 0.803488235,0 1.80058235,0 C2.79360492,0 3.6,0.806265145 3.6,1.79970934 C3.6,2.79373485 2.79360492,3.6 1.80058235,3.6 Z M0.4,16 L3.6,16 L3.6,5.2 L0.4,5.2 L0.4,16 Z" id="LinkedIn"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
