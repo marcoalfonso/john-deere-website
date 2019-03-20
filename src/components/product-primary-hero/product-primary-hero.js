@@ -9,9 +9,11 @@ export default ({ productModelName, productModelNumber, primaryCtaText, primaryC
       className={`jumbotron jumbotron-fluid ` + styles.hero}
       style={productHeroImage ? {backgroundImage: `url(${productHeroImage.src})`} : null}
     >
-      <div className={`container ` + styles.heroText}>
-        { productModelName && <div className={styles.heading} dangerouslySetInnerHTML={{__html: productModelNumber + ' ' + productModelName}} /> }
-        { primaryCtaText && <a href={primaryCtaUrl}><div className={styles.ctaText} dangerouslySetInnerHTML={{__html: primaryCtaText}} /></a> }
+      <div className={`container ` + styles.heroTextContainer}>
+        <div className={styles.heroText}>
+          { productModelName && <div className={styles.heading} dangerouslySetInnerHTML={{__html: productModelNumber + ' ' + productModelName}} /> }
+          { primaryCtaText && <a href={primaryCtaUrl}><div className={styles.ctaText} dangerouslySetInnerHTML={{__html: primaryCtaText}} /></a> }
+        </div>
       </div>
     </section>
 )}

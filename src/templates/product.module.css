@@ -1,4 +1,11 @@
 .anotherProductHeadline {
-  font-size: 48px;
+  font-size: 34px;
   font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .anotherProductHeadline {
+    font-size: 48px;
+    font-weight: bold;
+  }
 }

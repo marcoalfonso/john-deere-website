@@ -17,12 +17,12 @@ class ProductTemplate extends React.Component {
   render() {
     const product = get(this.props, 'data.contentfulProduct')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    console.log("product", product)
+
     return (
       <Layout location={this.props.location} >
         <div style={{ background: '#fff' }}>
           <Helmet
-            title={product.metadataTitle}
+            title={product.metadataTitle ? product.metadataTitle : siteTitle}
             meta={[
                 {name: 'keywords', content: product.metadataKeyword},
                 {name: 'description', content: product.metadataDescription.metadataDescription},

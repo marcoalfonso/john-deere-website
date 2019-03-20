@@ -4,7 +4,6 @@ import ContentCard from '../../components/content-card/content-card'
 import styles from './product-features.module.css'
 
 export default ({features}) => {
-  console.log("features", features)
   return (
     <ContentCardSection>
       <div className={`container ` + styles.containerProductFeatures}>

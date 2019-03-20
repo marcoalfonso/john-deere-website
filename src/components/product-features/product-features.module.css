@@ -8,8 +8,17 @@
 }
 
 .featuresHeadline {
-  font-size: 48px;
+  font-size: 34px;
   font-weight: bold;
   padding-top: 15px;
-  padding-bottom: 69px;
+  padding-bottom: 39px;
+}
+
+@media (min-width: 768px) {
+  .featuresHeadline {
+    font-size: 48px;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 69px;
+  }
 }
