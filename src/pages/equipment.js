@@ -45,9 +45,7 @@ class EquipmentIndex extends React.Component {
               </div>
             </div>
           </ContentCardSection>
-          <ProductCarousel
-            categories={categories}
-          />
+          <ProductCarousel />
         </div>
       </Layout>
     )
@@ -61,37 +59,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    allContentfulCategory {
-      edges {
-        node {
-          title
-          subcategories {
-            products {
-              productModelName
-              slug
-              productThumbnailImage {
-                fluid {
-                  aspectRatio
-                  sizes
-                  src
-                  srcSet
-                  tracedSVG
-                }
-              }
-              productHeroImage {
-                fluid {
-                  aspectRatio
-                  sizes
-                  src
-                  srcSet
-                  tracedSVG
-                }
-              }
-            }
-          }
-        }
       }
     }
   }

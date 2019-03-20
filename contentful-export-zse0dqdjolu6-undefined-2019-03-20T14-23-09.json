@@ -1,0 +1,2049 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zse0dqdjolu6"
+          }
+        },
+        "id": "page",
+        "type": "ContentType",
+        "createdAt": "2019-03-14T03:33:17.349Z",
+        "updatedAt": "2019-03-14T03:33:18.045Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2019-03-14T03:33:18.045Z",
+        "firstPublishedAt": "2019-03-14T03:33:18.045Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Page",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "metaTitle",
+          "name": "Meta Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "keywords",
+          "name": "Keywords",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "ogDescription",
+          "name": "OG Description",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "metaDescription",
+          "name": "Meta Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "enableLightTheme",
+          "name": "Enable Light Theme",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "pageModules",
+          "name": "Page Modules",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zse0dqdjolu6"
+          }
+        },
+        "id": "primaryHero",
+        "type": "ContentType",
+        "createdAt": "2019-03-15T05:26:20.505Z",
+        "updatedAt": "2019-03-19T06:30:17.654Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2019-03-19T06:30:17.654Z",
+        "firstPublishedAt": "2019-03-15T05:26:21.159Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        }
+      },
+      "displayField": "heading",
+      "name": "Primary Hero",
+      "description": "",
+      "fields": [
+        {
+          "id": "heading",
+          "name": "Heading",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "subheading",
+          "name": "Subheading",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "ctaText",
+          "name": "CTA Text",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "ctaLink",
+          "name": "CTA Link",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "backgroundImage",
+          "name": "Background Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "backgroundVideo",
+          "name": "Background Video",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zse0dqdjolu6"
+          }
+        },
+        "id": "product",
+        "type": "ContentType",
+        "createdAt": "2019-03-19T05:00:30.612Z",
+        "updatedAt": "2019-03-20T02:08:15.488Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 36,
+        "publishedAt": "2019-03-20T02:08:15.488Z",
+        "firstPublishedAt": "2019-03-19T05:01:03.585Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "publishedCounter": 18,
+        "version": 37,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        }
+      },
+      "displayField": "slug",
+      "name": "Product",
+      "description": "",
+      "fields": [
+        {
+          "id": "slug",
+          "name": "slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "productUrl",
+          "name": "product-url",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "metadataTitle",
+          "name": "Metadata-title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "metadataDescription",
+          "name": "Metadata-description",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "metadataKeyword",
+          "name": "Metadata-keyword",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "productHeroImage",
+          "name": "Product-hero-image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "productModelNumber",
+          "name": "product-model-number",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "productThumbnailImage",
+          "name": "ProductThumbnailImage",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "productModelName",
+          "name": "ProductModelName",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "productOverview",
+          "name": "ProductOverview",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "primaryCtaText",
+          "name": "PrimaryCtaText",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "primaryCtaUrl",
+          "name": "PrimaryCtaUrl",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "esiIncludeFeatures",
+          "name": "ESIIncludeFeatures",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "esiIncludeFeaturesData",
+          "name": "ESIIncludeFeatures.Data",
+          "type": "Object",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "imageCarousel",
+          "name": "ImageCarousel",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Asset"
+          }
+        },
+        {
+          "id": "videoTitle",
+          "name": "VideoTitle",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "videoSubTitle",
+          "name": "VideoSubTitle",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "videoYoutubeRef",
+          "name": "VideoYoutubeRef",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "blockContent1BlockTitle",
+          "name": "block-content1.BlockTitle",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "blockContent1BlockDescription",
+          "name": "block-content1.BlockDescription",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "blockContent1PrimaryLinkText",
+          "name": "block-content1.PrimaryLinkText",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "blockContent1PrimaryLink",
+          "name": "block-content1.PrimaryLink",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "blockContent1SecondaryLinkText",
+          "name": "block-content1.SecondaryLinkText",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "blockContent1SecondaryLink",
+          "name": "block-content1.SecondaryLink",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "blockContent1Image",
+          "name": "block-content1.Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zse0dqdjolu6"
+          }
+        },
+        "id": "category",
+        "type": "ContentType",
+        "createdAt": "2019-03-19T05:49:56.435Z",
+        "updatedAt": "2019-03-19T05:50:58.505Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2019-03-19T05:50:58.505Z",
+        "firstPublishedAt": "2019-03-19T05:50:58.505Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Category",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "subcategories",
+          "name": "subcategories",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zse0dqdjolu6"
+          }
+        },
+        "id": "subcategory",
+        "type": "ContentType",
+        "createdAt": "2019-03-19T05:51:29.185Z",
+        "updatedAt": "2019-03-19T05:51:29.903Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2019-03-19T05:51:29.903Z",
+        "firstPublishedAt": "2019-03-19T05:51:29.903Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Subcategory",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "products",
+          "name": "products",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    }
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "zse0dqdjolu6",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2019-03-14T03:33:18.168Z",
+        "createdBy": {
+          "sys": {
+            "id": "2rIJ1rmRYeJZyany7ZevfG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2019-03-14T03:33:19.376Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2rIJ1rmRYeJZyany7ZevfG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "page",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "metaTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "keywords",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "ogDescription",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "metaDescription",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "enableLightTheme",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "pageModules",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "zse0dqdjolu6",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 12,
+        "createdAt": "2019-03-15T05:26:21.359Z",
+        "createdBy": {
+          "sys": {
+            "id": "2rIJ1rmRYeJZyany7ZevfG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2019-03-19T06:30:18.588Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2rIJ1rmRYeJZyany7ZevfG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "primaryHero",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "heading",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "subheading",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "ctaText",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "ctaLink",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "backgroundImage",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "backgroundVideo",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "zse0dqdjolu6",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 36,
+        "createdAt": "2019-03-19T05:01:03.734Z",
+        "createdBy": {
+          "sys": {
+            "id": "2rIJ1rmRYeJZyany7ZevfG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2019-03-20T02:08:17.629Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2rIJ1rmRYeJZyany7ZevfG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "product",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "slug",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "productUrl",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "metadataTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "metadataDescription",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "metadataKeyword",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "productHeroImage",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "productModelNumber",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "productThumbnailImage",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "productModelName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "productOverview",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "primaryCtaText",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "primaryCtaUrl",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "esiIncludeFeatures",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "esiIncludeFeaturesData",
+          "widgetId": "objectEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "imageCarousel",
+          "widgetId": "assetLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "videoTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "videoSubTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "videoYoutubeRef",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "blockContent1BlockTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "blockContent1BlockDescription",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "blockContent1PrimaryLinkText",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "blockContent1PrimaryLink",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "blockContent1SecondaryLinkText",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "blockContent1SecondaryLink",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "blockContent1Image",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "zse0dqdjolu6",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2019-03-19T05:50:58.642Z",
+        "createdBy": {
+          "sys": {
+            "id": "2rIJ1rmRYeJZyany7ZevfG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2019-03-19T05:50:59.459Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2rIJ1rmRYeJZyany7ZevfG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "category",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "subcategories",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "zse0dqdjolu6",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2019-03-19T05:51:30.066Z",
+        "createdBy": {
+          "sys": {
+            "id": "2rIJ1rmRYeJZyany7ZevfG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2019-03-19T05:51:30.830Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2rIJ1rmRYeJZyany7ZevfG",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "subcategory",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "products",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zse0dqdjolu6"
+          }
+        },
+        "id": "49UoS1ol9WQMe4aXB5subo",
+        "type": "Entry",
+        "createdAt": "2019-03-15T05:26:49.643Z",
+        "updatedAt": "2019-03-18T23:12:10.495Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2019-03-18T23:12:10.495Z",
+        "firstPublishedAt": "2019-03-15T05:27:16.379Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Homepage"
+        },
+        "pageModules": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4Abqnwsqxpd3lcIZh15VR4"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zse0dqdjolu6"
+          }
+        },
+        "id": "4Abqnwsqxpd3lcIZh15VR4",
+        "type": "Entry",
+        "createdAt": "2019-03-15T05:27:30.244Z",
+        "updatedAt": "2019-03-18T23:20:53.856Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 17,
+        "publishedAt": "2019-03-18T23:20:53.856Z",
+        "firstPublishedAt": "2019-03-15T05:28:56.472Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "primaryHero"
+          }
+        }
+      },
+      "fields": {
+        "heading": {
+          "en-US": "Nothing's built like a Deere."
+        },
+        "ctaText": {
+          "en-US": "Discover more"
+        },
+        "ctaLink": {
+          "en-US": "/equipment"
+        },
+        "backgroundImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6I3xNvgLCCPT4dmpEWhqSJ"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zse0dqdjolu6"
+          }
+        },
+        "id": "72lnz8SiXAemPZWCK8P19X",
+        "type": "Entry",
+        "createdAt": "2019-03-19T05:10:10.180Z",
+        "updatedAt": "2019-03-20T02:29:06.491Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 125,
+        "publishedAt": "2019-03-20T02:21:51.406Z",
+        "firstPublishedAt": "2019-03-19T05:18:32.893Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "publishedCounter": 15,
+        "version": 130,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "product"
+          }
+        }
+      },
+      "fields": {
+        "slug": {
+          "en-US": "850k-crawler-dozer"
+        },
+        "productUrl": {
+          "en-US": "https://www.deere.com/en/dozers/850k/"
+        },
+        "metadataTitle": {
+          "en-US": "850K | Dozer | John Deere US"
+        },
+        "metadataDescription": {
+          "en-US": "850K | Dozer | John Deere US"
+        },
+        "metadataKeyword": {
+          "en-US": "850K | Dozer | John Deere US"
+        },
+        "productHeroImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2cfJgrvkoaOmiS2rtT3epq"
+            }
+          }
+        },
+        "productModelNumber": {
+          "en-US": "850K"
+        },
+        "productThumbnailImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4XYBFfCzhIyIEfwdjXS1Ft"
+            }
+          }
+        },
+        "productModelName": {
+          "en-US": "Crawler Dozer"
+        },
+        "productOverview": {
+          "en-US": "<ul><li>Net Power: 152 kW (205 hp) at 1,800 rpm&nbsp;</li><li>Operating Weight: 19,304–21,775 kg (42,558–48,005 lb.)</li><li>Track on Ground: 2,769–3,284 mm (109–129 in.)</li></ul>"
+        },
+        "primaryCtaText": {
+          "en-US": "Download Brochure"
+        },
+        "primaryCtaUrl": {
+          "en-US": "https://www.deere.com/assets/publications/index.html?id=5d5b4aa2"
+        },
+        "esiIncludeFeatures": {
+          "en-US": "/en/dozers/850k/fragment-features.html"
+        },
+        "esiIncludeFeaturesData": {
+          "en-US": [
+            {
+              "Description": "<div class=\"seccion-images\"></div><p>Engine employs field-proven cooled exhaust gas recirculation (EGR), easy-to-maintain high-uptime exhaust filters, and selective catalytic reduction (SCR).</p><div class=\"seccion-images\"></div><p>Standard Eco mode automatically adjusts engine power and transmission settings for fuel optimization.</p>",
+              "TitleQuestion": "Engine"
+            },
+            {
+              "Description": "<div class=\"seccion-images\"></div><p>Open-architecture design makes adding the grade-control system simple.</p>",
+              "TitleQuestion": "Grade Control Ready"
+            },
+            {
+              "Description": "<div class=\"seccion-images\"></div><ul> <li>Cab-forward design provides excellent visibility to the blade.</li> <li>Enhance your operator's grading skills with ergonomic T-bar hydraulic control.</li> <li>Exclusive Total Machine Control monitor allows operator to customize machine operation and response to personal preferences.</li> </ul>",
+              "TitleQuestion": "Cab & Controls"
+            },
+            {
+              "Description": "<div class=\"seccion-images\"></div><p>Hinged engine side shields swing open wide and the front grille tilts forward for convenient access to dipsticks, fill tubes, batteries, master electrical shutoff, the backside of the cooler, and engine, transmission, and hydraulic filters.</p>",
+              "TitleQuestion": "Simple Maintenance"
+            },
+            {
+              "Description": "<div class=\"seccion-images\"></div><ul> <li>Infinitely variable range to 9.7 km/h (6 mph) gives total flexibility to match ground speed to the load.</li> <li>Speeds up or slows down each track to provide full-power turns.</li> <li>Counterrotation an operator to overcome heavy corner loads and quickly reposition the blade on the go. Provides space-saving spot turns, too.</li> </ul>",
+              "TitleQuestion": "Hydrostatic Transmission"
+            },
+            {
+              "Description": "<div class=\"seccion-images\"></div><p>Maximum Life undercarriage features SC-2&trade;-coated bushings, larger components and stronger seals for longer wear life compared to basic undercarriage.</p>",
+              "TitleQuestion": "Undercarriage"
+            },
+            {
+              "Description": "<p>Grade-control system is fully integrated into the machine cabin, structures, and software &ndash; delivering precise grading performance while eliminating vulnerable external masts and cables.</p><p>Auto SmartGrade automatically raises the blade when heavier loads are encountered during rough grading to prevent stalling and track slip, enabling the machine to be used in all phases of grading.</p><p>Machine dimensions are preloaded into the grade-control monitor, reducing the time needed to calibrate to about 30 minutes.</p>",
+              "TitleQuestion": "Fully Integrated Grade Control"
+            }
+          ]
+        },
+        "imageCarousel": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6SxWys1SjIzrpAxewlhbSg"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6SxWys1SjIzrpAxewlhbSg"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6SxWys1SjIzrpAxewlhbSg"
+              }
+            }
+          ]
+        },
+        "videoTitle": {
+          "en-US": "Get more bang from your truck."
+        },
+        "videoSubTitle": {
+          "en-US": "John Deere"
+        },
+        "videoYoutubeRef": {
+          "en-US": "ud2cIDLewWo"
+        },
+        "blockContent1BlockDescription": {
+          "en-US": "<p>John Deere harvester heads are known for their productivity, reliability and especially accuracy.&nbsp; Both H400 and H200 series harvester heads have efficient feeding and delimbing.</p>"
+        },
+        "blockContent1PrimaryLinkText": {
+          "en-US": "H400-series brochure"
+        },
+        "blockContent1PrimaryLink": {
+          "en-US": "/assets/publications/index.html?id=36fedaa8"
+        },
+        "blockContent1SecondaryLinkText": {
+          "en-US": "H200-series brochure"
+        },
+        "blockContent1SecondaryLink": {
+          "en-US": "/assets/publications/index.html?id=e0829fae"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zse0dqdjolu6"
+          }
+        },
+        "id": "3emLO9cWHHh6giKIfu6UbE",
+        "type": "Entry",
+        "createdAt": "2019-03-19T05:51:58.426Z",
+        "updatedAt": "2019-03-19T05:52:27.792Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2019-03-19T05:52:27.792Z",
+        "firstPublishedAt": "2019-03-19T05:52:27.792Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "category"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Construction & Mining"
+        },
+        "subcategories": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4weyG2xzIGIYh8exMWvKRZ"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zse0dqdjolu6"
+          }
+        },
+        "id": "4weyG2xzIGIYh8exMWvKRZ",
+        "type": "Entry",
+        "createdAt": "2019-03-19T05:52:11.086Z",
+        "updatedAt": "2019-03-19T05:52:21.171Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2019-03-19T05:52:21.171Z",
+        "firstPublishedAt": "2019-03-19T05:52:21.171Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "subcategory"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Dozers"
+        },
+        "products": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "72lnz8SiXAemPZWCK8P19X"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zse0dqdjolu6"
+          }
+        },
+        "id": "6I3xNvgLCCPT4dmpEWhqSJ",
+        "type": "Asset",
+        "createdAt": "2019-03-15T05:33:44.860Z",
+        "updatedAt": "2019-03-15T05:36:03.750Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2019-03-15T05:36:03.750Z",
+        "firstPublishedAt": "2019-03-15T05:36:03.750Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "homepage hero"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/zse0dqdjolu6/6I3xNvgLCCPT4dmpEWhqSJ/81e81f1567a08160bde2565c226f33c3/homepage_hero.png",
+            "details": {
+              "size": 1254513,
+              "image": {
+                "width": 1440,
+                "height": 800
+              }
+            },
+            "fileName": "homepage_hero.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zse0dqdjolu6"
+          }
+        },
+        "id": "2cfJgrvkoaOmiS2rtT3epq",
+        "type": "Asset",
+        "createdAt": "2019-03-19T05:11:03.739Z",
+        "updatedAt": "2019-03-19T05:12:35.800Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 27,
+        "publishedAt": "2019-03-19T05:12:35.800Z",
+        "firstPublishedAt": "2019-03-19T05:12:35.800Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 28,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "productHero-850kCrawlerDozer"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/zse0dqdjolu6/2cfJgrvkoaOmiS2rtT3epq/aac7782331992756d5608bdef1917fdb/product_hero_img.png",
+            "details": {
+              "size": 2434363,
+              "image": {
+                "width": 1440,
+                "height": 900
+              }
+            },
+            "fileName": "product_hero_img.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zse0dqdjolu6"
+          }
+        },
+        "id": "4XYBFfCzhIyIEfwdjXS1Ft",
+        "type": "Asset",
+        "createdAt": "2019-03-19T05:12:58.450Z",
+        "updatedAt": "2019-03-19T06:13:54.623Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 34,
+        "publishedAt": "2019-03-19T06:13:54.623Z",
+        "firstPublishedAt": "2019-03-19T05:13:53.461Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 35,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "productImage-850kCrawlerDozer"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/zse0dqdjolu6/4XYBFfCzhIyIEfwdjXS1Ft/b4505bdb6a28082f44798d1eb53ce7cd/450K_fT4_Right_Front_3_Quarter_Large_large_8220e2a76423a1e64361bba1fc9b3364fa1b0b8d.png",
+            "details": {
+              "size": 89890,
+              "image": {
+                "width": 1366,
+                "height": 768
+              }
+            },
+            "fileName": "450K_fT4_Right_Front_3_Quarter_Large_large_8220e2a76423a1e64361bba1fc9b3364fa1b0b8d.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zse0dqdjolu6"
+          }
+        },
+        "id": "6SxWys1SjIzrpAxewlhbSg",
+        "type": "Asset",
+        "createdAt": "2019-03-19T06:42:24.180Z",
+        "updatedAt": "2019-03-19T23:13:50.748Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 50,
+        "publishedAt": "2019-03-19T23:13:50.748Z",
+        "firstPublishedAt": "2019-03-19T06:43:34.689Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 51,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "productCarousel-carouselImage1-850kCrawlerDozer"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/zse0dqdjolu6/6SxWys1SjIzrpAxewlhbSg/634651411a6790468f9999e6e044598b/Product_carousel_img1.png",
+            "details": {
+              "size": 555705,
+              "image": {
+                "width": 570,
+                "height": 400
+              }
+            },
+            "fileName": "Product_carousel_img1.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "U.S. English",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "2KM3zydyY5ToJa3lhUHlOB",
+        "version": 2,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zse0dqdjolu6"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "createdAt": "2019-03-10T23:51:31Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2rIJ1rmRYeJZyany7ZevfG"
+          }
+        },
+        "updatedAt": "2019-03-10T23:57:27Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+  ]
+}

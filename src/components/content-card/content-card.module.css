@@ -5,7 +5,9 @@
 }
 
 .body {
-  max-width: 280px;
+  /* max-width: 280px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .headline {
@@ -16,6 +18,21 @@
 }
 
 .headlineUnderline {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 20px;
+  padding-bottom: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.headlineUnderline:before{
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  bottom: 0;
+  left: 0;
   border-bottom: 2px solid #FFDD00;
 }
 

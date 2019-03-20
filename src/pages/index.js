@@ -23,10 +23,9 @@ class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const [homepage] = get(this, 'props.data.allContentfulPage.edges')
-    const categories = get(this, 'props.data.allContentfulCategory.edges')
 
     const homePageCarousel = homepage.node.pageModules[0]
-    console.log("categories index", categories)
+
     return (
       <Layout location={this.props.location} >
         <Helmet title={siteTitle} />
@@ -35,9 +34,7 @@ class RootIndex extends React.Component {
           ctaText={homePageCarousel.ctaText}
           image={homePageCarousel.backgroundImage.fluid}
         />
-        <ProductCarousel
-          categories={categories}
-        />
+        <ProductCarousel />
         <SecondayHero
           image={CarouselImage}
           headline="Applied power."
@@ -112,37 +109,6 @@ export const pageQuery = graphql`
                 src
                 srcSet
                 tracedSVG
-              }
-            }
-          }
-        }
-      }
-    }
-    allContentfulCategory {
-      edges {
-        node {
-          title
-          subcategories {
-            products {
-              productModelName
-              slug
-              productThumbnailImage {
-                fluid {
-                  aspectRatio
-                  sizes
-                  src
-                  srcSet
-                  tracedSVG
-                }
-              }
-              productHeroImage {
-                fluid {
-                  aspectRatio
-                  sizes
-                  src
-                  srcSet
-                  tracedSVG
-                }
               }
             }
           }

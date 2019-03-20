@@ -1,0 +1,15 @@
+.containerProductFeatures ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.containerProductFeatures li {
+  padding-bottom: 15px;
+}
+
+.featuresHeadline {
+  font-size: 48px;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 69px;
+}

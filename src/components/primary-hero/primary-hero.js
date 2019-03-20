@@ -7,7 +7,7 @@ export default ({ children, heading, ctaText, ctaLink, image }) => {
   return (
     <section
       className={`jumbotron jumbotron-fluid ` + styles.hero}
-      style={{backgroundImage: `url(${image.src})`}}
+      style={image ? {backgroundImage: `url(${image.src})`} : null}
     >
       {/*{image && <Img className={styles.heroImage} alt={heading} fluid={image} /> }*/}
       <div className={`container ` + styles.heroText}>

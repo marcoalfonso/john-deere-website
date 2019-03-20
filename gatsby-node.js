@@ -13,7 +13,7 @@ exports.createPages = ({ graphql, actions }) => {
             allContentfulProduct {
               edges {
                 node {
-                  title
+                  productModelName
                   slug
                 }
               }

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Link } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
@@ -9,52 +9,94 @@ import styles from './product-carousel.module.css'
 
 class ProductCarousel extends Component {
   render() {
-    console.log("categories", this.props.categories)
-    console.log("products", this.props.products)
-    console.log("this.props.windowWidth", this.props.windowWidth)
-
     return (
-      <section className={`product-carousel ` + styles.productCarouselContainer}>
-        <Tabs>
-          {this.props.categories.map(({ node }, index) => (
-            <Tab eventKey={node.title} title={node.title} key={index}>
-              {node.subcategories.map(( subcategory , index) => (
-                <CarouselProvider
-                  naturalSlideWidth={471}
-                  naturalSlideHeight={471}
-                  totalSlides={subcategory.products.length}
-                  visibleSlides={this.props.windowWidth > 991 ? 6 : this.props.windowWidth > 556 ? 3 : 2}
-                  className={styles.carousel}
-                >
-                  <Slider className={styles.slider}>
-                    {subcategory.products.map((product, i) => (
-                      <Slide index={i} key={i} className={styles.slide}>
-                        <div className={styles.slideContainer}>
-                          <Link to={`/equipment/${product.slug}`}>
-                            <Img className={styles.image} alt={product.productModelName} fluid={product.productThumbnailImage.fluid} />
-                            {/*<img className={styles.image} alt={product.node.title} src={product.node.heroImage.fluid.src} />*/}
-                            <div className={styles.title}>
-                              {product.productModelName}
+      <StaticQuery
+        query={productCarouselQuery}
+        render={data => (
+          <section className={`product-carousel ` + styles.productCarouselContainer}>
+            <Tabs>
+              {data.allContentfulCategory.edges.map(({ node }, index) => (
+                <Tab eventKey={node.title} title={node.title} key={index}>
+                  {node.subcategories.map(( subcategory , index) => (
+                    <div key={index}>
+                      <CarouselProvider
+                        naturalSlideWidth={471}
+                        naturalSlideHeight={471}
+                        totalSlides={subcategory.products.length}
+                        visibleSlides={this.props.windowWidth > 991 ? 6 : this.props.windowWidth > 556 ? 3 : 2}
+                        className={styles.carousel}
+                      >
+                        <Slider className={styles.slider}>
+                          {subcategory.products.map((product, i) => (
+                            <div key={i}>
+                              <Slide index={i} className={styles.slide}>
+                                <div className={styles.slideContainer}>
+                                  <Link to={`/equipment/${product.slug}`}>
+                                    <Img className={styles.image} alt={product.productModelName} fluid={product.productThumbnailImage.fluid} />
+                                    {/*<img className={styles.image} alt={product.node.title} src={product.node.heroImage.fluid.src} />*/}
+                                    <div className={styles.title}>
+                                      {product.productModelName}
+                                    </div>
+                                  </Link>
+                                </div>
+                              </Slide>
                             </div>
-                          </Link>
-                        </div>
-                      </Slide>
-                    ))}
-                  </Slider>
-                  <ButtonBack className={styles.backButton}>
-                    <div className={styles.chevronArrowLeft}></div>
-                  </ButtonBack>
-                  <ButtonNext className={styles.nextButton}>
-                    <div className={styles.chevronArrowRight}></div>
-                  </ButtonNext>
-                </CarouselProvider>
+                          ))}
+                        </Slider>
+                        <ButtonBack className={styles.backButton}>
+                          <div className={styles.chevronArrowLeft}></div>
+                        </ButtonBack>
+                        <ButtonNext className={styles.nextButton}>
+                          <div className={styles.chevronArrowRight}></div>
+                        </ButtonNext>
+                      </CarouselProvider>
+                    </div>
+                  ))}
+                </Tab>
               ))}
-            </Tab>
-          ))}
-        </Tabs>
-      </section>
+            </Tabs>
+          </section>
+        )}
+      />
+
     )
   }
 }
 
 export default windowSize(ProductCarousel);
+
+export const productCarouselQuery = graphql`
+  query CategoryQuery {
+    allContentfulCategory {
+      edges {
+        node {
+          title
+          subcategories {
+            products {
+              productModelName
+              slug
+              productThumbnailImage {
+                fluid {
+                  aspectRatio
+                  sizes
+                  src
+                  srcSet
+                  tracedSVG
+                }
+              }
+              productHeroImage {
+                fluid {
+                  aspectRatio
+                  sizes
+                  src
+                  srcSet
+                  tracedSVG
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
