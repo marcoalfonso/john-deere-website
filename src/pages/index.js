@@ -28,7 +28,11 @@ class RootIndex extends React.Component {
     const homepageCarousel = homepage.node.pageModules[2]
     const homepageFeatured = homepage.node.pageModules[3]
     const homepageTextInterlude = homepage.node.pageModules[4]
-    console.log("homepageCarousel", homepageCarousel)
+    const homepageVideo = homepage.node.pageModules[5]
+    const homepageContentCard1 = homepage.node.pageModules[6]
+    const homepageContentCard2 = homepage.node.pageModules[7]
+    console.log("homepageContentCard1", homepageContentCard1)
+    console.log("homepageContentCard2", homepageContentCard2)
     return (
       <Layout location={this.props.location} >
         <Helmet
@@ -79,23 +83,23 @@ class RootIndex extends React.Component {
         />
 
         <Video
-          title="JOHN DEERE"
-          headline="Get more bang<br/>from your truck."
-          videoId="HQvSrLtVCyw"
+          title={homepageVideo.title}
+          headline={homepageVideo.headline}
+          youTubeVideoId={homepageVideo.youTubeVideoId}
         />
         <Section>
           <div className="container">
             <div className="row justify-content-around">
               <div className="col-xs-12 col-md-4">
                 <ContentCard
-                  headline="Built to last."
-                  body="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit."
+                  headline={homepageContentCard1.headline}
+                  body={homepageContentCard1.body.body}
                 />
               </div>
               <div className="col-xs-12 col-md-4">
                 <ContentCard
-                  headline="Proven design."
-                  body="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit."
+                  headline={homepageContentCard2.headline}
+                  body={homepageContentCard2.body.body}
                 />
               </div>
             </div>
@@ -196,6 +200,13 @@ export const pageQuery = graphql`
             }
             __typename
             ... on ContentfulTextInterlude {
+              headline
+              body {
+                body
+              }
+            }
+            __typename
+            ... on ContentfulContentCard {
               headline
               body {
                 body

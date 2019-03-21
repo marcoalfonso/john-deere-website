@@ -24,7 +24,7 @@ class AboutUs extends React.Component {
           <Video
             title="RDO EQUIPMENT CO."
             headline="Our story."
-            videoId="HQvSrLtVCyw"
+            youTubeVideoId="HQvSrLtVCyw"
           />
           <Section>
             <div className="container">

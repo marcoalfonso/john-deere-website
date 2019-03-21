@@ -46,7 +46,7 @@ class ProductTemplate extends React.Component {
             <Video
               title={product.videoSubTitle}
               headline={product.videoTitle}
-              videoId={product.videoYoutubeRef}
+              youTubeVideoId={product.videoYoutubeRef}
             />
           }
           {product.blockContent1BlockTitle &&
