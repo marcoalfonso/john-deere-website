@@ -3,6 +3,7 @@ import { StaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
+import _ from 'lodash'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, DotGroup } from 'pure-react-carousel'
 import windowSize from 'react-window-size'
 import styles from './product-carousel.module.css'
@@ -16,31 +17,37 @@ class ProductCarousel extends Component {
           <section className="container">
             <div className={`product-carousel ` + styles.productCarouselContainer}>
               <Tabs>
-                {data.allContentfulCategory.edges.map(({ node }, index) => (
-                  <Tab eventKey={node.title} title={node.title} key={index}>
-                    {node.subcategories.map(( subcategory , index) => (
-                      <div key={index}>
+                {data.allContentfulCategory.edges.map(({ node }, index) => {
+                  const slides = _.sumBy(node.subcategories, 'products.length');
+
+                  return (
+                    <Tab eventKey={node.title} title={node.title} key={index}>
+                      <div>
                         <CarouselProvider
                           naturalSlideWidth={471}
                           naturalSlideHeight={471}
-                          totalSlides={subcategory.products.length}
+                          totalSlides={slides}
                           visibleSlides={this.props.windowWidth > 991 ? 6 : this.props.windowWidth > 556 ? 3 : 2}
                           className={styles.carousel}
                         >
                           <Slider className={styles.slider}>
-                            {subcategory.products.map((product, i) => (
-                              <div key={i}>
-                                <Slide index={i} className={styles.slide}>
-                                  <div className={styles.slideContainer}>
-                                    <Link to={`/equipment/${product.slug}`}>
-                                      <Img className={styles.image} alt={product.productModelName} fluid={product.productThumbnailImage.fluid} />
-                                      {/*<img className={styles.image} alt={product.node.title} src={product.node.heroImage.fluid.src} />*/}
-                                      <div className={styles.title}>
-                                        {product.productModelName}
+                            {node.subcategories.map(( subcategory , index) => (
+                              <div key={index}>
+                                {subcategory.products.map((product, i) => (
+                                  <div key={i}>
+                                    <Slide index={i} className={styles.slide}>
+                                      <div className={styles.slideContainer}>
+                                        <Link to={`/equipment/${product.slug}`}>
+                                          <Img className={styles.image} alt={product.productModelName} fluid={product.productThumbnailImage.fluid} />
+                                          {/*<img className={styles.image} alt={product.node.title} src={product.node.heroImage.fluid.src} />*/}
+                                          <div className={styles.title}>
+                                            {product.productModelName}
+                                          </div>
+                                        </Link>
                                       </div>
-                                    </Link>
+                                    </Slide>
                                   </div>
-                                </Slide>
+                                ))}
                               </div>
                             ))}
                           </Slider>
@@ -52,9 +59,10 @@ class ProductCarousel extends Component {
                           </ButtonNext>
                         </CarouselProvider>
                       </div>
-                    ))}
-                  </Tab>
-                ))}
+                    </Tab>
+                    )
+                  }
+                )}
               </Tabs>
             </div>
           </section>

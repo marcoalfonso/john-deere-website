@@ -73,6 +73,7 @@ a {
 
 .product-carousel .nav-tabs .nav-link {
   color: black;
+  font-weight: normal;
 }
 
 .product-carousel .nav-tabs .nav-link:focus {
@@ -81,13 +82,13 @@ a {
 }
 
 .product-carousel .nav-tabs .nav-link:hover {
-  border: none;
+  border-color: #ffffff #ffffff #FDDA02;
   color: black;
   font-weight: bold;
 }
 
 .product-carousel .nav-tabs .nav-link.active {
-  border-color: #ffffff #ffffff #FDDA02 !important;
+  border-color: #ffffff #ffffff #FDDA02;
   padding-left: 5px;
   padding-right: 5px;
   margin-left: 20px;
