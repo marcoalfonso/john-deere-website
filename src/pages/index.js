@@ -31,8 +31,7 @@ class RootIndex extends React.Component {
     const homepageVideo = homepage.node.pageModules[5]
     const homepageContentCard1 = homepage.node.pageModules[6]
     const homepageContentCard2 = homepage.node.pageModules[7]
-    console.log("homepageContentCard1", homepageContentCard1)
-    console.log("homepageContentCard2", homepageContentCard2)
+
     return (
       <Layout location={this.props.location} >
         <Helmet

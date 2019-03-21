@@ -20,61 +20,26 @@ export default ({ data }) => (
             />
           </div>
         </div>
-        <div className="row">
+        <div className="row justify-content-end">
           <div className="col-xs-12 col-md-4 col-lg-2">
             <ul>
-              <li>About us</li>
-              <li>The RDO story</li>
-              <li>50 year video</li>
-              <li>RDO Team</li>
+              <li><a href="#">Home</a></li>
+              <li><a href="/about-us">About us</a></li>
+              <li><a href="/equipment">Equipment</a></li>
+              <li><a href="/parts-and-service">Parts & Service</a></li>
             </ul>
           </div>
           <div className="col-xs-12 col-md-4 col-lg-2">
             <ul>
-              <li>Equipment</li>
-              <li>About John Deere</li>
-              <li>Construction & mining</li>
-              <li>Forestry</li>
-              <li>Parts information</li>
-            </ul>
-          </div>
-          <div className="col-xs-12 col-md-4 col-lg-2">
-            <ul>
-              <li>Servicing</li>
-              <li>RDO Blurb</li>
-              <li>Technical Services</li>
-              <li>Breakdowns</li>
-              <li>After Hours Servicing</li>
-              <li>Warranty</li>
-            </ul>
-          </div>
-          <div className="col-xs-12 col-md-4 col-lg-2">
-            <ul>
-              <li>Careers</li>
-              <li>Why RDO</li>
-              <li>Current Jobs</li>
-              <li>Core Values</li>
-            </ul>
-          </div>
-          <div className="col-xs-12 col-md-4 col-lg-2">
-            <ul>
-              <li>Other pages</li>
-              <li>Privacy & Data</li>
-              <li>Terms & Conditions</li>
-            </ul>
-          </div>
-          <div className="col-xs-12 col-md-4 col-lg-2">
-            <ul>
-              <li>Contact Us</li>
-              <li>News</li>
-              <li>Podcast</li>
-              <li>Get Social</li>
-              <li>Health & Safety</li>
+              <li><a href="/careers">Careers</a></li>
+              <li><a href="/contact-us">Contact us</a></li>
+              <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
+              <li><a href="/privacy-and-data">Privacy & Data</a></li>
             </ul>
           </div>
         </div>
-        <div className="row social-row">
-          <div className="col">
+        <div className="row justify-content-between social-row">
+          <div className="col-xs-12 col-md-6">
             <span>More</span>
             <img
               src={linkedin}
@@ -100,6 +65,9 @@ export default ({ data }) => (
               className="d-inline-block align-top social"
               alt="RDO Equipment Logo"
             />
+          </div>
+          <div className="col-xs-12 col-md-6 text-right">
+            <div>Copyright @ 2019. All Rights Reserved</div>
           </div>
         </div>
       </div>
