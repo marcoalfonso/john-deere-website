@@ -23,9 +23,10 @@ class RootIndex extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const [homepage] = get(this, 'props.data.allContentfulPage.edges')
 
-    const homePageCarousel = homepage.node.pageModules[0]
-    const homePageSecondaryCarousel = homepage.node.pageModules[1]
-    console.log("homePageSecondaryCarousel", homePageSecondaryCarousel)
+    const homepagePrimaryHero = homepage.node.pageModules[0]
+    const homepageSecondaryHero = homepage.node.pageModules[1]
+    const homepageCarousel = homepage.node.pageModules[2]
+    console.log("homepageCarousel", homepageCarousel)
     return (
       <Layout location={this.props.location} >
         <Helmet
@@ -37,31 +38,32 @@ class RootIndex extends React.Component {
           ]}
         />
         <PrimaryHero
-          heading={homePageCarousel.heading}
-          ctaText={homePageCarousel.ctaText}
-          image={homePageCarousel.backgroundImage.fluid}
+          heading={homepagePrimaryHero.heading}
+          ctaText={homepagePrimaryHero.ctaText}
+          image={homepagePrimaryHero.backgroundImage.fluid}
         />
         <ProductCarousel />
         <SecondayHero
-          firstSlideHeadline={homePageSecondaryCarousel.firstSlideHeadline}
-          fistSlideCtaText={homePageSecondaryCarousel.fistSlideCtaText}
-          fistSlideCtaLink={homePageSecondaryCarousel.fistSlideCtaLink}
-          fistSlideImage={homePageSecondaryCarousel.firstSlideImage.fluid.src}
-          secondSlideHeadline={homePageSecondaryCarousel.secondSlideHeadline}
-          secondSlideCtaText={homePageSecondaryCarousel.secondSlideCtaText}
-          secondSlideCtaLink={homePageSecondaryCarousel.secondSlideCtaLink}
-          secondSlideImage={homePageSecondaryCarousel.secondSlideImage.fluid.src}
-          thirdSlideHeadline={homePageSecondaryCarousel.thirdSlideHeadline}
-          thirdSlideCtaText={homePageSecondaryCarousel.thirdSlideCtaText}
-          thirdSlideCtaLink={homePageSecondaryCarousel.thirdSlideCtaLink}
-          thirdSlideImage={homePageSecondaryCarousel.thirdSlideImage.fluid.src}
+          firstSlideHeadline={homepageSecondaryHero.firstSlideHeadline}
+          fistSlideCtaText={homepageSecondaryHero.fistSlideCtaText}
+          fistSlideCtaLink={homepageSecondaryHero.fistSlideCtaLink}
+          fistSlideImage={homepageSecondaryHero.firstSlideImage.fluid.src}
+          secondSlideHeadline={homepageSecondaryHero.secondSlideHeadline}
+          secondSlideCtaText={homepageSecondaryHero.secondSlideCtaText}
+          secondSlideCtaLink={homepageSecondaryHero.secondSlideCtaLink}
+          secondSlideImage={homepageSecondaryHero.secondSlideImage.fluid.src}
+          thirdSlideHeadline={homepageSecondaryHero.thirdSlideHeadline}
+          thirdSlideCtaText={homepageSecondaryHero.thirdSlideCtaText}
+          thirdSlideCtaLink={homepageSecondaryHero.thirdSlideCtaLink}
+          thirdSlideImage={homepageSecondaryHero.thirdSlideImage.fluid.src}
         />
         <Carousel
-          image={SubCarouselImage}
-          title="THE RDO STORY"
-          headline="Everything you need to apply."
-          callToAction="Learn more"
-          callToActionLink="/careers"
+          title={homepageCarousel.title}
+          headline={homepageCarousel.headline}
+          ctaText={homepageCarousel.ctaText}
+          ctaLink={homepageCarousel.ctaLink}
+          images={homepageCarousel.images}
+          body=""
         />
         <Featured
           image={FeaturedImage}
@@ -160,6 +162,18 @@ export const pageQuery = graphql`
               thirdSlideCtaText
               thirdSlideCtaLink
               thirdSlideImage {
+                fluid {
+                  src
+                }
+              }
+            }
+            __typename
+            ... on ContentfulCarousel {
+              title
+              headline
+              ctaText
+              ctaLink
+              images {
                 fluid {
                   src
                 }
