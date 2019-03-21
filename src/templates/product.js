@@ -24,7 +24,7 @@ class ProductTemplate extends React.Component {
           <Helmet
             title={product.metadataTitle ? product.metadataTitle : siteTitle}
             meta={[
-                {name: 'keywords', content: product.metadataKeyword},
+                {name: 'keywords', content: product.metadataKeyword.metadataKeyword},
                 {name: 'description', content: product.metadataDescription.metadataDescription},
             ]}
           />
@@ -62,9 +62,11 @@ class ProductTemplate extends React.Component {
           {product.esiIncludeFeaturesData &&
             <ProductFeatures features={product.esiIncludeFeaturesData} />
           }
-          <div className="row justify-content-around">
-            <div className="col-xs-12 text-center">
-              <div className={styles.anotherProductHeadline}>Looking for another product?</div>
+          <div className="container">
+            <div className="row justify-content-around">
+              <div className="col-xs-12 text-center">
+                <div className={styles.anotherProductHeadline}>Looking for another product?</div>
+              </div>
             </div>
           </div>
           <ProductCarousel />
@@ -88,7 +90,9 @@ export const pageQuery = graphql`
       metadataDescription {
         metadataDescription
       }
-      metadataKeyword
+      metadataKeyword {
+        metadataKeyword
+      }
       productModelName
       productModelNumber
       productOverview {

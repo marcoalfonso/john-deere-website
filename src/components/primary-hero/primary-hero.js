@@ -6,7 +6,7 @@ import styles from './primary-hero.module.css'
 export default ({ children, heading, ctaText, ctaLink, image }) => {
   return (
     <section
-      className={`jumbotron jumbotron-fluid ` + styles.hero}
+      className={styles.hero}
       style={image ? {backgroundImage: `url(${image.src})`} : null}
     >
       {/*{image && <Img className={styles.heroImage} alt={heading} fluid={image} /> }*/}
@@ -15,5 +15,6 @@ export default ({ children, heading, ctaText, ctaLink, image }) => {
         { ctaText && <a href={ctaLink}><div className={styles.ctaText} dangerouslySetInnerHTML={{__html: ctaText}} /></a> }
         {children}
       </div>
+      <div className={styles.chevronArrowDown} />
     </section>
 )}

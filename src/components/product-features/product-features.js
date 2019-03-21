@@ -1,11 +1,11 @@
 import React from 'react'
-import ContentCardSection from '../../components/content-card-section/content-card-section'
+import Section from '../../components/section/section'
 import ContentCard from '../../components/content-card/content-card'
 import styles from './product-features.module.css'
 
 export default ({features}) => {
   return (
-    <ContentCardSection>
+    <Section>
       <div className={`container ` + styles.containerProductFeatures}>
         <div className="row justify-content-around">
           <div className="col-xs-12 text-center">
@@ -24,5 +24,5 @@ export default ({features}) => {
           ))}
         </div>
       </div>
-    </ContentCardSection>
+    </Section>
 )}

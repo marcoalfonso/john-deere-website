@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import ArticlePreview from '../components/article-preview'
 import PrimaryHero from '../components/primary-hero/primary-hero'
 import TextInterlude from '../components/text-interlude/text-interlude'
 import Featured from '../components/featured/featured'
@@ -12,7 +11,7 @@ import Video from '../components/video/video'
 import Carousel from '../components/carousel/carousel'
 import ContentCard from '../components/content-card/content-card'
 import ProductCarousel from '../components/product-carousel/product-carousel'
-import ContentCardSection from '../components/content-card-section/content-card-section'
+import Section from '../components/section/section'
 
 // Static image place holders to be removed
 import FeaturedImage from './homepage_science_img.png'
@@ -25,10 +24,18 @@ class RootIndex extends React.Component {
     const [homepage] = get(this, 'props.data.allContentfulPage.edges')
 
     const homePageCarousel = homepage.node.pageModules[0]
-
+    const homePageSecondaryCarousel = homepage.node.pageModules[1]
+    console.log("homePageSecondaryCarousel", homePageSecondaryCarousel)
     return (
       <Layout location={this.props.location} >
-        <Helmet title={siteTitle} />
+        <Helmet
+          title={homepage.node.metaTitle ? homepage.node.metaTitle : siteTitle}
+          meta={[
+              {name: 'keywords', content: homepage.node.keywords.keywords},
+              {name: 'description', content: homepage.node.metaDescription.metaDescription},
+              {name: 'og:description', content: homepage.node.ogDescription},
+          ]}
+        />
         <PrimaryHero
           heading={homePageCarousel.heading}
           ctaText={homePageCarousel.ctaText}
@@ -36,9 +43,18 @@ class RootIndex extends React.Component {
         />
         <ProductCarousel />
         <SecondayHero
-          image={CarouselImage}
-          headline="Applied power."
-          callToAction="Discover more"
+          firstSlideHeadline={homePageSecondaryCarousel.firstSlideHeadline}
+          fistSlideCtaText={homePageSecondaryCarousel.fistSlideCtaText}
+          fistSlideCtaLink={homePageSecondaryCarousel.fistSlideCtaLink}
+          fistSlideImage={homePageSecondaryCarousel.firstSlideImage.fluid.src}
+          secondSlideHeadline={homePageSecondaryCarousel.secondSlideHeadline}
+          secondSlideCtaText={homePageSecondaryCarousel.secondSlideCtaText}
+          secondSlideCtaLink={homePageSecondaryCarousel.secondSlideCtaLink}
+          secondSlideImage={homePageSecondaryCarousel.secondSlideImage.fluid.src}
+          thirdSlideHeadline={homePageSecondaryCarousel.thirdSlideHeadline}
+          thirdSlideCtaText={homePageSecondaryCarousel.thirdSlideCtaText}
+          thirdSlideCtaLink={homePageSecondaryCarousel.thirdSlideCtaLink}
+          thirdSlideImage={homePageSecondaryCarousel.thirdSlideImage.fluid.src}
         />
         <Carousel
           image={SubCarouselImage}
@@ -63,7 +79,7 @@ class RootIndex extends React.Component {
           headline="Get more bang<br/>from your truck."
           videoId="HQvSrLtVCyw"
         />
-        <ContentCardSection>
+        <Section>
           <div className="container">
             <div className="row justify-content-around">
               <div className="col-xs-12 col-md-4">
@@ -80,7 +96,7 @@ class RootIndex extends React.Component {
               </div>
             </div>
           </div>
-        </ContentCardSection>
+        </Section>
       </Layout>
     )
   }
@@ -98,17 +114,55 @@ export const pageQuery = graphql`
     allContentfulPage(filter: { contentful_id: { eq: "49UoS1ol9WQMe4aXB5subo" } }) {
       edges {
         node {
+          metaTitle
+          keywords {
+            keywords
+          }
+          ogDescription
+          metaDescription {
+            metaDescription
+          }
           pageModules {
-            heading
-            ctaText
-            ctaLink
-            backgroundImage {
-              fluid {
-                aspectRatio
-                sizes
-                src
-                srcSet
-                tracedSVG
+            __typename
+            ... on ContentfulPrimaryHero {
+              heading
+              ctaText
+              ctaLink
+              backgroundImage {
+                fluid {
+                  aspectRatio
+                  sizes
+                  src
+                  srcSet
+                  tracedSVG
+                }
+              }
+            }
+            __typename
+            ... on ContentfulSecondaryHero {
+              firstSlideHeadline
+              fistSlideCtaText
+              fistSlideCtaLink
+              firstSlideImage {
+                fluid {
+                  src
+                }
+              }
+              secondSlideHeadline
+              secondSlideCtaText
+              secondSlideCtaLink
+              secondSlideImage {
+                fluid {
+                  src
+                }
+              }
+              thirdSlideHeadline
+              thirdSlideCtaText
+              thirdSlideCtaLink
+              thirdSlideImage {
+                fluid {
+                  src
+                }
               }
             }
           }

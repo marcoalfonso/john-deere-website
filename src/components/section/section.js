@@ -1,9 +1,9 @@
 import React from 'react'
-import styles from './content-card-section.module.css'
+import styles from './section.module.css'
 
 export default ({ children  }) => {
   return (
-    <section className={styles.contentCardSection}>
+    <section className={styles.section}>
       {children}
     </section>
   )

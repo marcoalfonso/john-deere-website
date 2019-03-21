@@ -1,5 +1,4 @@
 import React from 'react'
-import ContentCardSection from '../../components/content-card-section/content-card-section'
 import ContentCard from '../../components/content-card/content-card'
 import styles from './product-extra-links.module.css'
 

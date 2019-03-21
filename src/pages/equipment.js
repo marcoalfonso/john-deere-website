@@ -4,13 +4,12 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import styles from './equipment.module.css'
 import Layout from "../components/layout"
-import ArticlePreview from '../components/article-preview'
 import PrimaryHero from '../components/primary-hero/primary-hero'
 import TextInterlude from '../components/text-interlude/text-interlude'
 import ProductCarousel from '../components/product-carousel/product-carousel'
-import ContentCardSection from '../components/content-card-section/content-card-section'
+import Section from '../components/section/section'
 
-class EquipmentIndex extends React.Component {
+class Equipment extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const categories = get(this, 'props.data.allContentfulCategory.edges')
@@ -27,7 +26,7 @@ class EquipmentIndex extends React.Component {
             headline="Our Strategy for Success."
             ctaText="Read more"
           />
-          <ContentCardSection>
+          <Section>
             <div className="container">
               <div className="row justify-content-around">
                 <div className="col-xs-12 col-md-4">
@@ -44,7 +43,7 @@ class EquipmentIndex extends React.Component {
                 </div>
               </div>
             </div>
-          </ContentCardSection>
+          </Section>
           <ProductCarousel />
         </div>
       </Layout>
@@ -52,7 +51,7 @@ class EquipmentIndex extends React.Component {
   }
 }
 
-export default EquipmentIndex
+export default Equipment
 
 export const pageQuery = graphql`
   query EquipmentQuery {

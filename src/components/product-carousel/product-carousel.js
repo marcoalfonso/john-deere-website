@@ -13,48 +13,50 @@ class ProductCarousel extends Component {
       <StaticQuery
         query={productCarouselQuery}
         render={data => (
-          <section className={`product-carousel ` + styles.productCarouselContainer}>
-            <Tabs>
-              {data.allContentfulCategory.edges.map(({ node }, index) => (
-                <Tab eventKey={node.title} title={node.title} key={index}>
-                  {node.subcategories.map(( subcategory , index) => (
-                    <div key={index}>
-                      <CarouselProvider
-                        naturalSlideWidth={471}
-                        naturalSlideHeight={471}
-                        totalSlides={subcategory.products.length}
-                        visibleSlides={this.props.windowWidth > 991 ? 6 : this.props.windowWidth > 556 ? 3 : 2}
-                        className={styles.carousel}
-                      >
-                        <Slider className={styles.slider}>
-                          {subcategory.products.map((product, i) => (
-                            <div key={i}>
-                              <Slide index={i} className={styles.slide}>
-                                <div className={styles.slideContainer}>
-                                  <Link to={`/equipment/${product.slug}`}>
-                                    <Img className={styles.image} alt={product.productModelName} fluid={product.productThumbnailImage.fluid} />
-                                    {/*<img className={styles.image} alt={product.node.title} src={product.node.heroImage.fluid.src} />*/}
-                                    <div className={styles.title}>
-                                      {product.productModelName}
-                                    </div>
-                                  </Link>
-                                </div>
-                              </Slide>
-                            </div>
-                          ))}
-                        </Slider>
-                        <ButtonBack className={styles.backButton}>
-                          <div className={styles.chevronArrowLeft}></div>
-                        </ButtonBack>
-                        <ButtonNext className={styles.nextButton}>
-                          <div className={styles.chevronArrowRight}></div>
-                        </ButtonNext>
-                      </CarouselProvider>
-                    </div>
-                  ))}
-                </Tab>
-              ))}
-            </Tabs>
+          <section className="container">
+            <div className={`product-carousel ` + styles.productCarouselContainer}>
+              <Tabs>
+                {data.allContentfulCategory.edges.map(({ node }, index) => (
+                  <Tab eventKey={node.title} title={node.title} key={index}>
+                    {node.subcategories.map(( subcategory , index) => (
+                      <div key={index}>
+                        <CarouselProvider
+                          naturalSlideWidth={471}
+                          naturalSlideHeight={471}
+                          totalSlides={subcategory.products.length}
+                          visibleSlides={this.props.windowWidth > 991 ? 6 : this.props.windowWidth > 556 ? 3 : 2}
+                          className={styles.carousel}
+                        >
+                          <Slider className={styles.slider}>
+                            {subcategory.products.map((product, i) => (
+                              <div key={i}>
+                                <Slide index={i} className={styles.slide}>
+                                  <div className={styles.slideContainer}>
+                                    <Link to={`/equipment/${product.slug}`}>
+                                      <Img className={styles.image} alt={product.productModelName} fluid={product.productThumbnailImage.fluid} />
+                                      {/*<img className={styles.image} alt={product.node.title} src={product.node.heroImage.fluid.src} />*/}
+                                      <div className={styles.title}>
+                                        {product.productModelName}
+                                      </div>
+                                    </Link>
+                                  </div>
+                                </Slide>
+                              </div>
+                            ))}
+                          </Slider>
+                          <ButtonBack className={styles.backButton}>
+                            <div className={styles.chevronArrowLeft}></div>
+                          </ButtonBack>
+                          <ButtonNext className={styles.nextButton}>
+                            <div className={styles.chevronArrowRight}></div>
+                          </ButtonNext>
+                        </CarouselProvider>
+                      </div>
+                    ))}
+                  </Tab>
+                ))}
+              </Tabs>
+            </div>
           </section>
         )}
       />

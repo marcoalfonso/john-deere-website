@@ -54,6 +54,20 @@
   padding: 14px 53px;
 }
 
+.chevronArrowDown {
+  display: flex;
+  align-self: flex-end;
+  position: absolute;
+  right: 50%;
+  display: inline-block;
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+  bottom: 15%;
+}
+
 @media (min-width: 768px) {
   .hero {
     max-height: 800px;

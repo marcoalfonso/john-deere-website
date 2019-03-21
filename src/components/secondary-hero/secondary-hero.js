@@ -2,38 +2,63 @@ import React from 'react'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, DotGroup } from 'pure-react-carousel';
 import styles from './secondary-hero.module.css'
 
-export default ({ image, children, headline, callToAction }) => {
+export default ({
+    firstSlideHeadline,
+    fistSlideCtaText,
+    fistSlideCtaLink,
+    fistSlideImage,
+    secondSlideHeadline,
+    secondSlideCtaText,
+    secondSlideCtaLink,
+    secondSlideImage,
+    thirdSlideHeadline,
+    thirdSlideCtaText,
+    thirdSlideCtaLink,
+    thirdSlideImage,
+  }) => {
+  const slidesNumber = [firstSlideHeadline, secondSlideHeadline, thirdSlideHeadline]
 
   return (
     <section className={styles.secondaryHero}>
       <CarouselProvider
         naturalSlideWidth={1075}
         naturalSlideHeight={520}
-        totalSlides={2}
+        totalSlides={slidesNumber.length}
       >
-        <Slider>
-          <Slide index={0}>
-            <img className={styles.image} src={image} />
+        <Slider className={styles.slider}>
+          <Slide index={0} className={styles.slide}>
+            <img className={styles.image} src={fistSlideImage} />
             <div className={styles.overlay}>
-              { headline && <div className={styles.headline}>{headline}</div>}
-              { callToAction && <div className={styles.callToAction}>{callToAction}</div>}
+              { firstSlideHeadline && <div className={styles.headline}>{firstSlideHeadline}</div>}
+              { fistSlideCtaText && <a href={fistSlideCtaLink}><div className={styles.callToAction}>{fistSlideCtaText}</div></a>}
         		</div>
           </Slide>
           <Slide index={1}>
-            <img className={styles.image} src={image} />
+            <img className={styles.image} src={secondSlideImage} />
             <div className={styles.overlay}>
-              { headline && <div className={styles.headline}>{headline}</div>}
-              { callToAction && <div className={styles.callToAction}>{callToAction}</div>}
+              { secondSlideHeadline && <div className={styles.headline}>{secondSlideHeadline}</div>}
+              { secondSlideCtaText && <a href={secondSlideCtaLink}><div className={styles.callToAction}>{secondSlideCtaText}</div></a>}
+        		</div>
+          </Slide>
+          <Slide index={2}>
+            <img className={styles.image} src={thirdSlideImage} />
+            <div className={styles.overlay}>
+              { thirdSlideHeadline && <div className={styles.headline}>{thirdSlideHeadline}</div>}
+              { thirdSlideCtaText && <a href={thirdSlideCtaLink}><div className={styles.callToAction}>{thirdSlideCtaText}</div></a>}
         		</div>
           </Slide>
         </Slider>
-        <ButtonBack className={styles.backButton}>
-          <div className={styles.chevronArrowLeft}></div>
-        </ButtonBack>
-        <ButtonNext className={styles.nextButton}>
-          <div className={styles.chevronArrowRight}></div>
-        </ButtonNext>
-        <DotGroup className={styles.dots}/>
+        {slidesNumber.length > 1 &&
+          <div>
+            <ButtonBack className={styles.backButton}>
+              <div className={styles.chevronArrowLeft}></div>
+            </ButtonBack>
+            <ButtonNext className={styles.nextButton}>
+              <div className={styles.chevronArrowRight}></div>
+            </ButtonNext>
+            <DotGroup className={styles.dots}/>
+          </div>
+        }
       </CarouselProvider>
     </section>
 )}
