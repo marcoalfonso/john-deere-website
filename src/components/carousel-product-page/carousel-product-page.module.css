@@ -134,7 +134,7 @@
 @media (min-width: 768px) {
   .carouselContainer {
     padding-top: 109px;
-    padding-bottom: 103px;
+    /* padding-bottom: 103px; */
   }
 
   .title {

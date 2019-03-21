@@ -26,6 +26,8 @@ class RootIndex extends React.Component {
     const homepagePrimaryHero = homepage.node.pageModules[0]
     const homepageSecondaryHero = homepage.node.pageModules[1]
     const homepageCarousel = homepage.node.pageModules[2]
+    const homepageFeatured = homepage.node.pageModules[3]
+    const homepageTextInterlude = homepage.node.pageModules[4]
     console.log("homepageCarousel", homepageCarousel)
     return (
       <Layout location={this.props.location} >
@@ -66,14 +68,14 @@ class RootIndex extends React.Component {
           body=""
         />
         <Featured
-          image={FeaturedImage}
-          title="JOHN DEERE"
-          headline="Designed by science."
-          body="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit."
+          title={homepageFeatured.title}
+          headline={homepageFeatured.headline}
+          body={homepageFeatured.body.body}
+          image={homepageFeatured.image.fluid.src}
         />
         <TextInterlude
-          headline="Haul of famer."
-          body="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus."
+          headline={homepageTextInterlude.headline}
+          body={homepageTextInterlude.body.body}
         />
 
         <Video
@@ -177,6 +179,26 @@ export const pageQuery = graphql`
                 fluid {
                   src
                 }
+              }
+            }
+            __typename
+            ... on ContentfulFeatured {
+              title
+              headline
+              body {
+                body
+              }
+              image {
+                fluid {
+                  src
+                }
+              }
+            }
+            __typename
+            ... on ContentfulTextInterlude {
+              headline
+              body {
+                body
               }
             }
           }
