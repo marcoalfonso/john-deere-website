@@ -103,6 +103,6 @@ a {
 
 @media (min-width: 768px) {
   .product-carousel .nav-tabs {
-    padding-left: 80px;
+    /* padding-left: 80px; */
   }
 }

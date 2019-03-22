@@ -13,11 +13,6 @@ import ContentCard from '../components/content-card/content-card'
 import ProductCarousel from '../components/product-carousel/product-carousel'
 import Section from '../components/section/section'
 
-// Static image place holders to be removed
-import FeaturedImage from './homepage_science_img.png'
-import CarouselImage from './homepage_carousel_placeholder.png'
-import SubCarouselImage from './homepage_sub_carousel_placeholder.png'
-
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')

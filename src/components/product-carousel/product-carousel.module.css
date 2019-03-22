@@ -47,8 +47,8 @@
 
 .nextButton {
   position: absolute;
-  top: 50%;
-  right: 0px;
+  top: 41%;
+  right: -5%;
   transform: translateY(-50%);
   display: none;
   background: none;
@@ -60,8 +60,8 @@
 
 .backButton {
   position: absolute;
-  top: 50%;
-  left: 0px;
+  top: 41%;
+  left: -5%;
   transform: translateY(-50%);
   display: none;
   background: none;
@@ -97,9 +97,9 @@
   opacity: 0.20;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   .carousel {
-    padding-left: 80px;
+    /* padding-left: 80px; */
   }
 
   .backButton,

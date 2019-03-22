@@ -15,6 +15,6 @@ export default ({ children, heading, ctaText, ctaLink, image }) => {
         { ctaText && <a href={ctaLink}><div className={styles.ctaText} dangerouslySetInnerHTML={{__html: ctaText}} /></a> }
         {children}
       </div>
-      <div className={styles.chevronArrowDown} />
+      {/*<div className={styles.chevronArrowDown} />*/}
     </section>
 )}
