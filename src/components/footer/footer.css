@@ -28,7 +28,30 @@
   padding-left: 0px;
 }
 
-/* .footer li:first-child {
-  font-weight: bold;
-  padding-bottom: 3rem;
-} */
+.copyright {
+  text-align: right;
+}
+
+
+@media (max-width: 768px) {
+  .footer {
+    padding-bottom: 0px;
+  }
+
+  .footer .social-row {
+    text-align: center;
+  }
+
+  .footer ul {
+    text-align: center;
+  }
+
+  .copyright {
+    padding-top: 70px;
+    text-align: center;
+  }
+
+  .footer-logos {
+    text-align: center;
+  }
+}

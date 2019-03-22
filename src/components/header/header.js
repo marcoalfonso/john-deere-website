@@ -5,8 +5,6 @@ import { StaticQuery, graphql, Link } from 'gatsby'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import NavDropdown from 'react-bootstrap/NavDropdown'
-import Container from 'react-bootstrap/Container'
-import logos from './logos.svg'
 
 class Header extends Component {
   render() {
@@ -14,15 +12,15 @@ class Header extends Component {
       <StaticQuery
         query={headerQuery}
         render={data => {
-        console.log("data", data)
+
         const headerData =  data.allContentfulHeader.edges[0].node
         return (
           <Navbar collapseOnSelect expand="lg" variant="dark">
-            <Container>
+            <div className="container">
               <div className="brand-section">
                 <Navbar.Brand href="/">
                   <img
-                    src={logos}
+                    src={headerData.siteLogo.file.url}
                     width="100"
                     className="d-inline-block align-top logo"
                     alt="RDO Equipment Logo"
@@ -51,7 +49,7 @@ class Header extends Component {
                   <Nav.Link href={headerData.fifthLinkUrl}>{headerData.fifthLinkText}</Nav.Link>
                 </Nav>
               </Navbar.Collapse>
-            </Container>
+            </div>
           </Navbar>
       )}} />
     )
@@ -78,8 +76,8 @@ export const headerQuery = graphql`
       edges {
         node {
           siteLogo {
-            fluid {
-              src
+            file {
+              url
             }
           }
           firstLinkText
@@ -91,7 +89,7 @@ export const headerQuery = graphql`
           fourthLinkText
           fourthLinkUrl
           fifthLinkText
-          firstLinkUrl
+          fifthLinkUrl
         }
       }
     }

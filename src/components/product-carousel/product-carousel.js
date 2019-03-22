@@ -16,7 +16,7 @@ class ProductCarousel extends Component {
         render={data => (
           <section className="container">
             <div className={`product-carousel ` + styles.productCarouselContainer}>
-              <Tabs>
+              <Tabs defaultActiveKey={this.props.defaultActiveKey}>
                 {data.allContentfulCategory.edges.map(({ node }, index) => {
                   const slides = _.sumBy(node.subcategories, 'products.length');
 
@@ -37,7 +37,7 @@ class ProductCarousel extends Component {
                                   <div key={i}>
                                     <Slide index={i} className={styles.slide}>
                                       <div className={styles.slideContainer}>
-                                        <Link to={`/equipment/${product.slug}`}>
+                                        <Link to={`/${product.slug}`}>
                                           <Img className={styles.image} alt={product.productModelName} fluid={product.productThumbnailImage.fluid} />
                                           {/*<img className={styles.image} alt={product.node.title} src={product.node.heroImage.fluid.src} />*/}
                                           <div className={styles.title}>
