@@ -1,0 +1,84 @@
+.callToAction {
+  border: 2px solid #FFDD00;
+  border-radius: 25px;
+  overflow: hidden;
+  display: inline-block;
+  padding: 14px 53px;
+  color: #000000 !important;
+  background-color: #FFDD00;
+  margin-right: 20px;
+}
+
+.callToAction:hover {
+  text-decoration: underline;
+}
+
+.downloadBrochure {
+  border: 2px solid #000000;
+  border-radius: 25px;
+  overflow: hidden;
+  display: inline-block;
+  padding: 14px 25px;
+  color: #000000 !important;
+  background-color: transparent;
+}
+
+.downloadBrochure:hover {
+  text-decoration: underline;
+}
+
+.subcategoryProductListContainer {
+  background-color: #F3F3F5;
+  padding-top: 98px;
+  padding-bottom: 74px;
+}
+
+.productRow {
+  margin-bottom: 28px;
+  border: 1px solid #BCC0CC;
+  background-color: #FFFFFF;
+  padding-top: 33px;
+  padding-bottom: 33px;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  max-height: 278px;
+  max-width: 370px;
+}
+
+.imageCol {
+  display: flex;
+  justify-content: space-around;
+}
+
+.productModelName {
+  padding-top: 20px;
+  padding-bottom: 12px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.productOverview ul {
+  padding-left: 0;
+  padding-bottom: 20px;
+  list-style: none;
+}
+
+
+@media (max-width: 768px) {
+  .buttons {
+    text-align: center
+  }
+
+  .callToAction {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+
+  .productRow {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

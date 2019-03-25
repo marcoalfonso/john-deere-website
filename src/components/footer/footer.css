@@ -28,6 +28,12 @@
   padding-left: 0px;
 }
 
+.footer a:hover,
+.footer a:active {
+  color: #FFDD00 !important;
+  text-decoration: none;
+}
+
 .copyright {
   text-align: right;
 }

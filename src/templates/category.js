@@ -7,6 +7,8 @@ import Layout from "../components/layout"
 import PrimaryHero from '../components/primary-hero/primary-hero'
 import TextInterlude from '../components/text-interlude/text-interlude'
 import ProductCarousel from '../components/product-carousel/product-carousel'
+import RichText from '../components/rich-text/rich-text'
+import Section from '../components/section/section'
 
 class CategoryTemplate extends React.Component {
 
@@ -21,11 +23,20 @@ class CategoryTemplate extends React.Component {
             heading={this.props.pageContext.title}
             image={this.props.pageContext.heroImage}
           />
-          {/*<TextInterlude
-            headline="Our Strategy for Success."
-            body="ABOUT JOHN DEERE."
-          />*/}
+          <TextInterlude
+            headline={this.props.pageContext.headline}
+            body={this.props.pageContext.body}
+          />
           <ProductCarousel defaultActiveKey={this.props.pageContext.title}/>
+          <div className={`container ` + styles.longFormText}>
+            <div className="row">
+              <div className="col">
+                <RichText
+                  body={this.props.pageContext.longFormText}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </Layout>
     )

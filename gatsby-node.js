@@ -56,6 +56,13 @@ exports.createPages = ({ graphql, actions }) => {
                       src
                     }
                   }
+                  headline
+                  body {
+                    body
+                  }
+                  longFormText {
+                    longFormText
+                  }
                 }
               }
             }
@@ -76,7 +83,10 @@ exports.createPages = ({ graphql, actions }) => {
             context: {
               slug: category.node.slug,
               title: category.node.title,
-              heroImage: category.node.heroImage.fluid
+              heroImage: category.node.heroImage.fluid,
+              headline: category.node.headline,
+              body: category.node.body.body,
+              longFormText: category.node.longFormText.longFormText
             },
           })
         })
@@ -96,6 +106,25 @@ exports.createPages = ({ graphql, actions }) => {
                   subcategories {
                     title
                     slug
+                    heroImage {
+                      fluid {
+                        src
+                      }
+                    }
+                    products {
+                      productThumbnailImage {
+                        fluid {
+                          src
+                        }
+                      }
+                      productModelNumber
+                      productModelName
+                      productOverview {
+                        productOverview
+                      }
+                      slug
+                      primaryCtaUrl
+                    }
                   }
                 }
               }
@@ -117,7 +146,9 @@ exports.createPages = ({ graphql, actions }) => {
               component: subcategoryTemplate,
               context: {
                 slug: subcategory.slug,
-                title: subcategory.title
+                title: subcategory.title,
+                heroImage: subcategory.heroImage.fluid,
+                products: subcategory.products
               },
             })
           })

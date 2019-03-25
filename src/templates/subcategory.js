@@ -6,21 +6,22 @@ import styles from './subcategory.module.css'
 import Layout from "../components/layout"
 import PrimaryHero from '../components/primary-hero/primary-hero'
 import TextInterlude from '../components/text-interlude/text-interlude'
+import SubcategoryProductList from '../components/subcategory-product-list/subcategory-product-list'
 
 class SubCategoryTemplate extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-
+    console.log("this.props.pageContext.products", this.props.pageContext.products)
     return (
       <Layout location={this.props.location} >
         <div>
           <Helmet title={siteTitle} />
           <PrimaryHero
-            heading="There’s a Deere for everything."
+            heading={this.props.pageContext.title}
+            image={this.props.pageContext.heroImage}
           />
-          <TextInterlude
-            headline="Our Strategy for Success."
-            body="ABOUT JOHN DEERE."
+          <SubcategoryProductList
+            products={this.props.pageContext.products}
           />
         </div>
       </Layout>
