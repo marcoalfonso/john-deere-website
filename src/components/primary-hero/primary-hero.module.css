@@ -54,6 +54,10 @@
   padding: 14px 53px;
 }
 
+.ctaText:hover {
+  text-decoration: underline;
+}
+
 .chevronArrowDown {
   display: flex;
   align-self: flex-end;

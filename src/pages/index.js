@@ -53,10 +53,6 @@ class RootIndex extends React.Component {
           secondSlideCtaText={homepageSecondaryHero.secondSlideCtaText}
           secondSlideCtaLink={homepageSecondaryHero.secondSlideCtaLink}
           secondSlideImage={homepageSecondaryHero.secondSlideImage.fluid.src}
-          thirdSlideHeadline={homepageSecondaryHero.thirdSlideHeadline}
-          thirdSlideCtaText={homepageSecondaryHero.thirdSlideCtaText}
-          thirdSlideCtaLink={homepageSecondaryHero.thirdSlideCtaLink}
-          thirdSlideImage={homepageSecondaryHero.thirdSlideImage.fluid.src}
         />
         <Carousel
           title={homepageCarousel.title}
@@ -66,21 +62,20 @@ class RootIndex extends React.Component {
           images={homepageCarousel.images}
           body=""
         />
-        <Featured
-          title={homepageFeatured.title}
-          headline={homepageFeatured.headline}
-          body={homepageFeatured.body.body}
-          image={homepageFeatured.image.fluid.src}
+        <Video
+          title={homepageVideo.title}
+          headline={homepageVideo.headline}
+          youTubeVideoId={homepageVideo.youTubeVideoId}
         />
         <TextInterlude
           headline={homepageTextInterlude.headline}
           body={homepageTextInterlude.body.body}
         />
-
-        <Video
-          title={homepageVideo.title}
-          headline={homepageVideo.headline}
-          youTubeVideoId={homepageVideo.youTubeVideoId}
+        <Featured
+          title={homepageFeatured.title}
+          headline={homepageFeatured.headline}
+          body={homepageFeatured.body.body}
+          image={homepageFeatured.image.fluid.src}
         />
         <Section>
           <div className="container">
@@ -155,14 +150,6 @@ export const pageQuery = graphql`
               secondSlideCtaText
               secondSlideCtaLink
               secondSlideImage {
-                fluid {
-                  src
-                }
-              }
-              thirdSlideHeadline
-              thirdSlideCtaText
-              thirdSlideCtaLink
-              thirdSlideImage {
                 fluid {
                   src
                 }

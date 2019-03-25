@@ -23,9 +23,11 @@ export default ({ images, title, headline, body, primaryCtaText, primaryCtaUrl }
             >
               <Slider className={styles.slider}>
                 {images.map(( image, index) => (
-                  <Slide index={index}>
-                    <img className={styles.image} src={image.fluid.src} />
-                  </Slide>
+                  <div key={index}>
+                    <Slide index={index}>
+                      <img className={styles.image} src={image.fluid.src} />
+                    </Slide>
+                  </div>
                 ))}
               </Slider>
               {images.length > 1 &&

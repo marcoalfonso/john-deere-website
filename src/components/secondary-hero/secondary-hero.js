@@ -10,13 +10,9 @@ export default ({
     secondSlideHeadline,
     secondSlideCtaText,
     secondSlideCtaLink,
-    secondSlideImage,
-    thirdSlideHeadline,
-    thirdSlideCtaText,
-    thirdSlideCtaLink,
-    thirdSlideImage,
+    secondSlideImage
   }) => {
-  const slidesNumber = [firstSlideHeadline, secondSlideHeadline, thirdSlideHeadline]
+  const slidesNumber = [firstSlideHeadline, secondSlideHeadline]
 
   return (
     <section className={styles.secondaryHero}>
@@ -33,18 +29,11 @@ export default ({
               { fistSlideCtaText && <a href={fistSlideCtaLink}><div className={styles.callToAction}>{fistSlideCtaText}</div></a>}
         		</div>
           </Slide>
-          <Slide index={1}>
+          <Slide index={1} className={styles.slide}>
             <img className={styles.image} src={secondSlideImage} />
             <div className={styles.overlay}>
               { secondSlideHeadline && <div className={styles.headline}>{secondSlideHeadline}</div>}
               { secondSlideCtaText && <a href={secondSlideCtaLink}><div className={styles.callToAction}>{secondSlideCtaText}</div></a>}
-        		</div>
-          </Slide>
-          <Slide index={2}>
-            <img className={styles.image} src={thirdSlideImage} />
-            <div className={styles.overlay}>
-              { thirdSlideHeadline && <div className={styles.headline}>{thirdSlideHeadline}</div>}
-              { thirdSlideCtaText && <a href={thirdSlideCtaLink}><div className={styles.callToAction}>{thirdSlideCtaText}</div></a>}
         		</div>
           </Slide>
         </Slider>

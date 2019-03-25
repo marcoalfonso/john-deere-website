@@ -1,5 +1,20 @@
 .secondaryHero {
   background-color: #4C5367;
+
+}
+
+.slider {
+  min-height: 480px;
+}
+
+.slide {
+  min-height: 480px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .dots {
@@ -28,7 +43,7 @@
   position: absolute;
   top: 50%;
   right: 0px;
-  transform: translateY(-50%);
+  transform: translateY(-5%);
   display: none;
   background: none;
   border: none;
@@ -41,7 +56,7 @@
   position: absolute;
   top: 50%;
   left: 0px;
-  transform: translateY(-50%);
+  transform: translateY(-5%);
   display: none;
   background: none;
   border: none;
@@ -78,11 +93,10 @@
 
 .overlay {
   position: absolute;
-  bottom: 35%;
-  left: 0;
+  top: 50%;
+  transform: translateY(-55%);
   padding-right: 15px;
   padding-left: 15px;
-  /* transform: translateY(0%); */
 }
 
 .headline {
@@ -99,11 +113,18 @@
   color: white;
   font-size: 16px;
   font-weight: bold;
+  border: 2px solid #FFFFFF;
+  border-radius: 20px;
+  padding: 10px 33px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
+  .slider {
+    max-height: 800px;
+  }
+
   .headline {
-    font-size: 82px;
+    font-size: 72px;
     letter-spacing: -3.42px;
     padding-bottom: 20px;
   }
@@ -121,10 +142,6 @@
   }
 
   .callToAction {
-    border: 2px solid #FFFFFF;
-    border-radius: 30px;
-    overflow: hidden;
-    display: inline-block;
     padding: 14px 53px;
   }
 }

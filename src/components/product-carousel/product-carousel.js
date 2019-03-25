@@ -25,7 +25,7 @@ class ProductCarousel extends Component {
                       <div>
                         <CarouselProvider
                           naturalSlideWidth={471}
-                          naturalSlideHeight={471}
+                          naturalSlideHeight={371}
                           totalSlides={slides}
                           visibleSlides={this.props.windowWidth > 991 ? 6 : this.props.windowWidth > 556 ? 3 : 2}
                           className={styles.carousel}
