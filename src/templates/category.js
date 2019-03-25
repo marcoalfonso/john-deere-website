@@ -18,12 +18,13 @@ class CategoryTemplate extends React.Component {
         <div>
           <Helmet title={siteTitle} />
           <PrimaryHero
-            heading="There’s a Deere for everything."
+            heading={this.props.pageContext.title}
+            image={this.props.pageContext.heroImage}
           />
-          <TextInterlude
+          {/*<TextInterlude
             headline="Our Strategy for Success."
             body="ABOUT JOHN DEERE."
-          />
+          />*/}
           <ProductCarousel defaultActiveKey={this.props.pageContext.title}/>
         </div>
       </Layout>

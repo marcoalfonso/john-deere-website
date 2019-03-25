@@ -51,9 +51,10 @@ exports.createPages = ({ graphql, actions }) => {
                 node {
                   title
                   slug
-                  subcategories {
-                    title
-                    slug
+                  heroImage {
+                    fluid {
+                      src
+                    }
                   }
                 }
               }
@@ -74,7 +75,8 @@ exports.createPages = ({ graphql, actions }) => {
             component: categoryTemplate,
             context: {
               slug: category.node.slug,
-              title: category.node.title
+              title: category.node.title,
+              heroImage: category.node.heroImage.fluid
             },
           })
         })
