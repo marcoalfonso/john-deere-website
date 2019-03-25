@@ -12,7 +12,7 @@ class CategoryTemplate extends React.Component {
 
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    console.log("props", this.props)
+
     return (
       <Layout location={this.props.location} >
         <div>

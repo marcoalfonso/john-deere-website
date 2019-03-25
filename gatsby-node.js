@@ -107,10 +107,8 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         const subcategories = result.data.allContentfulCategory.edges
-        console.log("subcategories", subcategories)
 
         subcategories.forEach(({node}, index) => {
-          console.log("node", node)
           node.subcategories.forEach((subcategory, index) => {
             createPage({
               path: `/${subcategory.slug}/`,

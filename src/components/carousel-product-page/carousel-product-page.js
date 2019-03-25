@@ -3,7 +3,7 @@ import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, DotGroup } fro
 import styles from './carousel-product-page.module.css'
 
 export default ({ images, title, headline, body, primaryCtaText, primaryCtaUrl }) => {
-  console.log(images.length)
+
   return (
   <section className={styles.carouselComponent}>
     <div className={`container ` + styles.carouselContainer}>

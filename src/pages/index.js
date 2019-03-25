@@ -201,6 +201,12 @@ export const pageQuery = graphql`
               }
             }
             __typename
+            ... on ContentfulVideo {
+              title
+              headline
+              youTubeVideoId
+            }
+            __typename
             ... on ContentfulContentCard {
               headline
               body {

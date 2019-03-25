@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default ({ text }) => (
+export default ({ body }) => (
   <div>
-    { text && <div dangerouslySetInnerHTML={{__html: text}} /> }
+    { body && <div dangerouslySetInnerHTML={{__html: body}} /> }
   </div>
 )

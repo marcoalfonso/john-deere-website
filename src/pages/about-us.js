@@ -13,22 +13,28 @@ import RichText from '../components/rich-text/rich-text'
 class AboutUs extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const [aboutUsData] = get(this, 'props.data.allContentfulPage.edges')
+
+    const AboutUsPrimaryHero = aboutUsData.node.pageModules[0]
+    const AboutUsVideo = aboutUsData.node.pageModules[1]
+    const AboutUsRichText = aboutUsData.node.pageModules[2]
 
     return (
       <Layout location={this.props.location} >
         <div>
           <Helmet title={siteTitle} />
           <PrimaryHero
-            heading="There’s a Deere for everything."
+            heading={AboutUsPrimaryHero.heading}
+            image={AboutUsPrimaryHero.backgroundImage.fluid}
           />
           <Video
-            title="RDO EQUIPMENT CO."
-            headline="Our story."
-            youTubeVideoId="HQvSrLtVCyw"
+            title={AboutUsVideo.title}
+            headline={AboutUsVideo.headline}
+            youTubeVideoId={AboutUsVideo.youTubeVideoId}
           />
           <Section>
             <div className="container">
-              <RichText text="test" />
+              <RichText body={AboutUsRichText.body.body} />
             </div>
           </Section>
         </div>
@@ -44,6 +50,43 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    allContentfulPage(filter: { contentful_id: { eq: "2QkS41nfnuE0O4r4J4X3pE" } }) {
+      edges {
+        node {
+          metaTitle
+          keywords {
+            keywords
+          }
+          ogDescription
+          metaDescription {
+            metaDescription
+          }
+          pageModules {
+            __typename
+            ... on ContentfulPrimaryHero {
+              heading
+              backgroundImage {
+                fluid {
+                  src
+                }
+              }
+            }
+            __typename
+            ... on ContentfulVideo {
+              title
+              headline
+              youTubeVideoId
+            }
+            __typename
+            ... on ContentfulRichText {
+              body {
+                body
+              }
+            }
+          }
+        }
       }
     }
   }
