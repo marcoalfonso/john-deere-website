@@ -10,8 +10,8 @@ import ProductCarousel from '../components/product-carousel/product-carousel'
 import Section from '../components/section/section'
 import RichText from '../components/rich-text/rich-text'
 
-import ConstructionImage from './construction-and-mining.png'
-import ForestryImage from './forestry.png'
+import ConstructionImage from '../components/construction-and-mining.png'
+import ForestryImage from '../components/forestry.png'
 
 class Equipment extends React.Component {
   render() {

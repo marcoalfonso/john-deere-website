@@ -5,10 +5,24 @@ import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import _ from 'lodash'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, DotGroup } from 'pure-react-carousel'
-import windowSize from 'react-window-size'
 import styles from './product-carousel.module.css'
 
 class ProductCarousel extends Component {
+  state = { width: 0, height: 0 }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener("resize", this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions = () => {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
+
   render() {
     return (
       <StaticQuery
@@ -27,7 +41,7 @@ class ProductCarousel extends Component {
                           naturalSlideWidth={471}
                           naturalSlideHeight={371}
                           totalSlides={slides}
-                          visibleSlides={this.props.windowWidth > 991 ? 6 : this.props.windowWidth > 556 ? 3 : 2}
+                          visibleSlides={this.state.width > 991 ? 6 : this.state.width > 556 ? 3 : 2}
                           className={styles.carousel}
                         >
                           <Slider className={styles.slider}>
@@ -73,7 +87,7 @@ class ProductCarousel extends Component {
   }
 }
 
-export default windowSize(ProductCarousel);
+export default ProductCarousel;
 
 export const productCarouselQuery = graphql`
   query CategoryQuery {
