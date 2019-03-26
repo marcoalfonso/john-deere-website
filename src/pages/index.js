@@ -20,13 +20,14 @@ class RootIndex extends React.Component {
 
     const homepagePrimaryHero = homepage.node.pageModules[0]
     const homepageSecondaryHero = homepage.node.pageModules[1]
-    const homepageCarousel = homepage.node.pageModules[2]
-    const homepageFeatured = homepage.node.pageModules[3]
+    const homepageCarousel1 = homepage.node.pageModules[2]
+    const homepageVideo = homepage.node.pageModules[3]
     const homepageTextInterlude = homepage.node.pageModules[4]
-    const homepageVideo = homepage.node.pageModules[5]
-    const homepageContentCard1 = homepage.node.pageModules[6]
-    const homepageContentCard2 = homepage.node.pageModules[7]
-
+    const homepageFeatured1 = homepage.node.pageModules[5]
+    const homepageFeatured2 = homepage.node.pageModules[6]
+    const homepageCarousel2 = homepage.node.pageModules[7]
+    console.log("homepageFeatured1", homepageFeatured1)
+    console.log("homepageFeatured2", homepageFeatured2)
     return (
       <Layout location={this.props.location} >
         <Helmet
@@ -55,12 +56,11 @@ class RootIndex extends React.Component {
           secondSlideImage={homepageSecondaryHero.secondSlideImage.fluid.src}
         />
         <Carousel
-          title={homepageCarousel.title}
-          headline={homepageCarousel.headline}
-          ctaText={homepageCarousel.ctaText}
-          ctaLink={homepageCarousel.ctaLink}
-          images={homepageCarousel.images}
-          body=""
+          title={homepageCarousel1.title}
+          headline={homepageCarousel1.headline}
+          ctaText={homepageCarousel1.ctaText}
+          ctaLink={homepageCarousel1.ctaLink}
+          images={homepageCarousel1.images}
         />
         <Video
           title={homepageVideo.title}
@@ -72,29 +72,28 @@ class RootIndex extends React.Component {
           body={homepageTextInterlude.body.body}
         />
         <Featured
-          title={homepageFeatured.title}
-          headline={homepageFeatured.headline}
-          body={homepageFeatured.body.body}
-          image={homepageFeatured.image.fluid.src}
+          title={homepageFeatured1.title}
+          headline={homepageFeatured1.headline}
+          image={homepageFeatured1.image.fluid.src}
+          imageRight={homepageFeatured1.imageRight}
+          ctaText={homepageFeatured1.ctaText}
+          ctaLink={homepageFeatured1.ctaLink}
         />
-        <Section>
-          <div className="container">
-            <div className="row justify-content-around">
-              <div className="col-xs-12 col-md-4">
-                <ContentCard
-                  headline={homepageContentCard1.headline}
-                  body={homepageContentCard1.body.body}
-                />
-              </div>
-              <div className="col-xs-12 col-md-4">
-                <ContentCard
-                  headline={homepageContentCard2.headline}
-                  body={homepageContentCard2.body.body}
-                />
-              </div>
-            </div>
-          </div>
-        </Section>
+        <Featured
+          title={homepageFeatured2.title}
+          headline={homepageFeatured2.headline}
+          image={homepageFeatured2.image.fluid.src}
+          imageRight={homepageFeatured2.imageRight}
+          ctaText={homepageFeatured2.ctaText}
+          ctaLink={homepageFeatured2.ctaLink}
+        />
+        <Carousel
+          title={homepageCarousel2.title}
+          headline={homepageCarousel2.headline}
+          ctaText={homepageCarousel2.ctaText}
+          ctaLink={homepageCarousel2.ctaLink}
+          images={homepageCarousel2.images}
+        />
       </Layout>
     )
   }
@@ -171,14 +170,14 @@ export const pageQuery = graphql`
             ... on ContentfulFeatured {
               title
               headline
-              body {
-                body
-              }
+              ctaText
+              ctaLink
               image {
                 fluid {
                   src
                 }
               }
+              imageRight
             }
             __typename
             ... on ContentfulTextInterlude {
@@ -192,13 +191,6 @@ export const pageQuery = graphql`
               title
               headline
               youTubeVideoId
-            }
-            __typename
-            ... on ContentfulContentCard {
-              headline
-              body {
-                body
-              }
             }
           }
         }
