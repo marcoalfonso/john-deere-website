@@ -11,7 +11,42 @@ class Footer extends Component {
   render() {
     return (
       <StaticQuery
-        query={footerQuery}
+        query={graphql`
+          query FooterQuery {
+            allContentfulFooter(filter: { contentful_id: { eq: "3QEYRqS8Yb0lVB1xloj9Lr" } }) {
+              edges {
+                node {
+                  logo {
+                    file {
+                      url
+                    }
+                  }
+                  youTubeLink
+                  twitterLink
+                  podcastLink
+                  linkedinLink
+                  copyright
+                  firstLinkText
+                  firstLinkUrl
+        					secondLinkText
+                  secondLinkUrl
+                  thirdLinkText
+                  thirdLinkUrl
+                  fourthLinkText
+                  fourthLinkUrl
+                  fifthLinkText
+                  fifthLinkUrl
+                  sixthLinkText
+                  sixthLinkUrl
+                  seventhLinkText
+                  seventLinkUrl
+                  eightLinkText
+                  eightLinkUrl
+                }
+              }
+            }
+          }
+        `}
         render={data => {
 
         const footerData =  data.allContentfulFooter.edges[0].node
@@ -103,41 +138,4 @@ class Footer extends Component {
   }
 }
 
-export default Footer;
-
-const footerQuery = graphql`
-  query FooterQuery {
-    allContentfulFooter(filter: { contentful_id: { eq: "3QEYRqS8Yb0lVB1xloj9Lr" } }) {
-      edges {
-        node {
-          logo {
-            file {
-              url
-            }
-          }
-          youTubeLink
-          twitterLink
-          podcastLink
-          linkedinLink
-          copyright
-          firstLinkText
-          firstLinkUrl
-					secondLinkText
-          secondLinkUrl
-          thirdLinkText
-          thirdLinkUrl
-          fourthLinkText
-          fourthLinkUrl
-          fifthLinkText
-          fifthLinkUrl
-          sixthLinkText
-          sixthLinkUrl
-          seventhLinkText
-          seventLinkUrl
-          eightLinkText
-          eightLinkUrl
-        }
-      }
-    }
-  }
-`
+export default Footer

@@ -26,7 +26,41 @@ class ProductCarousel extends Component {
   render() {
     return (
       <StaticQuery
-        query={productCarouselQuery}
+        query={graphql`
+          query CategoryQuery {
+            allContentfulCategory {
+              edges {
+                node {
+                  title
+                  subcategories {
+                    products {
+                      productModelName
+                      slug
+                      productThumbnailImage {
+                        fluid {
+                          aspectRatio
+                          sizes
+                          src
+                          srcSet
+                          tracedSVG
+                        }
+                      }
+                      productHeroImage {
+                        fluid {
+                          aspectRatio
+                          sizes
+                          src
+                          srcSet
+                          tracedSVG
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        `}
         render={data => (
           <section className="container">
             <div className={`product-carousel ` + styles.productCarouselContainer}>
@@ -87,40 +121,4 @@ class ProductCarousel extends Component {
   }
 }
 
-export default ProductCarousel;
-
-const productCarouselQuery = graphql`
-  query CategoryQuery {
-    allContentfulCategory {
-      edges {
-        node {
-          title
-          subcategories {
-            products {
-              productModelName
-              slug
-              productThumbnailImage {
-                fluid {
-                  aspectRatio
-                  sizes
-                  src
-                  srcSet
-                  tracedSVG
-                }
-              }
-              productHeroImage {
-                fluid {
-                  aspectRatio
-                  sizes
-                  src
-                  srcSet
-                  tracedSVG
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
+export default ProductCarousel

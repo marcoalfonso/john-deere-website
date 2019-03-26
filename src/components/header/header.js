@@ -10,7 +10,43 @@ class Header extends Component {
   render() {
     return (
       <StaticQuery
-        query={headerQuery}
+        query={graphql`
+          query HeaderQuery {
+            allContentfulCategory {
+              edges {
+                node {
+                  title
+                  slug
+                  subcategories {
+                    title
+                    slug
+                  }
+                }
+              }
+            }
+            allContentfulHeader(filter: { contentful_id: { eq: "2KIXZfF1UA7whZ5eRQagug" } }) {
+              edges {
+                node {
+                  siteLogo {
+                    file {
+                      url
+                    }
+                  }
+                  firstLinkText
+                  firstLinkUrl
+        					secondLinkText
+                  secondLinkUrl
+                  thirdLinkText
+                  thirdLinkUrl
+                  fourthLinkText
+                  fourthLinkUrl
+                  fifthLinkText
+                  fifthLinkUrl
+                }
+              }
+            }
+          }
+        `}
         render={data => {
 
         const headerData =  data.allContentfulHeader.edges[0].node
@@ -56,42 +92,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
-
-const headerQuery = graphql`
-  query HeaderQuery {
-    allContentfulCategory {
-      edges {
-        node {
-          title
-          slug
-          subcategories {
-            title
-            slug
-          }
-        }
-      }
-    }
-    allContentfulHeader(filter: { contentful_id: { eq: "2KIXZfF1UA7whZ5eRQagug" } }) {
-      edges {
-        node {
-          siteLogo {
-            file {
-              url
-            }
-          }
-          firstLinkText
-          firstLinkUrl
-					secondLinkText
-          secondLinkUrl
-          thirdLinkText
-          thirdLinkUrl
-          fourthLinkText
-          fourthLinkUrl
-          fifthLinkText
-          fifthLinkUrl
-        }
-      }
-    }
-  }
-`
+export default Header
