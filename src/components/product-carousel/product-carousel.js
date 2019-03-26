@@ -89,7 +89,7 @@ class ProductCarousel extends Component {
 
 export default ProductCarousel;
 
-export const productCarouselQuery = graphql`
+const productCarouselQuery = graphql`
   query CategoryQuery {
     allContentfulCategory {
       edges {

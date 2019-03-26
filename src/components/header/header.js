@@ -58,7 +58,7 @@ class Header extends Component {
 
 export default Header;
 
-export const headerQuery = graphql`
+const headerQuery = graphql`
   query HeaderQuery {
     allContentfulCategory {
       edges {

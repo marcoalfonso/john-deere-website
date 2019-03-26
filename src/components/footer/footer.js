@@ -105,7 +105,7 @@ class Footer extends Component {
 
 export default Footer;
 
-export const footerQuery = graphql`
+const footerQuery = graphql`
   query FooterQuery {
     allContentfulFooter(filter: { contentful_id: { eq: "3QEYRqS8Yb0lVB1xloj9Lr" } }) {
       edges {
