@@ -127,14 +127,18 @@
     max-height: 800px;
   }
 
+  .slide {
+    max-height: 800px;
+  }
+
+  .slideInner {
+    max-height: 800px;
+  }
+
   .headline {
     font-size: 72px;
     letter-spacing: -3.42px;
     padding-bottom: 20px;
-  }
-
-  .overlay {
-    padding-left: 100px;
   }
 
   .nextButton {

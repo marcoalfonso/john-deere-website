@@ -22,19 +22,23 @@ export default ({
         totalSlides={slidesNumber.length}
       >
         <Slider className={styles.slider}>
-          <Slide index={0} className={styles.slide}>
+          <Slide index={0} className={styles.slide} innerClassName={styles.slideInner}>
             <img className={styles.image} src={fistSlideImage} />
-            <div className={styles.overlay}>
-              { firstSlideHeadline && <div className={styles.headline}>{firstSlideHeadline}</div>}
-              { fistSlideCtaText && <a href={fistSlideCtaLink}><div className={styles.callToAction}>{fistSlideCtaText}</div></a>}
-        		</div>
+            <div className="container">
+              <div className={styles.overlay}>
+                { firstSlideHeadline && <div className={styles.headline}>{firstSlideHeadline}</div>}
+                { fistSlideCtaText && <a href={fistSlideCtaLink}><div className={styles.callToAction}>{fistSlideCtaText}</div></a>}
+          		</div>
+            </div>
           </Slide>
-          <Slide index={1} className={styles.slide}>
+          <Slide index={1} className={styles.slide} innerClassName={styles.slideInner}>
             <img className={styles.image} src={secondSlideImage} />
-            <div className={styles.overlay}>
-              { secondSlideHeadline && <div className={styles.headline}>{secondSlideHeadline}</div>}
-              { secondSlideCtaText && <a href={secondSlideCtaLink}><div className={styles.callToAction}>{secondSlideCtaText}</div></a>}
-        		</div>
+            <div className="container">
+              <div className={styles.overlay}>
+                { secondSlideHeadline && <div className={styles.headline}>{secondSlideHeadline}</div>}
+                { secondSlideCtaText && <a href={secondSlideCtaLink}><div className={styles.callToAction}>{secondSlideCtaText}</div></a>}
+          		</div>
+            </div>
           </Slide>
         </Slider>
         {slidesNumber.length > 1 &&

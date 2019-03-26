@@ -36,9 +36,9 @@ class Header extends Component {
                     <div className="mega-menu-content">
                       {data.allContentfulCategory.edges.map(({ node }, index) => (
                         <div key={index} className="mega-menu">
-                          <NavDropdown.Item href={node.slug}>{node.title}</NavDropdown.Item>
+                          <NavDropdown.Item href={`/${node.slug}`}>{node.title}</NavDropdown.Item>
                           {node.subcategories.map(( subcategory , index) => (
-                            <NavDropdown.Item key={index} href={subcategory.slug}>{subcategory.title}</NavDropdown.Item>
+                            <NavDropdown.Item key={index} href={`/${subcategory.slug}`}>{subcategory.title}</NavDropdown.Item>
                           ))}
                         </div>
                       ))}
