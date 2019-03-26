@@ -1,0 +1,35 @@
+.image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.categoryText {
+  text-align: center;
+  max-width: 315px;
+}
+
+.categoryTitle {
+  font-size: 48px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.callToAction {
+  border: 2px solid #FFDD00;
+  border-radius: 30px;
+  overflow: hidden;
+  display: inline-block;
+  padding: 14px 53px;
+  color: #000000 !important;
+  background-color: #FFDD00;
+  margin-bottom: 40px
+}
+
+.callToAction:hover {
+  text-decoration: underline;
+}

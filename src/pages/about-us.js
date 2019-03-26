@@ -22,7 +22,14 @@ class AboutUs extends React.Component {
     return (
       <Layout location={this.props.location} >
         <div>
-          <Helmet title={siteTitle} />
+          <Helmet
+            title={aboutUsData.node.metaTitle ? aboutUsData.node.metaTitle : siteTitle}
+            meta={[
+                {name: 'keywords', content: aboutUsData.node.keywords.keywords},
+                {name: 'description', content: aboutUsData.node.metaDescription.metaDescription},
+                {name: 'og:description', content: aboutUsData.node.ogDescription},
+            ]}
+          />
           <PrimaryHero
             heading={AboutUsPrimaryHero.heading}
             image={AboutUsPrimaryHero.backgroundImage.fluid}

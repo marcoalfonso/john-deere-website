@@ -18,6 +18,10 @@
   font-size: 16px;
 }
 
+ul {
+  list-style: none;
+}
+
 @media (min-width: 768px) {
   .videoContainer {
     padding-top: 167px;

@@ -8,43 +8,70 @@ import PrimaryHero from '../components/primary-hero/primary-hero'
 import TextInterlude from '../components/text-interlude/text-interlude'
 import ProductCarousel from '../components/product-carousel/product-carousel'
 import Section from '../components/section/section'
+import RichText from '../components/rich-text/rich-text'
+
+import ConstructionImage from './construction-and-mining.png'
+import ForestryImage from './forestry.png'
 
 class Equipment extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const categories = get(this, 'props.data.allContentfulCategory.edges')
+    const [equipmentData] = get(this, 'props.data.allContentfulPage.edges')
+
+    const EquipmentPrimaryHero = equipmentData.node.pageModules[0]
+    const EquipmentTextInterlude1 = equipmentData.node.pageModules[1]
+    const EquipmentTextInterlude2 = equipmentData.node.pageModules[2]
+    const EquipmentRichText = equipmentData.node.pageModules[3]
 
     return (
       <Layout location={this.props.location} >
-        <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
+        <div>
+          <Helmet
+            title={equipmentData.node.metaTitle ? equipmentData.node.metaTitle : siteTitle}
+            meta={[
+                {name: 'keywords', content: equipmentData.node.keywords.keywords},
+                {name: 'description', content: equipmentData.node.metaDescription.metaDescription},
+                {name: 'og:description', content: equipmentData.node.ogDescription},
+            ]}
+          />
           <PrimaryHero
-            heading="There’s a Deere for everything."
+            heading={EquipmentPrimaryHero.heading}
+            image={EquipmentPrimaryHero.backgroundImage.fluid}
           />
           <TextInterlude
-            miniHeadline="ABOUT JOHN DEERE."
-            headline="Our Strategy for Success."
-            ctaText="Read more"
+            body={EquipmentTextInterlude1.body.body}
           />
-          <Section>
+          <Section className={styles.categories}>
             <div className="container">
-              <div className="row justify-content-around">
-                <div className="col-xs-12 col-md-4">
-                  <TextInterlude
-                    headline="Construction & Mining"
-                    ctaText="Read more"
-                  />
+              <div className="row justify-content-around no-gutters">
+                <div className="col-xs-12 col-md-6">
+                  <div className={styles.image} style={{backgroundImage: `url(${ConstructionImage})`}}>
+                    <div className={styles.categoryText}>
+                      <div className={styles.categoryTitle}>Construction & Mining</div>
+                      <a href="contruction-and-mining"><div className={styles.callToAction}>Discover more</div></a>
+                    </div>
+                  </div>
                 </div>
-                <div className="col-xs-12 col-md-4">
-                  <TextInterlude
-                    headline="Forestry"
-                    ctaText="Read more"
-                  />
+                <div className="col-xs-12 col-md-6">
+                  <div className={styles.category}>
+                    <div className={styles.image} style={{backgroundImage: `url(${ForestryImage})`}}>
+                      <div className={styles.categoryText}>
+                        <div className={styles.categoryTitle}>Forestry</div>
+                        <a href="forestry" ><div className={styles.callToAction}>Discover more</div></a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </Section>
           <ProductCarousel />
+          <TextInterlude
+            body={EquipmentTextInterlude2.body.body}
+          />
+          <div className="container page-container">
+            <RichText body={EquipmentRichText.body.body} />
+          </div>
         </div>
       </Layout>
     )
@@ -58,6 +85,44 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    allContentfulPage(filter: { contentful_id: { eq: "NsTVK8kyGmU73D1UYMfnC" } }) {
+      edges {
+        node {
+          title
+          metaTitle
+          keywords {
+            keywords
+          }
+          ogDescription
+          metaDescription {
+            metaDescription
+          }
+          pageModules {
+            __typename
+            ... on ContentfulPrimaryHero {
+              heading
+              backgroundImage {
+                fluid {
+                  src
+                }
+              }
+            }
+            __typename
+            ... on ContentfulTextInterlude {
+              body {
+                body
+              }
+            }
+            __typename
+            ... on ContentfulRichText {
+              body {
+                body
+              }
+            }
+          }
+        }
       }
     }
   }
