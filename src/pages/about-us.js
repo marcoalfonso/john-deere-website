@@ -16,8 +16,9 @@ class AboutUs extends React.Component {
     const [aboutUsData] = get(this, 'props.data.allContentfulPage.edges')
 
     const AboutUsPrimaryHero = aboutUsData.node.pageModules[0]
-    const AboutUsVideo = aboutUsData.node.pageModules[1]
-    const AboutUsRichText = aboutUsData.node.pageModules[2]
+    const AboutUsTextInterlude = aboutUsData.node.pageModules[1]
+    const AboutUsVideo = aboutUsData.node.pageModules[2]
+    const AboutUsRichText = aboutUsData.node.pageModules[3]
 
     return (
       <Layout location={this.props.location} >
@@ -33,6 +34,9 @@ class AboutUs extends React.Component {
           <PrimaryHero
             heading={AboutUsPrimaryHero.heading}
             image={AboutUsPrimaryHero.backgroundImage.fluid}
+          />
+          <TextInterlude
+            body={AboutUsTextInterlude.body.body}
           />
           <Video
             title={AboutUsVideo.title}
@@ -78,6 +82,13 @@ export const pageQuery = graphql`
                 fluid {
                   src
                 }
+              }
+            }
+            __typename
+            ... on ContentfulTextInterlude {
+              headline
+              body {
+                body
               }
             }
             __typename
