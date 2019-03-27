@@ -15,7 +15,7 @@ export default ({products}) => {
               { product.productModelName && <div className={styles.productModelName}>{product.productModelNumber + ' ' + product.productModelName}</div> }
               { product.productOverview.productOverview && <div className={styles.productOverview} dangerouslySetInnerHTML={{__html: product.productOverview.productOverview}} /> }
               <div className={styles.buttons}>
-                { product.slug && <a href={product.slug}><div className={styles.callToAction}>See product</div></a> }
+                { product.slug && <a href={`/${product.slug}`}><div className={styles.callToAction}>See product</div></a> }
                 { product.primaryCtaUrl && <a href={product.primaryCtaUrl}><div className={styles.downloadBrochure}>Download brochure</div></a> }
               </div>
             </div>
