@@ -3,7 +3,6 @@ import Section from '../../components/section/section'
 import styles from './subcategory-product-list.module.css'
 
 export default ({products}) => {
-  console.log("products", products)
   return (
     <section className={styles.subcategoryProductListContainer}>
       <div className="container">

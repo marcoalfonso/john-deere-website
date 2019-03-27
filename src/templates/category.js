@@ -6,7 +6,7 @@ import styles from './category.module.css'
 import Layout from "../components/layout"
 import PrimaryHero from '../components/primary-hero/primary-hero'
 import TextInterlude from '../components/text-interlude/text-interlude'
-import ProductCarousel from '../components/product-carousel/product-carousel'
+import SubcategoryCarousel from '../components/subcategory-carousel/subcategory-carousel'
 import RichText from '../components/rich-text/rich-text'
 import Section from '../components/section/section'
 
@@ -27,7 +27,7 @@ class CategoryTemplate extends React.Component {
             headline={this.props.pageContext.headline}
             body={this.props.pageContext.body}
           />
-          <ProductCarousel defaultActiveKey={this.props.pageContext.title}/>
+          <SubcategoryCarousel defaultActiveKey={this.props.pageContext.title}/>
           <div className={`container ` + styles.longFormText}>
             <div className="row">
               <div className="col">

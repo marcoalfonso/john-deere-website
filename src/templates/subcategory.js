@@ -11,7 +11,6 @@ import SubcategoryProductList from '../components/subcategory-product-list/subca
 class SubCategoryTemplate extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    console.log("this.props.pageContext.products", this.props.pageContext.products)
     return (
       <Layout location={this.props.location} >
         <div>

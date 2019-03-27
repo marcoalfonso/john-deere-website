@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import ProductPrimaryHero from '../components/product-primary-hero/product-primary-hero'
 import CarouselProductPage from '../components/carousel-product-page/carousel-product-page'
-import ProductCarousel from '../components/product-carousel/product-carousel'
+import SubcategoryCarousel from '../components/subcategory-carousel/subcategory-carousel'
 import ProductFeatures from '../components/product-features/product-features'
 import ProductExtraLinks from '../components/product-extra-links/product-extra-links'
 import Video from '../components/video/video'
@@ -69,7 +69,7 @@ class ProductTemplate extends React.Component {
               </div>
             </div>
           </div>
-          <ProductCarousel />
+          <SubcategoryCarousel />
         </div>
       </Layout>
     )

@@ -76,7 +76,7 @@
 
 @media (min-width: 768px) {
   .logo {
-    width: 300px;
+    /* width: 300px; */
   }
 }
 
@@ -99,7 +99,7 @@
   }
 
   .dropdown-menu {
-    top: 149%;
+    top: 160%;
     left: -186%;
     min-width: 42rem;
     padding: 2.5rem 5rem;

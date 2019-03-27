@@ -11,6 +11,7 @@ import Video from '../components/video/video'
 import Carousel from '../components/carousel/carousel'
 import ContentCard from '../components/content-card/content-card'
 import ProductCarousel from '../components/product-carousel/product-carousel'
+import SubcategoryCarousel from '../components/subcategory-carousel/subcategory-carousel'
 import Section from '../components/section/section'
 
 class RootIndex extends React.Component {
@@ -26,8 +27,7 @@ class RootIndex extends React.Component {
     const homepageFeatured1 = homepage.node.pageModules[5]
     const homepageFeatured2 = homepage.node.pageModules[6]
     const homepageCarousel2 = homepage.node.pageModules[7]
-    console.log("homepageFeatured1", homepageFeatured1)
-    console.log("homepageFeatured2", homepageFeatured2)
+
     return (
       <Layout location={this.props.location} >
         <Helmet
@@ -44,7 +44,7 @@ class RootIndex extends React.Component {
           ctaLink={homepagePrimaryHero.ctaLink}
           image={homepagePrimaryHero.backgroundImage.fluid}
         />
-        <ProductCarousel />
+        <SubcategoryCarousel />
         <SecondayHero
           firstSlideHeadline={homepageSecondaryHero.firstSlideHeadline}
           fistSlideCtaText={homepageSecondaryHero.fistSlideCtaText}
