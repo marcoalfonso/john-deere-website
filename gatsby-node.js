@@ -52,7 +52,7 @@ exports.createPages = ({ graphql, actions }) => {
                   title
                   slug
                   heroImage {
-                    fluid {
+                    fluid(maxWidth: 2000, quality: 50) {
                       src
                     }
                   }
@@ -107,7 +107,7 @@ exports.createPages = ({ graphql, actions }) => {
                     title
                     slug
                     heroImage {
-                      fluid {
+                      fluid(maxWidth: 2000, quality: 50) {
                         src
                       }
                     }

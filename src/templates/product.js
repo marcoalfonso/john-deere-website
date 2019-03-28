@@ -125,7 +125,7 @@ export const pageQuery = graphql`
         }
       }
       productHeroImage {
-        fluid {
+        fluid(maxWidth: 2000, quality: 50) {
           aspectRatio
           sizes
           src

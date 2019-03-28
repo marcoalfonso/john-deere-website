@@ -9,12 +9,10 @@ export default ({ children, heading, ctaText, ctaLink, image }) => {
       className={styles.hero}
       style={image ? {backgroundImage: `url(${image.src})`} : null}
     >
-      {/*{image && <Img className={styles.heroImage} alt={heading} fluid={image} /> }*/}
       <div className={`container ` + styles.heroText}>
         { heading && <div className={styles.heading} dangerouslySetInnerHTML={{__html: heading}} /> }
         { ctaText && <a href={ctaLink}><div className={styles.ctaText} dangerouslySetInnerHTML={{__html: ctaText}} /></a> }
         {children}
       </div>
-      {/*<div className={styles.chevronArrowDown} />*/}
     </section>
 )}

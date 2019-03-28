@@ -12,7 +12,7 @@ export default ({ productModelName, productModelNumber, primaryCtaText, primaryC
       <div className={`container ` + styles.heroTextContainer}>
         <div className={styles.heroText}>
           { productModelName && <div className={styles.heading} dangerouslySetInnerHTML={{__html: productModelNumber + ' ' + productModelName}} /> }
-          { primaryCtaText && <a href={primaryCtaUrl}><div className={styles.ctaText} dangerouslySetInnerHTML={{__html: primaryCtaText}} /></a> }
+          { primaryCtaText && <a href={primaryCtaUrl} target="_blank"><div className={styles.ctaText} dangerouslySetInnerHTML={{__html: primaryCtaText}} /></a> }
         </div>
       </div>
     </section>

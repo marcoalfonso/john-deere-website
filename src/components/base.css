@@ -32,6 +32,8 @@ a {
   color: currentColor;
 }
 
+
+
 .wrapper {
   width: calc(100% - 10vmin);
   margin: 0 auto;
@@ -112,6 +114,11 @@ a {
 @media (max-width: 991px) {
   .container {
       max-width: none;
+  }
+
+  .row {
+    margin-left: unset;
+    margin-right: unset;
   }
 }
 

@@ -28,7 +28,7 @@ class SubcategoryCarousel extends Component {
       <StaticQuery
         query={graphql`
           query SubcategoryCarouselQuery {
-            allContentfulCategory {
+            allContentfulCategory(sort: { fields: [title], order: ASC }) {
               edges {
                 node {
                   title
@@ -83,14 +83,16 @@ class SubcategoryCarousel extends Component {
                               </div>
                             ))}
                           </Slider>
-                          <div>
-                            <ButtonBack className={styles.backButton}>
-                              <div className={styles.chevronArrowLeft}></div>
-                            </ButtonBack>
-                            <ButtonNext className={styles.nextButton}>
-                              <div className={styles.chevronArrowRight}></div>
-                            </ButtonNext>
-                          </div>
+                          {slides > 6 &&
+                            <div>
+                              <ButtonBack className={styles.backButton}>
+                                <div className={styles.chevronArrowLeft}></div>
+                              </ButtonBack>
+                              <ButtonNext className={styles.nextButton}>
+                                <div className={styles.chevronArrowRight}></div>
+                              </ButtonNext>
+                            </div>
+                          }
                         </CarouselProvider>
                       </div>
                     </Tab>

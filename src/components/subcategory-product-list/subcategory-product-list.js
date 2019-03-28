@@ -16,7 +16,7 @@ export default ({products}) => {
               { product.productOverview.productOverview && <div className={styles.productOverview} dangerouslySetInnerHTML={{__html: product.productOverview.productOverview}} /> }
               <div className={styles.buttons}>
                 { product.slug && <a href={`/${product.slug}`}><div className={styles.callToAction}>See product</div></a> }
-                { product.primaryCtaUrl && <a href={product.primaryCtaUrl}><div className={styles.downloadBrochure}>Download brochure</div></a> }
+                { product.primaryCtaUrl && <a href={product.primaryCtaUrl} target="_blank"><div className={styles.downloadBrochure}>Download brochure</div></a> }
               </div>
             </div>
           </div>

@@ -126,7 +126,7 @@ export const pageQuery = graphql`
               ctaText
               ctaLink
               backgroundImage {
-                fluid {
+                fluid(maxWidth: 2000, quality: 50) {
                   aspectRatio
                   sizes
                   src
@@ -141,7 +141,7 @@ export const pageQuery = graphql`
               fistSlideCtaText
               fistSlideCtaLink
               firstSlideImage {
-                fluid {
+                fluid(maxWidth: 2000, quality: 50) {
                   src
                 }
               }
@@ -149,7 +149,7 @@ export const pageQuery = graphql`
               secondSlideCtaText
               secondSlideCtaLink
               secondSlideImage {
-                fluid {
+                fluid(maxWidth: 2000, quality: 50) {
                   src
                 }
               }

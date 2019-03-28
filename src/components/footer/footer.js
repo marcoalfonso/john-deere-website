@@ -65,7 +65,7 @@ class Footer extends Component {
                   </div>
                 </div>
                 <div className="row justify-content-end">
-                  <div className="col-xs-12 col-md-4 col-lg-2">
+                  <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2">
                     <ul>
                       { footerData.firstLinkText && <li><a href={footerData.firstLinkUrl}>{footerData.firstLinkText}</a></li> }
                       { footerData.secondLinkText && <li><a href={footerData.secondLinkUrl}>{footerData.secondLinkText}</a></li> }
@@ -73,7 +73,7 @@ class Footer extends Component {
                       { footerData.fourthLinkText && <li><a href={footerData.fourthLinkUrl}>{footerData.fourthLinkText}</a></li> }
                     </ul>
                   </div>
-                  <div className="col-xs-12 col-md-4 col-lg-2">
+                  <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2">
                     <ul>
                       { footerData.fifthLinkText && <li><a href={footerData.fifthLinkUrl}>{footerData.fifthLinkText}</a></li> }
                       { footerData.sixthLinkText && <li><a href={footerData.sixthLinkUrl}>{footerData.sixthLinkText}</a></li> }
@@ -83,7 +83,7 @@ class Footer extends Component {
                   </div>
                 </div>
                 <div className="row justify-content-between social-row">
-                  <div className="col-xs-12 col-md-6">
+                  <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                     <span>More</span>
                     { footerData.linkedinLink &&
                       <a href={footerData.linkedinLink}>
@@ -126,7 +126,7 @@ class Footer extends Component {
                       </a>
                     }
                   </div>
-                  <div className="col-xs-12 col-md-6 copyright">
+                  <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copyright">
                     <div>{footerData.copyright}</div>
                   </div>
                 </div>
