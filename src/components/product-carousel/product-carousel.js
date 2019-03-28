@@ -42,7 +42,6 @@ class ProductCarousel extends Component {
                           sizes
                           src
                           srcSet
-                          tracedSVG
                         }
                       }
                       productHeroImage {
@@ -51,7 +50,6 @@ class ProductCarousel extends Component {
                           sizes
                           src
                           srcSet
-                          tracedSVG
                         }
                       }
                     }
