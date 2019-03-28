@@ -6,7 +6,7 @@ import styles from './equipment.module.css'
 import Layout from "../components/layout"
 import PrimaryHero from '../components/primary-hero/primary-hero'
 import TextInterlude from '../components/text-interlude/text-interlude'
-import ProductCarousel from '../components/product-carousel/product-carousel'
+import SubcategoryCarousel from '../components/subcategory-carousel/subcategory-carousel'
 import Section from '../components/section/section'
 import RichText from '../components/rich-text/rich-text'
 
@@ -65,7 +65,7 @@ class Equipment extends React.Component {
               </div>
             </div>
           </Section>
-          <ProductCarousel />
+          <SubcategoryCarousel />
           <TextInterlude
             body={EquipmentTextInterlude2.body.body}
           />
