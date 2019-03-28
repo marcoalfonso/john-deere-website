@@ -13,6 +13,20 @@ import Video from '../components/video/video'
 import styles from './product.module.css'
 
 class ProductTemplate extends React.Component {
+  state = { width: 0, height: 0 }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener("resizeProduct", this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resizeProduct", this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions = () => {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
 
   render() {
     const product = get(this.props, 'data.contentfulProduct')
@@ -33,7 +47,7 @@ class ProductTemplate extends React.Component {
             productModelNumber={product.productModelNumber}
             primaryCtaText={product.primaryCtaText}
             primaryCtaUrl={product.primaryCtaUrl}
-            productHeroImage={product.productHeroImage.fluid}
+            productHeroImage={this.state.width > 991 ? product.productHeroImage.fluid : product.productHeroImageMobile.fluid}
           />
           <CarouselProductPage
             images={product.imageCarousel}
@@ -121,7 +135,6 @@ export const pageQuery = graphql`
           sizes
           src
           srcSet
-          tracedSVG
         }
       }
       productHeroImage {
@@ -130,7 +143,14 @@ export const pageQuery = graphql`
           sizes
           src
           srcSet
-          tracedSVG
+        }
+      }
+      productHeroImageMobile {
+        fluid {
+          aspectRatio
+          sizes
+          src
+          srcSet
         }
       }
     }
