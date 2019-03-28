@@ -6,6 +6,7 @@ import linkedin from './linkedin.svg'
 import podcast from './podcast.svg'
 import youtube from './youtube.svg'
 import twitter from './twitter.svg'
+import instagram from './instagram.svg'
 
 class Footer extends Component {
   render() {
@@ -23,6 +24,7 @@ class Footer extends Component {
                   }
                   youTubeLink
                   twitterLink
+                  instagramLink
                   podcastLink
                   linkedinLink
                   copyright
@@ -55,7 +57,7 @@ class Footer extends Component {
             <div className="container">
               <div className="footer-inner">
                 <div className="row">
-                  <div className="col footer-logos">
+                  <div className="col-xs-12 col-lg-12 footer-logos">
                     <img
                       src={footerData.logo.file.url}
                       width="100"
@@ -92,6 +94,16 @@ class Footer extends Component {
                           width="100"
                           className="d-inline-block align-top social"
                           alt="RDO Linkedin"
+                        />
+                      </a>
+                    }
+                    { footerData.instagramLink &&
+                      <a href={footerData.instagramLink}>
+                        <img
+                          src={instagram}
+                          width="100"
+                          className="d-inline-block align-top social"
+                          alt="RDO Twitter"
                         />
                       </a>
                     }

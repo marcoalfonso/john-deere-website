@@ -10,8 +10,11 @@
 }
 
 .nav-link:hover,
-.nav-link:active {
+.nav-link:active,
+.navbar .active,
+.mega-menu .active {
   color: #FFDD00 !important;
+  background: transparent !important;
 }
 
 .navbar-dark .navbar-nav .nav-link {

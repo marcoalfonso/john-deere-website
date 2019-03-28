@@ -63,7 +63,7 @@ class ProductTemplate extends React.Component {
             <ProductFeatures features={product.esiIncludeFeaturesData} />
           }
           <div className="container">
-            <div className="row justify-content-around">
+            <div className="row">
               <div className="col-xs-12 text-center">
                 <div className={styles.anotherProductHeadline}>Looking for another product?</div>
               </div>

@@ -13,7 +13,7 @@ class TermsAndConditions extends React.Component {
 
     return (
       <Layout location={this.props.location} >
-        <div>
+        <div className={styles.termsAndCondition}>
           <Helmet
             title={termsAndConditionsData.node.metaTitle ? termsAndConditionsData.node.metaTitle : siteTitle}
             meta={[
