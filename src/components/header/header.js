@@ -7,6 +7,18 @@ import Navbar from 'react-bootstrap/Navbar'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
 class Header extends Component {
+  constructor() {
+    super()
+    this.state = {
+      windowLocation: ''
+    }
+  }
+
+  componentDidMount() {
+    const windowLocation = window.location.pathname.substring(0, window.location.pathname.length - 1)
+    this.setState({ windowLocation: windowLocation })
+  }
+
   render() {
     return (
       <StaticQuery
@@ -48,7 +60,7 @@ class Header extends Component {
           }
         `}
         render={data => {
-        console.log(window.location.pathname.substring(0, window.location.pathname.length - 1))
+
         const headerData =  data.allContentfulHeader.edges[0].node
         return (
           <Navbar collapseOnSelect expand="lg" variant="dark">
@@ -66,7 +78,7 @@ class Header extends Component {
               </div>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="ml-auto" activeKey={window.location.pathname.substring(0, window.location.pathname.length - 1)}>
+                <Nav className="ml-auto" activeKey={this.state.windowLocation} onSelect>
                   <Nav.Link href={headerData.firstLinkUrl}>{headerData.firstLinkText}</Nav.Link>
                   <NavDropdown title={headerData.secondLinkText} id="basic-nav-dropdown">
                     <div className="mega-menu-content">
