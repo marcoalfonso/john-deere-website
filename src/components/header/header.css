@@ -28,7 +28,7 @@
 .nav-link::after {
   position: absolute;
   right: 40px;
-  top: 20px;
+  top: 25px;
   border-right: 3px solid #8E8E8E;
   border-bottom: 3px solid #8E8E8E;
   width: 15px;
@@ -36,6 +36,11 @@
   transform: rotate(45deg);
   border-top: 0;
   border-left: 0;
+}
+
+.show.dropdown.nav-item .nav-link::after {
+  top: 30px !important;
+  transform: rotate(225deg) !important;
 }
 
 @media (max-width: 991px) {

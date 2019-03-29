@@ -118,9 +118,12 @@ a {
   padding-bottom: 20px;
 }
 
-/* .navbar-toggler.collapsed > span {
-  background-image: url('./cross.svg')
-} */
+.navbar-toggler > span {
+  background-image: url('./open.svg') !important;
+}
+.navbar-toggler.collapsed > span {
+  background-image: url('./close.svg') !important;
+}
 
 .navbar-dark .navbar-toggler {
   border: none;

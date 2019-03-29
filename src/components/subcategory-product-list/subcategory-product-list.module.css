@@ -6,9 +6,11 @@
   color: #000000 !important;
   background-color: #FFDD00;
   margin-right: 20px;
+  border: 2px solid #FFDD00;
 }
 
 .callToAction:hover {
+  border: 2px solid #FECA33;
   background-color: #FECA33;
 }
 

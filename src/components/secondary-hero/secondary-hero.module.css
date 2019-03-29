@@ -119,10 +119,10 @@
 }
 
 .callToAction:hover {
-  border: 2px solid #000000;
+  border: 2px solid #FFF;
   opacity: 0.8;
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #FFF;
+  color: black;
 }
 
 @media (min-width: 992px) {
