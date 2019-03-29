@@ -106,6 +106,7 @@
     left: -186%;
     min-width: 42rem;
     padding: 2.5rem 5rem;
+    padding-bottom: 50px;
     margin: .125rem 0 0;
     font-size: 1rem;
     color: #212529;
@@ -117,7 +118,7 @@
     border-top: none;
     border-radius: unset;
     border-bottom: 3px solid #FFDD00;
-    box-shadow: 0 4px 22px 0 rgba(0,0,0,0.1);
+    box-shadow: 12px 16px 43px 0 rgba(0,0,0,.2);
   }
 
   .mega-menu-content {
@@ -143,6 +144,7 @@
   .mega-menu a:hover {
     background-color: transparent;
     color: #000000;
+    font-weight: bold;
   }
 
   .mega-menu a:first-child {
@@ -154,5 +156,6 @@
   .mega-menu a:first-child:hover {
     background-color: transparent;
     color: #FFDD00;
+    font-weight: bold;
   }
 }

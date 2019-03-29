@@ -13,6 +13,10 @@
   max-height: 580px;
 }
 
+.hero a {
+  text-decoration: none;
+}
+
 .heroTextContainer {
   display: flex;
   align-self: flex-end;
@@ -33,12 +37,17 @@
 }
 
 .ctaText {
-  background-color: #FFC400;
-  color: #000000;
+  background-color: #FFDD00;
+  color: #000000 !important;
   font-size: 16px;
   font-weight: 900;
   border-radius: 30px;
   padding: 14px 53px;
+  text-decoration: none;
+}
+
+.ctaText:hover {
+  background-color: #FECA33;
 }
 
 .heading {

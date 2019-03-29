@@ -54,7 +54,10 @@
 }
 
 .ctaText:hover {
-  text-decoration: underline;
+  border: 2px solid #000000;
+  opacity: 0.8;
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 .chevronArrowDown {
@@ -84,7 +87,7 @@
 
   .heading {
     font-size: 82px;
-    line-height: 90px;
+    line-height: 85px;
     letter-spacing: -2.42px;
     max-width: 556px;
   }

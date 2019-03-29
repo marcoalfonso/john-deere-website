@@ -57,7 +57,6 @@
 }
 
 .primaryCtaText {
-  border: 2px solid #FFDD00;
   border-radius: 30px;
   overflow: hidden;
   display: inline-block;
@@ -68,7 +67,7 @@
 }
 
 .primaryCtaText:hover {
-  text-decoration: underline;
+  background-color: #FECA33;
 }
 
 .dots {
