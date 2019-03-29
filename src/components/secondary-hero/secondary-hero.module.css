@@ -94,7 +94,7 @@
 .overlay {
   position: absolute;
   top: 50%;
-  transform: translateY(-55%);
+  transform: translateY(-50%);
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -142,6 +142,8 @@
     font-size: 72px;
     letter-spacing: -3.42px;
     padding-bottom: 20px;
+    max-width: 520px;
+    line-height: 84px;
   }
 
   .nextButton {

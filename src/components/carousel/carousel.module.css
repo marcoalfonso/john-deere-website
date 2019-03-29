@@ -131,6 +131,7 @@
   .headline {
   	font-size: 48px;
     max-width: 470px;
+    line-height: 54px;
   }
 
   .body {

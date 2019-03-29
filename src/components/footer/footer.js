@@ -86,7 +86,6 @@ class Footer extends Component {
                 </div>
                 <div className="row justify-content-between social-row">
                   <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <span>More</span>
                     { footerData.linkedinLink &&
                       <a href={footerData.linkedinLink}>
                         <img

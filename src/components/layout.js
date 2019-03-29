@@ -1,13 +1,16 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'pure-react-carousel/dist/react-carousel.es.css';
-import './base.css'
+import ReactGA from 'react-ga'
 import Container from 'react-bootstrap/Container'
 import Header from './header/header'
 import Footer from './footer/footer'
 
 class Template extends React.Component {
+  componentDidMount() {
+    ReactGA.initialize('UA-66608058-3')
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  }
+
   render() {
     const { location, children } = this.props
     let header

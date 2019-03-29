@@ -39,6 +39,13 @@
   padding-top: 20px;
 }
 
+.title:hover,
+.slideContainer a:hover {
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+
 .carousel {
   height: 100%;
   /* max-height: 250px; */
