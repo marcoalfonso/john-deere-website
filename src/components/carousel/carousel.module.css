@@ -59,19 +59,20 @@
 
 .dots {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .dots button {
-  height: 16px;
-  width: 12px;
-  background-color: #D8D8D8;
-  display: inline-block;
-  border-color: #D8D8D8;
-  border-radius: 50%;
-  margin: 0px 9px;
+  background: transparent;
+  border: none;
+}
+
+.dots button:before {
+  content: ' \25CF';
+  font-size: 26px;
+  color: #D8D8D8;
 }
 
 .dots button:disabled {

@@ -17,6 +17,7 @@ export default ({ images, title, headline, body, primaryCtaText, primaryCtaUrl }
         <div className="col-xs-12 col-md-6">
           { images &&
             <CarouselProvider
+              lockOnWindowScroll={true}
               naturalSlideWidth={570}
               naturalSlideHeight={400}
               totalSlides={images.length}

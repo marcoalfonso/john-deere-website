@@ -17,6 +17,7 @@ export default ({
   return (
     <section className={styles.secondaryHero}>
       <CarouselProvider
+        lockOnWindowScroll={true}
         naturalSlideWidth={1075}
         naturalSlideHeight={520}
         totalSlides={slidesNumber.length}

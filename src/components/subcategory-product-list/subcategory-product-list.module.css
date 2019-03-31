@@ -78,7 +78,11 @@
   .callToAction {
     margin-right: 10px;
     margin-left: 10px;
-    margin-bottom: unset;
+    margin-bottom: 10px;
+  }
+
+  .downloadBrochure {
+    margin-bottom: 10px;
   }
 
   .productRow {

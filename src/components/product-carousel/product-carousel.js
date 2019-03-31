@@ -70,6 +70,7 @@ class ProductCarousel extends Component {
                     <Tab eventKey={node.title} title={node.title} key={index}>
                       <div>
                         <CarouselProvider
+                          lockOnWindowScroll={true}
                           naturalSlideWidth={471}
                           naturalSlideHeight={371}
                           totalSlides={slides}

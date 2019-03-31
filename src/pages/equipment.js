@@ -48,7 +48,7 @@ class Equipment extends React.Component {
                   <div className={styles.image} style={{backgroundImage: `url(${ConstructionImage})`}}>
                     <div className={styles.categoryText}>
                       <div className={styles.categoryTitle}>Construction & Mining</div>
-                      <a href="/contruction-and-mining"><div className={styles.callToAction}>Discover more</div></a>
+                      <a href="/construction-and-mining"><div className={styles.callToAction}>Discover more</div></a>
                     </div>
                   </div>
                 </div>
