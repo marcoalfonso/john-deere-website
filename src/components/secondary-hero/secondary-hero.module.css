@@ -26,19 +26,13 @@
 }
 
 .dots button {
-  /* height: 16px;
-  width: 12px;
-  background-color: #D8D8D8;
-  display: inline-block;
-  border-color: #D8D8D8;
-  border-radius: 50%;
-  margin: 0px 9px; */
-
+  padding: 0px;
   background: transparent;
   border: none;
 }
 
 .dots button:before {
+  margin: 0px 9px;
   content: ' \25CF';
   font-size: 26px;
   color: #D8D8D8;
