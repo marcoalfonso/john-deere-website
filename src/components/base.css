@@ -84,11 +84,11 @@ a {
 }
 
 .product-carousel .nav-tabs .nav-link:hover {
-  border-bottom: 2px solid #FDDA02;
+  border-bottom: unset;
   border-top: unset;
   border-left: unset;
   border-right: unset;
-  color: black;
+  color: black !important;
   font-weight: bold;
 }
 

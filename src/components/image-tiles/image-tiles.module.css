@@ -1,0 +1,101 @@
+.imageTiles {
+  padding-bottom: 130px;
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 38px;
+  color: #000000;
+  padding-bottom: 15px;
+}
+
+.rowOne {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0 4px;
+  width: 120%;
+  margin-left: -50px;
+}
+
+.rowTwo {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0 4px;
+  width: 120%;
+  margin-left: -100px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.mobileTiles {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .desktopTiles {
+    display: none;
+  }
+
+  .mobileTiles {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: -250px;
+  }
+
+  /* .slider,
+  .slide {
+    height: 350px;
+    width: 220px;
+  } */
+  .imageTiles {
+    padding-bottom: 0px;
+
+  }
+
+  .slide img {
+    width: 100%;
+    heigh: 100%;
+  }
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .rowOne {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 4px;
+  }
+
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .rowOne {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 4px;
+  }
+
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}

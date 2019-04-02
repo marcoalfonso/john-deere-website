@@ -13,6 +13,7 @@ import ContentCard from '../components/content-card/content-card'
 import ProductCarousel from '../components/product-carousel/product-carousel'
 import SubcategoryCarousel from '../components/subcategory-carousel/subcategory-carousel'
 import Section from '../components/section/section'
+import ImageTiles from '../components/image-tiles/image-tiles'
 
 class RootIndex extends React.Component {
   render() {
@@ -27,6 +28,7 @@ class RootIndex extends React.Component {
     const homepageFeatured1 = homepage.node.pageModules[5]
     const homepageFeatured2 = homepage.node.pageModules[6]
     const homepageCarousel2 = homepage.node.pageModules[7]
+    const homepageImageTiles = homepage.node.pageModules[8]
 
     return (
       <Layout location={this.props.location} >
@@ -94,6 +96,7 @@ class RootIndex extends React.Component {
           ctaLink={homepageCarousel2.ctaLink}
           images={homepageCarousel2.images}
         />
+        <ImageTiles images={homepageImageTiles.images}/>
       </Layout>
     )
   }
@@ -191,6 +194,14 @@ export const pageQuery = graphql`
               title
               headline
               youTubeVideoId
+            }
+            __typename
+            ... on ContentfulImageTiles {
+               images {
+                 fluid {
+                  src
+                }
+              }
             }
           }
         }

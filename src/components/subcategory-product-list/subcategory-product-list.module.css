@@ -1,22 +1,22 @@
 .callToAction {
-  border-radius: 25px;
+  border-radius: 30px;
   overflow: hidden;
   display: inline-block;
   padding: 14px 53px;
   color: #000000 !important;
   background-color: #FFDD00;
   margin-right: 20px;
-  border: 2px solid #FFDD00;
+  border: 3px solid #FFDD00;
 }
 
 .callToAction:hover {
-  border: 2px solid #FECA33;
+  border: 3px solid #FECA33;
   background-color: #FECA33;
 }
 
 .downloadBrochure {
   border: 2px solid #000000;
-  border-radius: 25px;
+  border-radius: 30px;
   overflow: hidden;
   display: inline-block;
   padding: 14px 25px;
