@@ -84,10 +84,7 @@ a {
 }
 
 .product-carousel .nav-tabs .nav-link:hover {
-  border-bottom: unset;
-  border-top: unset;
-  border-left: unset;
-  border-right: unset;
+  border-color: transparent transparent transparent;
   color: black !important;
   font-weight: bold;
 }
@@ -118,10 +115,19 @@ a {
   padding-bottom: 20px;
 }
 
+.navbar-toggler:focus {
+  outline: none;
+}
+
 .navbar-toggler > span {
+  width: 22px;
+  height: 14px;
   background-image: url('./open.svg') !important;
 }
+
 .navbar-toggler.collapsed > span {
+  width: 22px;
+  height: 14px;
   background-image: url('./close.svg') !important;
 }
 
@@ -140,8 +146,9 @@ a {
   }
 }
 
-@media (min-width: 768px) {
-  .product-carousel .nav-tabs {
-    /* padding-left: 80px; */
+@media (max-width: 768px) {
+  .navbar-brand {
+    padding-bottom: .6125rem;
+    line-height: 0px;
   }
 }

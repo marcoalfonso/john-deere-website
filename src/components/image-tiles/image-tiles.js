@@ -36,13 +36,15 @@ export default ({ images }) => (
               {images.map((image, index ) => (
                 <div key={index}>
                   <Slide index={index} className={styles.slide}>
-                    <img src={image.fluid.src} />
+                    <img className={styles.image} src={image.fluid.src} />
                   </Slide>
                 </div>
               ))}
             </div>
           </Slider>
+
         </CarouselProvider>
+
       </div>
     </div>
 

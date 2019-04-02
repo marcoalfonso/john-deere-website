@@ -4,10 +4,11 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import styles from './primary-hero.module.css'
 
 export default ({ children, heading, ctaText, ctaLink, image }) => {
+  console.log("image", image)
   return (
     <section
       className={styles.hero}
-      style={image ? {backgroundImage: `url(${image.src})`} : null}
+      style={image ? {backgroundImage: `url(${image.src ? image.src : image})`} : null}
     >
       <div className={`container ` + styles.heroText}>
         { heading && <div className={styles.heading} dangerouslySetInnerHTML={{__html: heading}} /> }

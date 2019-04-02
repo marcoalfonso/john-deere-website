@@ -66,7 +66,7 @@ class Footer extends Component {
                     />
                   </div>
                 </div>
-                <div className="row justify-content-end">
+                <div className="row justify-content-end footer-links">
                   <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2">
                     <ul>
                       { footerData.firstLinkText && <li><a href={footerData.firstLinkUrl}>{footerData.firstLinkText}</a></li> }
@@ -89,6 +89,7 @@ class Footer extends Component {
                     { footerData.linkedinLink &&
                       <a href={footerData.linkedinLink}>
                         <img
+                          style={{height: 21}}
                           src={linkedin}
                           width="100"
                           className="d-inline-block align-top social"

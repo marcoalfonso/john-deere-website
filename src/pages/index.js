@@ -198,7 +198,7 @@ export const pageQuery = graphql`
             __typename
             ... on ContentfulImageTiles {
                images {
-                 fluid {
+                 fluid(quality: 100) {
                   src
                 }
               }

@@ -36,6 +36,13 @@
   text-align: right;
 }
 
+.footer-links  {
+	padding-bottom: 100px;
+}
+
+.footer-links li {
+	line-height: 40px;
+}
 
 @media (max-width: 768px) {
   .footer {
@@ -58,4 +65,12 @@
   .footer-logos {
     text-align: center;
   }
+
+	.footer-links  {
+	  padding-bottom: unset;
+	}
+
+	.footer-links li {
+	  line-height: 30px;
+	}
 }

@@ -157,5 +157,61 @@ exports.createPages = ({ graphql, actions }) => {
     )
   })
 
-  return Promise.all([createProductPages, createCategoryPages, createSubcategoryPages])
+  const createJobsPages =  new Promise((resolve, reject) => {
+    const jobTemplate = path.resolve('./src/templates/job.js')
+    resolve(
+      graphql(
+        `
+          {
+             allContentfulSublocation{
+              edges {
+                node {
+                  title
+                  slug
+                  jobs {
+                    title
+                    slug
+                    body {
+                      body
+                    }
+                    pdf {
+                      file {
+                        url
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          `
+      ).then(result => {
+        if (result.errors) {
+          console.log(result.errors)
+          reject(result.errors)
+        }
+
+        const sublocations = result.data.allContentfulSublocation.edges
+        console.log("sublocations", sublocations)
+        sublocations.forEach(({node}, index) => {
+
+          node.jobs.forEach((job, index) => {
+            console.log("node", node)
+            createPage({
+              path: `/${node.slug}/${job.slug}/`,
+              component: jobTemplate,
+              context: {
+                slug: job.slug,
+                title: job.title,
+                body: job.body.body,
+                pdf: job.pdf.file.url
+              },
+            })
+          })
+        })
+      })
+    )
+  })
+
+  return Promise.all([createProductPages, createCategoryPages, createSubcategoryPages, createJobsPages])
 }

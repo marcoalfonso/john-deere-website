@@ -15,7 +15,7 @@ export default ({features}) => {
         </div>
         <div className="row">
           {features.map((feature, index) =>  (
-            <div key={index} className="col-md-4">
+            <div key={index} className={`col-md-4 ` + styles.featuresCards}>
               <ContentCard
                 headlineUnderline={feature.TitleQuestion}
                 body={feature.Description}
