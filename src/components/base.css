@@ -126,8 +126,8 @@ a {
 }
 
 .navbar-toggler.collapsed > span {
-  width: 22px;
-  height: 14px;
+  width: 17px;
+  height: 16px;
   background-image: url('./close.svg') !important;
 }
 

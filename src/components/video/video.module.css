@@ -6,6 +6,8 @@
   padding-top: 35px;
   padding-bottom: 83px;
   text-align: left;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .title {
@@ -22,6 +24,7 @@
   font-size: 34px;
   font-weight: 900;
   padding-bottom: 32px;
+  line-height: 50px;
 }
 
 .videoWrap {
@@ -69,7 +72,6 @@
     font-weight: 900;
     line-height: 52px;
     padding-bottom: 50px;
-    /* max-width: 377px; */
     align-items: center;
   }
 }

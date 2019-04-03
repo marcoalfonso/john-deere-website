@@ -78,19 +78,19 @@
 
 .chevronArrowLeft {
   display: inline-block;
-  border-right: 5px solid white;
-  border-bottom: 5px solid white;
-  width: 30px;
-  height: 30px;
+  border-right: 3px solid white;
+  border-bottom: 3px solid white;
+  width: 25px;
+  height: 25px;
   transform: rotate(-225deg);
 }
 
 .chevronArrowRight {
   display: inline-block;
-  border-right: 5px solid white;
-  border-bottom: 5px solid white;
-  width: 30px;
-  height: 30px;
+  border-right: 3px solid white;
+  border-bottom: 3px solid white;
+  width: 25px;
+  height: 25px;
   transform: rotate(-45deg);
 }
 
@@ -108,6 +108,7 @@
   font-weight: 900;
   letter-spacing: -1.83px;
   padding-bottom: 14px;
+  line-height: 50px;
 }
 
 .callToAction {
