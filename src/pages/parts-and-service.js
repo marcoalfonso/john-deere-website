@@ -3,13 +3,18 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import styles from './privacy-and-data.module.css'
-import Layout from "../components/layout"
-import RichText from '../components/rich-text/rich-text'
+import Layout from '../components/layout'
+import PrimaryHero from '../components/primary-hero/primary-hero'
+import Featured from '../components/featured/featured'
 
 class PartsAndService extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const [partsAndServiceData] = get(this, 'props.data.allContentfulPage.edges')
+
+    const partsAndServicesPrimaryHero = partsAndServiceData.node.pageModules[0]
+    const partsAndServicesFeaturedOne = partsAndServiceData.node.pageModules[1]
+    const partsAndServicesFeaturedTwo = partsAndServiceData.node.pageModules[2]
 
     return (
       <Layout location={this.props.location} >
@@ -22,10 +27,26 @@ class PartsAndService extends React.Component {
                 {name: 'og:description', content: partsAndServiceData.node.ogDescription},
             ]}
           />
-          <div className="headline">{partsAndServiceData.node.title}</div>
-          <div className="container page-container">
-            <RichText body={partsAndServiceData.node.pageModules[0].body.body} />
-          </div>
+          <PrimaryHero
+            heading={partsAndServicesPrimaryHero.heading}
+            image={partsAndServicesPrimaryHero.backgroundImage.fluid}
+          />
+          <Featured
+            title={partsAndServicesFeaturedOne.title}
+            headline={partsAndServicesFeaturedOne.headline}
+            body={partsAndServicesFeaturedOne.body.body}
+            image={partsAndServicesFeaturedOne.image.fluid.src}
+            imageRight={partsAndServicesFeaturedOne.imageRight}
+            greyBackground={partsAndServicesFeaturedOne.greyBackground}
+          />
+          <Featured
+            title={partsAndServicesFeaturedTwo.title}
+            headline={partsAndServicesFeaturedTwo.headline}
+            body={partsAndServicesFeaturedTwo.body.body}
+            image={partsAndServicesFeaturedTwo.image.fluid.src}
+            imageRight={partsAndServicesFeaturedTwo.imageRight}
+            greyBackground={partsAndServicesFeaturedTwo.greyBackground}
+          />
         </div>
       </Layout>
     )
@@ -55,10 +76,32 @@ export const pageQuery = graphql`
           }
           pageModules {
             __typename
-            ... on ContentfulRichText {
+            ... on ContentfulPrimaryHero {
+              heading
+              backgroundImage {
+                fluid(maxWidth: 2000, quality: 50) {
+                  aspectRatio
+                  sizes
+                  src
+                  srcSet
+                  tracedSVG
+                }
+              }
+            }
+            __typename
+            ... on ContentfulFeatured {
+              title
+              headline
               body {
                 body
               }
+              image {
+                fluid {
+                  src
+                }
+              }
+              imageRight
+              greyBackground
             }
           }
         }

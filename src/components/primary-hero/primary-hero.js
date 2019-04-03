@@ -4,7 +4,6 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import styles from './primary-hero.module.css'
 
 export default ({ children, heading, ctaText, ctaLink, image }) => {
-  console.log("image", image)
   return (
     <section
       className={styles.hero}

@@ -1,5 +1,9 @@
-.featuredComponent {
+.featuredComponentGrey {
   background-color: #F3F3F5;
+}
+
+.featuredComponentWhite {
+  background-color: #FFFFFF;
 }
 
 .featuredContainer {

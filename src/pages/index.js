@@ -80,6 +80,7 @@ class RootIndex extends React.Component {
           imageRight={homepageFeatured1.imageRight}
           ctaText={homepageFeatured1.ctaText}
           ctaLink={homepageFeatured1.ctaLink}
+          greyBackground={homepageFeatured1.greyBackground}
         />
         <Featured
           title={homepageFeatured2.title}
@@ -88,6 +89,7 @@ class RootIndex extends React.Component {
           imageRight={homepageFeatured2.imageRight}
           ctaText={homepageFeatured2.ctaText}
           ctaLink={homepageFeatured2.ctaLink}
+          greyBackground={homepageFeatured2.greyBackground}
         />
         <Carousel
           title={homepageCarousel2.title}
@@ -181,6 +183,7 @@ export const pageQuery = graphql`
                 }
               }
               imageRight
+              greyBackground
             }
             __typename
             ... on ContentfulTextInterlude {

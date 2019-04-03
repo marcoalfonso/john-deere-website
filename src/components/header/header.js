@@ -91,7 +91,7 @@ class Header extends Component {
                         </div>
                       ))}
                     </div>
-                    <div className="header-about-link"><NavDropdown.Item href={`/about-us`}>About John Deere</NavDropdown.Item></div>
+                    <div className="header-about-link"><NavDropdown.Item href={`/equipment`}>About John Deere</NavDropdown.Item></div>
                   </NavDropdown>
                   <Nav.Link href={headerData.thirdLinkUrl}>{headerData.thirdLinkText}</Nav.Link>
                   <Nav.Link href={headerData.fourthLinkUrl}>{headerData.fourthLinkText}</Nav.Link>

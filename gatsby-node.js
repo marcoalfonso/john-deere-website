@@ -192,11 +192,9 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         const sublocations = result.data.allContentfulSublocation.edges
-        console.log("sublocations", sublocations)
         sublocations.forEach(({node}, index) => {
 
           node.jobs.forEach((job, index) => {
-            console.log("node", node)
             createPage({
               path: `/${node.slug}/${job.slug}/`,
               component: jobTemplate,
