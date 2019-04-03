@@ -51,30 +51,6 @@
   display: none;
 }
 
-.dots {
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.dots button {
-  padding: 0px;
-  background: transparent;
-  border: none;
-}
-
-.dots button:before {
-  margin: 0px 9px;
-  content: ' \25CF';
-  font-size: 26px;
-  color: #D8D8D8;
-}
-
-.dots button:disabled {
-  opacity: 0.22;
-}
-
 .nextButton {
   background: none;
   border: none;
@@ -121,19 +97,20 @@
 
   .mobileTiles {
     display: block;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: -250px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 100px;
+  }
+
+  .image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
   }
 
   .imageTiles {
     padding-bottom: 0px;
 
-  }
-
-  .slide img {
-    width: 100%;
-    /* height: 100%; */
   }
 }
 

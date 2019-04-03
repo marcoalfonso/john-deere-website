@@ -26,8 +26,8 @@ export default ({ images }) => (
       <div className={styles.mobileTiles}>
         <CarouselProvider
           lockOnWindowScroll={true}
-          naturalSlideWidth={220}
-          naturalSlideHeight={350}
+          naturalSlideWidth={570}
+          naturalSlideHeight={400}
           totalSlides={images.length}
           visibleSlides={1}
         >
@@ -42,7 +42,14 @@ export default ({ images }) => (
               ))}
             </div>
           </Slider>
-
+          <div>
+            <ButtonBack className={styles.backButton}>
+              <div className={styles.chevronArrowLeft}></div>
+            </ButtonBack>
+            <ButtonNext className={styles.nextButton}>
+              <div className={styles.chevronArrowRight}></div>
+            </ButtonNext>
+          </div>
         </CarouselProvider>
 
       </div>

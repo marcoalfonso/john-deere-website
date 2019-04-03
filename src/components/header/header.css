@@ -12,7 +12,8 @@
 .nav-link:hover,
 .nav-link:active,
 .navbar .active,
-.mega-menu .active {
+.mega-menu .active,
+.header-about-link a:hover {
   color: #FFDD00 !important;
   background: transparent !important;
 }
@@ -41,6 +42,13 @@
 .show.dropdown.nav-item .nav-link::after {
   top: 30px !important;
   transform: rotate(225deg) !important;
+}
+
+.header-about-link {
+  text-align: left;
+  font-weight: bold;
+  padding-top: 20px;
+  color: #000000;
 }
 
 @media (max-width: 991px) {
@@ -89,6 +97,11 @@
 }
 
 @media (min-width: 992px) {
+  .header-about-link {
+    text-align: center;
+    color: #000000;
+  }
+
   .nav-link::after {
     display: none;
   }
@@ -111,7 +124,7 @@
     left: -186%;
     min-width: 42rem;
     padding: 2.5rem 5rem;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     margin: .125rem 0 0;
     font-size: 1rem;
     color: #212529;
