@@ -16,6 +16,7 @@ class Careers extends React.Component {
 
     const CareersPrimaryHero = careersData.node.pageModules[0]
     const CareersRichTextOne = careersData.node.pageModules[1]
+    const CareersRichTextTwo = careersData.node.pageModules[2]
 
     return (
       <Layout location={this.props.location} >
@@ -36,6 +37,14 @@ class Careers extends React.Component {
             <div className="container">
               <RichText
                 richText={documentToHtmlString(CareersRichTextOne.richText.json)}
+              />
+            </div>
+          </Section>
+
+          <Section>
+            <div className="container">
+              <RichText
+                richText={documentToHtmlString(CareersRichTextTwo.richText.json)}
               />
             </div>
           </Section>

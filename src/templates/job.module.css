@@ -1,6 +1,18 @@
+.jobTemplate a {
+  font-weight: bold;
+
+  text-decoration: underline;
+}
+
+.jobTemplate a:hover {
+  font-weight: normal;
+  color: #000000;
+  text-decoration: underline;
+}
+
 .backLink {
   font-size: 16px;
-  font-weight: 900;
+  font-weight: bold;
   line-height: 24px;
   color: #000000;
   margin-bottom: 10px;
@@ -9,4 +21,17 @@
 
 .backLink:hover {
   text-decoration: none;
+  font-weight: normal;
+}
+
+.pdfSection {
+  padding-top: 20px;
+  padding-bottom: 44px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  padding-top: 47px;
+  padding-bottom: 10px;
 }
