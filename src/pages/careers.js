@@ -8,6 +8,7 @@ import Layout from '../components/layout'
 import Section from '../components/section/section'
 import PrimaryHero from '../components/primary-hero/primary-hero'
 import RichText from '../components/rich-text/rich-text'
+import JobsList from '../components/jobs-list/jobs-list'
 
 class Careers extends React.Component {
   render() {
@@ -40,7 +41,7 @@ class Careers extends React.Component {
               />
             </div>
           </Section>
-
+          <JobsList />
           <Section>
             <div className="container">
               <RichText
