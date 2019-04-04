@@ -17,8 +17,8 @@
   padding: 0 4px;
   width: 120%;
   margin-left: -50px;
-  overflow: hidden;
 }
+
 
 .rowTwo {
   display: flex;
@@ -26,8 +26,8 @@
   padding: 0 4px;
   width: 120%;
   margin-left: -100px;
-  overflow: hidden;
 }
+
 
 .column {
   flex: 25%;
@@ -41,13 +41,6 @@
   max-height: 200px;
   object-fit: cover;
 }
-
-/* .image,
-.slide,
-.slider {
-  max-height: 200px;
-  width: 100%;
-} */
 
 .mobileTiles {
   display: none;
@@ -88,8 +81,8 @@
 
 .backButton:disabled > div,
 .nextButton:disabled > div {
-  border-right: 3px solid #C7C7C7 !important;
-  border-bottom: 3px solid #C7C7C7 !important;
+  border-right: 2px solid #C7C7C7 !important;
+  border-bottom: 2px solid #C7C7C7 !important;
 }
 
 @media screen and (max-width: 768px) {

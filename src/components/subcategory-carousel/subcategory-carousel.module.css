@@ -101,9 +101,6 @@
 }
 
 @media (min-width: 991px) {
-  .carousel {
-    /* padding-left: 80px; */
-  }
 
   .backButton,
   .nextButton {

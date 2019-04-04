@@ -21,7 +21,7 @@ class Template extends React.Component {
     }
 
     return (
-      <div>
+      <div style={{ overflow: 'hidden' }}>
         <Header />
         {children}
         <Footer />

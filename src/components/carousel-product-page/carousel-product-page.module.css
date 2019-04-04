@@ -129,8 +129,8 @@
 
 .backButton:disabled > div,
 .nextButton:disabled > div {
-  border-right: 3px solid #C7C7C7 !important;
-  border-bottom: 3px solid #C7C7C7 !important;
+  border-right: 2px solid #C7C7C7 !important;
+  border-bottom: 2px solid #C7C7C7 !important;
 }
 
 @media (min-width: 768px) {

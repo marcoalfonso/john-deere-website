@@ -36,7 +36,7 @@ class SubcategoryCarousel extends Component {
                     title
                     slug
                     thumbnailImage {
-                      fluid {
+                      fluid(maxWidth: 371) {
                         aspectRatio
                         sizes
                         src
