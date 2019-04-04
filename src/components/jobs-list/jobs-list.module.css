@@ -46,3 +46,7 @@
 .jobTitle a:hover {
   color: #000000;
 }
+
+.jobsColumn {
+  padding-bottom: 30px;
+}

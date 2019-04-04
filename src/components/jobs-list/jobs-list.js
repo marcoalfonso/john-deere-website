@@ -38,7 +38,7 @@ class JobsList extends Component {
                   <div className={styles.locationTitle}>{node.title}</div>
                     <div className="row justify-content-around">
                       { node.sublocations.map((sublocation, index) => (
-                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 ` + styles.jobsColumn}>
                           <div className={styles.sublocationTitle}>{sublocation.title}</div>
                             { sublocation.jobs.map((job, index) => (
                               <div className={styles.jobTitle}>
