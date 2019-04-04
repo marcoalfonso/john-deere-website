@@ -31,7 +31,9 @@ class JobTemplate extends React.Component {
             <div className="container">
               <a href="/careers"><div className={styles.backLink}>Back to Job list</div></a>
               <div className={styles.title}>{this.props.pageContext.title}</div>
-              <RichText richText={documentToHtmlString(this.props.pageContext.richText.json)} />
+
+              <RichText richText={ documentToHtmlString(this.props.pageContext.richText.json) } />
+
               <p>We strongly encourage all candidates to learn more about the <a href="https://rdoequipment.com" target="_blank">Global RDO Equipment</a> business and read the <a href={this.props.pageContext.pdf} target="_blank">full job description here</a>.</p>
               <p>To apply, email your resume and cover letter to <a href="mailto:careers@rdoequipment.com.au">careers@rdoequipment.com.au</a> and include the role and location in the subject title of your email.</p>
               <p>Prospective candidates are advised that interviews will commence immediately. All candidates must have the right to work in Australia.</p>
