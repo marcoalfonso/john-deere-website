@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import Helmet from 'react-helmet'
 import styles from './equipment.module.css'
-import Layout from "../components/layout"
+import Layout from '../components/layout'
 import PrimaryHero from '../components/primary-hero/primary-hero'
 import TextInterlude from '../components/text-interlude/text-interlude'
 import SubcategoryCarousel from '../components/subcategory-carousel/subcategory-carousel'
@@ -41,7 +42,7 @@ class Equipment extends React.Component {
           <TextInterlude
             body={EquipmentTextInterlude1.body.body}
           />
-          <Section className={styles.categories}>
+          <Section>
             <div className="container">
               <div className="row justify-content-around no-gutters">
                 <div className="col-xs-12 col-md-6">
@@ -70,7 +71,9 @@ class Equipment extends React.Component {
             body={EquipmentTextInterlude2.body.body}
           />
           <div className="container page-container">
-            <RichText body={EquipmentRichText.body.body} />
+            <RichText
+              richText={documentToHtmlString(EquipmentRichText.richText.json)}
+            />
           </div>
         </div>
       </Layout>
@@ -117,8 +120,8 @@ export const pageQuery = graphql`
             }
             __typename
             ... on ContentfulRichText {
-              body {
-                body
+              richText {
+                json
               }
             }
           }

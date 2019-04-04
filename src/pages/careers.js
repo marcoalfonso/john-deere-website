@@ -1,14 +1,21 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import styles from './careers.module.css'
-import Layout from "../components/layout"
+import Layout from '../components/layout'
+import Section from '../components/section/section'
+import PrimaryHero from '../components/primary-hero/primary-hero'
+import RichText from '../components/rich-text/rich-text'
 
 class Careers extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const [careersData] = get(this, 'props.data.allContentfulPage.edges')
+
+    const CareersPrimaryHero = careersData.node.pageModules[0]
+    const CareersRichTextOne = careersData.node.pageModules[1]
 
     return (
       <Layout location={this.props.location} >
@@ -21,11 +28,17 @@ class Careers extends React.Component {
                 {name: 'og:description', content: careersData.node.ogDescription},
             ]}
           />
-          <div className="headline">Join Our Team</div>
-          <div className="container page-container">
-            <div>As RDO Equipment prepares to launch its operations in Australia, numerous positions are available at our locations in Australia — especially in sales and service. Our team members are a vital part of our organisation and are a key stakeholder in our success.</div>
-
-          </div>
+          <PrimaryHero
+            heading={CareersPrimaryHero.heading}
+            image={CareersPrimaryHero.backgroundImage.fluid}
+          />
+          <Section>
+            <div className="container">
+              <RichText
+                richText={documentToHtmlString(CareersRichTextOne.richText.json)}
+              />
+            </div>
+          </Section>
         </div>
       </Layout>
     )
@@ -52,6 +65,30 @@ export const pageQuery = graphql`
           ogDescription
           metaDescription {
             metaDescription
+          }
+          pageModules {
+            __typename
+            ... on ContentfulPrimaryHero {
+              heading
+              backgroundImage {
+                fluid(maxWidth: 2000, quality: 50) {
+                  aspectRatio
+                  sizes
+                  src
+                  srcSet
+                  tracedSVG
+                }
+              }
+            }
+            __typename
+            ... on ContentfulRichText {
+              body {
+                body
+              }
+              richText {
+                json
+              }
+            }
           }
         }
       }

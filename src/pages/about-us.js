@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import styles from './contact-us.module.css'
+import styles from './about-us.module.css'
 import Layout from "../components/layout"
 import PrimaryHero from '../components/primary-hero/primary-hero'
 import TextInterlude from '../components/text-interlude/text-interlude'
@@ -22,7 +23,7 @@ class AboutUs extends React.Component {
 
     return (
       <Layout location={this.props.location} >
-        <div>
+        <div className={styles.aboutUs}>
           <Helmet
             title={aboutUsData.node.metaTitle ? aboutUsData.node.metaTitle : siteTitle}
             meta={[
@@ -45,7 +46,9 @@ class AboutUs extends React.Component {
           />
           <Section>
             <div className="container">
-              <RichText body={AboutUsRichText.body.body} />
+              <RichText
+                richText={documentToHtmlString(AboutUsRichText.richText.json)}
+              />
             </div>
           </Section>
         </div>
@@ -99,8 +102,8 @@ export const pageQuery = graphql`
             }
             __typename
             ... on ContentfulRichText {
-              body {
-                body
+              richText {
+                json
               }
             }
           }

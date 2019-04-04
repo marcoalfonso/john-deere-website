@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import Helmet from 'react-helmet'
 import styles from './terms-and-conditions.module.css'
 import Layout from "../components/layout"
@@ -24,7 +25,9 @@ class TermsAndConditions extends React.Component {
           />
           <div className="headline">{termsAndConditionsData.node.title}</div>
           <div className="container page-container">
-            <RichText body={termsAndConditionsData.node.pageModules[0].body.body} />
+            <RichText
+              richText={documentToHtmlString(termsAndConditionsData.node.pageModules[0].richText.json)}
+            />
           </div>
         </div>
       </Layout>
@@ -56,8 +59,8 @@ export const pageQuery = graphql`
           pageModules {
             __typename
             ... on ContentfulRichText {
-              body {
-                body
+              richText {
+                json
               }
             }
           }
