@@ -33,17 +33,19 @@ class JobsList extends Component {
         return (
           <div>
             { jobsListData.map(({ node }, index) => (
-              <div className={styles.jobsListSection}>
+              <div className={`${styles.jobsListSection} ${index % 2 == 0 ? styles.jobsListSectionGrey : styles.jobsListSectionWhite}`}>
                 <div className="container">
                   <div className={styles.locationTitle}>{node.title}</div>
-                    <div className="row">
+                    <div className="row justify-content-around">
                       { node.sublocations.map((sublocation, index) => (
                         <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                           <div className={styles.sublocationTitle}>{sublocation.title}</div>
                             { sublocation.jobs.map((job, index) => (
-                              <a href={`/${sublocation.slug}/${job.slug}/`}>
-                                <div className={styles.jobTitle}>{job.title}</div>
-                              </a>
+                              <div className={styles.jobTitle}>
+                                <a href={`/${sublocation.slug}/${job.slug}/`}>
+                                  {job.title}
+                                </a>
+                              </div>
                             ))}
                         </div>
                       ))}

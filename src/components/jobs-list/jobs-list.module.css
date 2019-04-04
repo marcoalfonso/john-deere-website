@@ -1,0 +1,48 @@
+.jobsListSection {
+  padding-top: 72px;
+  padding-bottom: 101px;
+}
+
+.jobsListSectionGrey {
+  background: #F3F3F5;
+}
+
+.jobsListSectionWhite {
+  background: #FFFFFF;
+}
+
+.locationTitle {
+  font-size: 48px;
+  font-weight: bold;
+  padding-bottom: 55px;
+  text-align: center;
+}
+
+.sublocationTitle {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 20px;
+  padding-bottom: 20px;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.sublocationTitle:before{
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid #FFDD00;
+}
+
+.jobTitle {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.jobTitle a:hover {
+  color: #000000;
+}
