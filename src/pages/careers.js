@@ -82,9 +82,6 @@ export const pageQuery = graphql`
             }
             __typename
             ... on ContentfulRichText {
-              body {
-                body
-              }
               richText {
                 json
               }

@@ -172,7 +172,7 @@ exports.createPages = ({ graphql, actions }) => {
                     title
                     slug
                     body {
-                      body
+                      json
                     }
                     pdf {
                       file {
@@ -201,7 +201,7 @@ exports.createPages = ({ graphql, actions }) => {
               context: {
                 slug: job.slug,
                 title: job.title,
-                body: job.body.body,
+                richText: job.body,
                 pdf: job.pdf.file.url
               },
             })
