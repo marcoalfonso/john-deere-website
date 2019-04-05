@@ -9,13 +9,15 @@
   background-size: cover;
   min-height: 600px;
   display: flex;
-  align-items: center;
   justify-content: space-around;
 }
 
 .categoryText {
   text-align: center;
   max-width: 315px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .categoryTitle {

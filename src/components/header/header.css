@@ -113,8 +113,8 @@
 
   .navbar-dark .navbar-nav .nav-link {
     color: #FFFFFF;
-    margin-top: unset;
-    margin-right: unset;
+    margin-top: 0px;
+    margin-right: 0px;
     border-bottom: none;
     border-bottom: none;
   }
