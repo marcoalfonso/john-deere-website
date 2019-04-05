@@ -85,6 +85,7 @@
   .headline {
   	font-size: 48px;
     line-height: 57px;
+    max-width: 450px;
   }
 
   .body {
@@ -94,7 +95,7 @@
   }
 
   .imageCol {
-    order: unset;
+    order: inherit;
   }
 
   .imageColRight {
