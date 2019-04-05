@@ -7,6 +7,7 @@ import styles from './about-us.module.css'
 import Layout from "../components/layout"
 import PrimaryHero from '../components/primary-hero/primary-hero'
 import TextInterlude from '../components/text-interlude/text-interlude'
+import Featured from '../components/featured/featured'
 import Video from '../components/video/video'
 import Section from '../components/section/section'
 import RichText from '../components/rich-text/rich-text'
@@ -20,6 +21,12 @@ class AboutUs extends React.Component {
     const AboutUsTextInterlude = aboutUsData.node.pageModules[1]
     const AboutUsVideo = aboutUsData.node.pageModules[2]
     const AboutUsRichText = aboutUsData.node.pageModules[3]
+    const AboutUsFeaturedOne = aboutUsData.node.pageModules[4]
+    const AboutUsFeaturedTwo = aboutUsData.node.pageModules[5]
+    const AboutUsFeaturedThree = aboutUsData.node.pageModules[6]
+    const AboutUsFeaturedFour = aboutUsData.node.pageModules[7]
+    const AboutUsFeaturedFive = aboutUsData.node.pageModules[8]
+    const AboutUsRichTextTwo = aboutUsData.node.pageModules[9]
 
     return (
       <Layout location={this.props.location} >
@@ -48,6 +55,53 @@ class AboutUs extends React.Component {
             <div className="container">
               <RichText
                 richText={documentToHtmlString(AboutUsRichText.richText.json)}
+              />
+            </div>
+          </Section>
+          <Featured
+            title={AboutUsFeaturedOne.title}
+            headline={AboutUsFeaturedOne.headline}
+            body={AboutUsFeaturedOne.body.body}
+            image={AboutUsFeaturedOne.image.fluid.src}
+            imageRight={AboutUsFeaturedOne.imageRight}
+            greyBackground={AboutUsFeaturedOne.greyBackground}
+          />
+          <Featured
+            title={AboutUsFeaturedTwo.title}
+            headline={AboutUsFeaturedTwo.headline}
+            body={AboutUsFeaturedTwo.body.body}
+            image={AboutUsFeaturedTwo.image.fluid.src}
+            imageRight={AboutUsFeaturedTwo.imageRight}
+            greyBackground={AboutUsFeaturedTwo.greyBackground}
+          />
+          <Featured
+            title={AboutUsFeaturedThree.title}
+            headline={AboutUsFeaturedThree.headline}
+            body={AboutUsFeaturedThree.body.body}
+            image={AboutUsFeaturedThree.image.fluid.src}
+            imageRight={AboutUsFeaturedThree.imageRight}
+            greyBackground={AboutUsFeaturedThree.greyBackground}
+          />
+          <Featured
+            title={AboutUsFeaturedFour.title}
+            headline={AboutUsFeaturedFour.headline}
+            body={AboutUsFeaturedFour.body.body}
+            image={AboutUsFeaturedFour.image.fluid.src}
+            imageRight={AboutUsFeaturedFour.imageRight}
+            greyBackground={AboutUsFeaturedFour.greyBackground}
+          />
+          <Featured
+            title={AboutUsFeaturedFive.title}
+            headline={AboutUsFeaturedFive.headline}
+            body={AboutUsFeaturedFive.body.body}
+            image={AboutUsFeaturedFive.image.fluid.src}
+            imageRight={AboutUsFeaturedFive.imageRight}
+            greyBackground={AboutUsFeaturedFive.greyBackground}
+          />
+          <Section>
+            <div className="container">
+              <RichText
+                richText={documentToHtmlString(AboutUsRichTextTwo.richText.json)}
               />
             </div>
           </Section>
@@ -105,6 +159,21 @@ export const pageQuery = graphql`
               richText {
                 json
               }
+            }
+            __typename
+            ... on ContentfulFeatured {
+              title
+              headline
+              body {
+                body
+              }
+              image {
+                fluid {
+                  src
+                }
+              }
+              imageRight
+              greyBackground
             }
           }
         }
