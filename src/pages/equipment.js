@@ -44,7 +44,7 @@ class Equipment extends React.Component {
           />
           <Section>
             <div className="container">
-              <div className="row justify-content-around no-gutters">
+              <div className="row no-gutters">
                 <div className="col-xs-12 col-md-6">
                   <div className={styles.image} style={{backgroundImage: `url(${ConstructionImage})`}}>
                     <div className={styles.categoryText}>

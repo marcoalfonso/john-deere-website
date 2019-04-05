@@ -9,7 +9,6 @@
   background-size: cover;
   min-height: 600px;
   display: flex;
-  justify-content: space-around;
 }
 
 .categoryText {
@@ -17,7 +16,8 @@
   max-width: 315px;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .categoryTitle {

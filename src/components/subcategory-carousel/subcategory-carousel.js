@@ -73,12 +73,12 @@ class SubcategoryCarousel extends Component {
                               <div key={index}>
                                 <Slide className={styles.slide}>
                                   <div className={styles.slideContainer}>
-                                    <Link to={`/${subcategory.slug}`}>
+                                    <a href={`/${subcategory.slug}`}>
                                       <img className={styles.image} alt={subcategory.title} src={subcategory.thumbnailImage.fluid.src} />
                                       <div className={styles.title}>
                                         {subcategory.title}
                                       </div>
-                                    </Link>
+                                    </a>
                                   </div>
                                 </Slide>
                               </div>
