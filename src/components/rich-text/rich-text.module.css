@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+  .richTextContainer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
