@@ -96,9 +96,9 @@ a {
   margin-left: 20px;
   margin-right: 20px;
   font-weight: bold;
-  border-top: unset;
-  border-left: unset;
-  border-right: unset;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 
 .page-container {

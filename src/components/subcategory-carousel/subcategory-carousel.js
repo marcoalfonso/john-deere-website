@@ -36,7 +36,7 @@ class SubcategoryCarousel extends Component {
                     title
                     slug
                     thumbnailImage {
-                      fluid(maxWidth: 371) {
+                      fluid {
                         aspectRatio
                         sizes
                         src
@@ -74,7 +74,7 @@ class SubcategoryCarousel extends Component {
                                 <Slide className={styles.slide}>
                                   <div className={styles.slideContainer}>
                                     <Link to={`/${subcategory.slug}`}>
-                                      <Img className={styles.image} alt={subcategory.title} fluid={subcategory.thumbnailImage.fluid} />
+                                      <img className={styles.image} alt={subcategory.title} src={subcategory.thumbnailImage.fluid.src} />
                                       <div className={styles.title}>
                                         {subcategory.title}
                                       </div>

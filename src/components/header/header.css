@@ -120,12 +120,11 @@
   }
 
   .dropdown-menu {
-    top: 142%;
     left: -186%;
     min-width: 42rem;
     padding: 2.5rem 5rem;
     padding-bottom: 20px;
-    margin: .125rem 0 0;
+    margin: 19px 0 0;
     font-size: 1rem;
     color: #212529;
     text-align: left;
