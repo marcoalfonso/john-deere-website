@@ -44,7 +44,7 @@ class RootIndex extends React.Component {
           heading={homepagePrimaryHero.heading}
           ctaText={homepagePrimaryHero.ctaText}
           ctaLink={homepagePrimaryHero.ctaLink}
-          image={homepagePrimaryHero.backgroundImage.fluid}
+          image={homepagePrimaryHero.backgroundImage.fluid.src}
         />
         <SubcategoryCarousel />
         <SecondayHero

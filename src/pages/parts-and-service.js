@@ -29,7 +29,7 @@ class PartsAndService extends React.Component {
           />
           <PrimaryHero
             heading={partsAndServicesPrimaryHero.heading}
-            image={partsAndServicesPrimaryHero.backgroundImage.fluid}
+            image={partsAndServicesPrimaryHero.backgroundImage.fluid.src}
           />
           <Featured
             title={partsAndServicesFeaturedOne.title}

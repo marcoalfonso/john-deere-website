@@ -1,6 +1,7 @@
 import React from 'react'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, DotGroup } from 'pure-react-carousel';
 import styles from './image-tiles.module.css'
+import Fade from 'react-reveal/Fade'
 
 export default ({ images }) => (
     <div className={styles.imageTiles}>
@@ -8,19 +9,21 @@ export default ({ images }) => (
       <div className={styles.desktopTiles}>
         <div className={styles.rowOne}>
           {images.slice(0,5).map((image, index ) => (
-            <div className={styles.column}>
-              <img src={image.fluid.src}/>
-            </div>
-          ))}
-        </div>
-        <div>
-          <div className={styles.rowTwo}>
-            {images.slice(5,10).map((image, index ) => (
+            <Fade left ssrFadeout>
               <div className={styles.column}>
                 <img src={image.fluid.src}/>
               </div>
-            ))}
-          </div>
+            </Fade>
+          ))}
+        </div>
+        <div className={styles.rowTwo}>
+          {images.slice(5,10).map((image, index ) => (
+            <Fade right ssrFadeout>
+              <div className={styles.column}>
+                <img src={image.fluid.src}/>
+              </div>
+            </Fade>
+          ))}
         </div>
       </div>
       <div className={styles.mobileTiles}>

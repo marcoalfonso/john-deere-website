@@ -37,7 +37,7 @@ class Equipment extends React.Component {
           />
           <PrimaryHero
             heading={EquipmentPrimaryHero.heading}
-            image={EquipmentPrimaryHero.backgroundImage.fluid}
+            image={EquipmentPrimaryHero.backgroundImage.fluid.src}
           />
           <TextInterlude
             body={EquipmentTextInterlude1.body.body}

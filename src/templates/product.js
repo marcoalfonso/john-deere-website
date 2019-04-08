@@ -17,11 +17,11 @@ class ProductTemplate extends React.Component {
 
   componentDidMount() {
     this.updateWindowDimensions();
-    window.addEventListener("resizeProduct", this.updateWindowDimensions);
+    window.addEventListener("resize", this.updateWindowDimensions);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resizeProduct", this.updateWindowDimensions);
+    window.removeEventListener("resize", this.updateWindowDimensions);
   }
 
   updateWindowDimensions = () => {

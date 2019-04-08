@@ -32,7 +32,7 @@ class Careers extends React.Component {
           />
           <PrimaryHero
             heading={CareersPrimaryHero.heading}
-            image={CareersPrimaryHero.backgroundImage.fluid}
+            image={CareersPrimaryHero.backgroundImage.fluid.src}
           />
           <Section>
             <div className="container">

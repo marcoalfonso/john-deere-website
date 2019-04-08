@@ -13,15 +13,19 @@ import Section from '../components/section/section'
 class CategoryTemplate extends React.Component {
 
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-
     return (
       <Layout location={this.props.location} >
         <div>
-          <Helmet title={siteTitle} />
+          <Helmet
+            title={`${this.props.pageContext.title} | RDO Equipment`}
+            meta={[
+                {name: 'description', content: `Explore John Deere ${this.props.pageContext.title} on the RDO Equipment Australia website.`},
+                {name: 'og:description', content: `Explore John Deere ${this.props.pageContext.title} on the RDO Equipment Australia website.`}
+            ]}
+          />
           <PrimaryHero
             heading={this.props.pageContext.title}
-            image={this.props.pageContext.heroImage}
+            image={this.props.pageContext.heroImage.src}
           />
           <TextInterlude
             headline={this.props.pageContext.headline}
@@ -44,13 +48,3 @@ class CategoryTemplate extends React.Component {
 }
 
 export default CategoryTemplate
-
-export const pageQuery = graphql`
-  query CategoryTemplateQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

@@ -111,6 +111,11 @@ exports.createPages = ({ graphql, actions }) => {
                         src
                       }
                     }
+                    heroImageMobile {
+                      fluid {
+                        src
+                      }
+                    }
                     products {
                       productThumbnailImage {
                         fluid {
@@ -148,6 +153,7 @@ exports.createPages = ({ graphql, actions }) => {
                 slug: subcategory.slug,
                 title: subcategory.title,
                 heroImage: subcategory.heroImage.fluid,
+                heroImageMobile: subcategory.heroImageMobile.fluid,
                 products: subcategory.products
               },
             })

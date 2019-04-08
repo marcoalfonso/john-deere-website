@@ -18,9 +18,9 @@ class JobTemplate extends React.Component {
       <Layout location={this.props.location} >
         <div className={styles.jobTemplate}>
           <Helmet
-            title={`${this.props.pageContext.title} - RDO Equipment`}
+            title={`${this.props.pageContext.title} | RDO Equipment`}
             meta={[
-                {name: 'description', content: `${this.props.pageContext.title} - RDO Equipment`}
+                {name: 'description', content: `${this.props.pageContext.title} | RDO Equipment`}
             ]}
           />
           <PrimaryHero

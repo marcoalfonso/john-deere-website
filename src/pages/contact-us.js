@@ -4,7 +4,6 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import styles from './contact-us.module.css'
 import Layout from "../components/layout"
-import PrimaryHero from '../components/primary-hero/primary-hero'
 import TextInterlude from '../components/text-interlude/text-interlude'
 import ProductCarousel from '../components/product-carousel/product-carousel'
 import Section from '../components/section/section'

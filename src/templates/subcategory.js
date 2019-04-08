@@ -10,14 +10,20 @@ import SubcategoryProductList from '../components/subcategory-product-list/subca
 
 class SubCategoryTemplate extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     return (
       <Layout location={this.props.location} >
         <div>
-          <Helmet title={siteTitle} />
+          <Helmet
+            title={`${this.props.pageContext.title} | RDO Equipment`}
+            meta={[
+                {name: 'description', content: `Explore John Deere ${this.props.pageContext.title} on the RDO Equipment Australia website.`},
+                {name: 'og:description', content: `Explore John Deere ${this.props.pageContext.title} on the RDO Equipment Australia website.`}
+            ]}
+          />
           <PrimaryHero
             heading={this.props.pageContext.title}
-            image={this.props.pageContext.heroImage}
+            image={this.props.pageContext.heroImage.src}
+            imageMobile={this.props.pageContext.heroImageMobile.src}
           />
           <SubcategoryProductList
             products={this.props.pageContext.products}
@@ -29,13 +35,3 @@ class SubCategoryTemplate extends React.Component {
 }
 
 export default SubCategoryTemplate
-
-export const pageQuery = graphql`
-  query SubCategoryTemplateQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

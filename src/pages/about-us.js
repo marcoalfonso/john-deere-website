@@ -41,7 +41,7 @@ class AboutUs extends React.Component {
           />
           <PrimaryHero
             heading={AboutUsPrimaryHero.heading}
-            image={AboutUsPrimaryHero.backgroundImage.fluid}
+            image={AboutUsPrimaryHero.backgroundImage.fluid.src}
           />
           <TextInterlude
             body={AboutUsTextInterlude.body.body}
