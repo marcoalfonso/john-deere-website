@@ -21,10 +21,12 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'RDO Equipment',
+    title: 'RDO Equipment AU',
+    siteUrl: process.env.HOSTNAME || 'https://rdoequipment.com.au/'
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
+    'gatsby-plugin-sitemap',
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
