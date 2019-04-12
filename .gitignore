@@ -67,3 +67,5 @@ public
 
 export-config.json
 import-config.json
+
+.contentful.json
